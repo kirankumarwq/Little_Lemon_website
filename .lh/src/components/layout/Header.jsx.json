@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/layout/Header.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1738863442288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1738863442287,
+            "name": "Commit-0",
+            "content": "import { useState } from \"react\";\nimport { HashLink } from \"react-router-hash-link\";\nimport { FontAwesomeIcon } from \"@fortawesome/react-fontawesome\";\nimport logoImage from \"./assets/logo.png\";\nimport { faUser } from \"@fortawesome/free-solid-svg-icons\";\nimport \"./header.css\";\nimport { Link } from \"react-router-dom\";\n\nconst Header = ({ navLinks }) => {\n  return (\n    <header className=\"header\">\n      <nav className=\"container grid nav-bar\">\n        {/* Logo */}\n        <Link className=\"nav-bar-logo\" to=\"/\">\n          <img src={logoImage} alt=\"Little Lemon logo\" />\n        </Link>\n\n        {/* Login Button (Only on Mobile) */}\n        <Link to=\"/login\" className=\"login-btn\">\n        <FontAwesomeIcon icon={faUser} className=\"login-icon\" style={{ marginRight: \"8px\" }}/>\n        <span>Login</span>\n      </Link>\n\n        {/* Full Nav Menu (Only Visible on Larger Screens) */}\n        <ul className=\"nav-bar-links\">\n          {navLinks.map((navLink) => (\n            <li key={navLink.name} className=\"hover-underline-animation\">\n              {navLink.hashLink ? (\n                <HashLink to={navLink.path}>{navLink.name}</HashLink>\n              ) : (\n                <Link to={navLink.path}>{navLink.name}</Link>\n              )}\n          </li>\n          ))}\n        </ul>\n      </nav>\n    </header>\n  );\n};\n\nexport default Header;\n"
+        }
+    ]
+}

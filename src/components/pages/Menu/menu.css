@@ -1,0 +1,87 @@
+/* Menu Container */
+#menu {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8; /* Light background */
+  }
+  
+  /* Title Styling */
+  #menu-title {
+    font-size: 2.5rem;
+    color: #2c3e50; /* Dark blue-gray */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Menu Sections */
+  .menu-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 0;
+  }
+  
+  /* Individual Menu Articles */
+  .article-title {
+    font-size: 1.8rem;
+    color: #143b01; /* Orange highlight */
+    border-bottom: 3px solid #3a6b02;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Menu Entry */
+  .menu-entry {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .menu-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Menu Item Name and Price */
+  .menu-entry h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #34495e; /* Dark gray-blue */
+    margin-bottom: 5px;
+  }
+  
+  .menu-entry .title {
+    flex-grow: 1;
+    text-align: left;
+  }
+  
+  .menu-entry .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #27ae60; /* Green for price */
+  }
+  
+  /* Description Styling */
+  .menu-entry p {
+    font-size: 1rem;
+    color: #7f8c8d; /* Soft gray */
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .menu-section {
+      grid-template-columns: 1fr;
+    }
+    #menu-title {
+      font-size: 2rem;
+    }
+  }
+  

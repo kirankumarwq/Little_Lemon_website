@@ -1,0 +1,111 @@
+/* Centering the Form */
+.reservations {
+  min-height: calc(100vh - 6.25rem - 18rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  padding: 20px;
+  box-sizing: border-box;
+  padding-top: 50px; /* Moves the content down (Adjust as needed) */
+}
+
+/* Form Styling */
+.reservations form {
+  width: 90%;
+  max-width: 400px; /* Limits form width */
+  display: flex;
+  flex-direction: column; /* Keeps fields one below another */
+  gap: 1rem;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Time Slot Container */
+.time-slots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 slots in a row for PC */
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.time-slots button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #f4ce14;
+  color: black;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 50px;
+  text-align: center;
+}
+
+.time-slots button:hover {
+  background-color: #ffcc00;
+}
+
+.time-slots button.selected {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Greyed-out button for unavailable time slots */
+.time-slots button.unavailable {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+  color: #a9a9a9;
+}
+
+/* Show More Button */
+.show-more-btn {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #4CAF50;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.show-more-btn:hover {
+  color: #388e3c;
+}
+
+.show-more-btn::after {
+  content: " ▼"; /* Downfacing arrow */
+  font-size: 1rem;
+}
+
+
+/* Ensure other form elements fit */
+.reservations form > * {
+  flex-shrink: 0; /* Prevent elements from shrinking */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 491px) {
+  .reservations {
+    padding: 10px;
+  }
+
+  .reservations form {
+    width: 100%;
+  }
+
+  .time-slots {
+    grid-template-columns: repeat(3, 1fr); /* 3 slots per row on mobile */
+  }
+
+  .show-more-btn {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,120 @@
+/* Header Container */
+.header {
+  display: inline-flex;
+  justify-content: space-between; /* Ensures Logo and Login stay in one line */
+  align-items: center;
+  padding: 15px 20px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.nav-bar {
+  border-bottom: 2px solid #495e57;
+  width: 100%;
+  max-width:device-width;
+  padding: 0 6%;
+  align-items: center;
+  grid-template-columns: auto auto auto;
+  height: 6.25rem;
+}
+
+.nav-bar-logo {
+  grid-column: 1;
+  justify-self: start;
+  align-self: center;
+  line-height: 0;
+}
+
+.nav-bar-logo img {
+  width: 10rem;
+  height: auto
+}
+.login-img {
+  width: 10rem; /* Adjust size */
+  height: auto;
+}
+
+/* Login Button */
+.login-btn {
+  justify-self: flex-end;
+  width: max-content;
+  background: #f4ce14;
+  padding: 8px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+/* Full Navigation Menu (Desktop) */
+.nav-bar-links {
+  grid-column: 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 1.5rem;
+  transition: left 300ms linear;
+}
+
+.nav-bar-links li {
+  list-style-type: none;
+  font-weight: 600;
+}
+
+.nav-bar-links a {
+  height: max-content;
+  text-transform: uppercase;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #495e57;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+@media only screen and (max-width: 992px) {
+  .hover-underline-animation:after {
+    bottom: -1px;
+  }
+}
+  .nav-bar {
+    grid-template-columns: auto auto;
+  }
+/* Hide Full Navigation on Mobile */
+@media (max-width: 768px) {
+  .nav-bar-links {
+    display: none;
+  }
+
+  .header {
+    padding: 15px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .login-btn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+@media (min-width: 768px) {
+  .login-btn {
+    display: none;
+  }
+}
