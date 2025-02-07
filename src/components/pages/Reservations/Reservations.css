@@ -33,16 +33,14 @@
 }
 
 .time-slots button {
-  padding: 10px;
-  font-size: 1rem;
+  padding: 10px 15px;
+  font-size: 0.9rem;
   background-color: #f4ce14;
   color: black;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s;
-  height: 50px;
-  text-align: center;
+  transition: 0.3s ease-in-out;
 }
 
 .time-slots button:hover {
@@ -84,6 +82,34 @@
   content: " ▼"; /* Downfacing arrow */
   font-size: 1rem;
 }
+/* Dine In Selection Buttons */
+.dine-in-options {
+  display: flex;
+  gap: 7px;
+  justify-content: left;
+  margin-top: 10px;
+}
+
+.dine-in-btn {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #f4ce14;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.dine-in-btn:hover {
+  background-color: #ffcc00;
+}
+
+.dine-in-btn.selected {
+  background-color: #4CAF50;
+  color: white;
+}
+
 
 
 /* Ensure other form elements fit */

@@ -3,7 +3,7 @@ import FormField from "./formField";
 
 const ReservationForm = ({ dispatchOnDateChange, submitData }) => {
   const minimumDate = new Date().toISOString().split("T")[0]; // Get today's date
-  const occasions = ["Birthday", "Anniversary"];
+  const dineOptions = ["Indoor", "Outdoor",];
 
   const convertTo12HourFormat = (time) => {
     let [hour, minute] = time.split(":").map(Number);
@@ -13,6 +13,7 @@ const ReservationForm = ({ dispatchOnDateChange, submitData }) => {
   };
 
   const allTimes = [
+    "06:00", "06:30", "07:00", "07:30", "08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",//breakfast
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30", "15:00", "15:30", "16:00", "16:30", "17:00", // Lunch
     "18:00", "18:30", "19:00", "19:30", "20:00", "20:30", "21:00", "21:30", "22:00", "22:30", "23:00"  // Dinner
   ];
@@ -21,7 +22,7 @@ const ReservationForm = ({ dispatchOnDateChange, submitData }) => {
   const [mealType, setMealType] = useState(""); // Default: No meal type selected
   const [time, setTime] = useState("");
   const [numberOfGuests, setNumberGuests] = useState("");
-  const [occasion, setOccasion] = useState("");
+  const [dineIN, setDineIN] = useState("");
   const [showAllSlots, setShowAllSlots] = useState(false);
   const [currentTime, setCurrentTime] = useState(null);
 
@@ -49,6 +50,7 @@ const ReservationForm = ({ dispatchOnDateChange, submitData }) => {
       // If the booking date is not today, show both lunch and dinner time slots without checking time
       if (new Date(date) > new Date()) {
         return (
+          (mealType === "Breakfast" && hour >= 6 && hour <= 11) ||
           (mealType === "Lunch" && hour >= 12 && hour <= 17) ||
           (mealType === "Dinner" && hour >= 18 && hour <= 23)
         );
@@ -56,6 +58,9 @@ const ReservationForm = ({ dispatchOnDateChange, submitData }) => {
 
       // If the booking date is today, show only the applicable meal type based on current time
       if (isToday) {
+        if (mealType === "Breakfast" && hour >= 6 && hour <= 11) {
+          return (slotHour > currentHour) || (slotHour === currentHour && slotMinute > currentMinute);
+        }
         if (mealType === "Lunch" && hour >= 12 && hour <= 17) {
           return (slotHour > currentHour) || (slotHour === currentHour && slotMinute > currentMinute);
         }
@@ -89,17 +94,17 @@ const ReservationForm = ({ dispatchOnDateChange, submitData }) => {
     e.preventDefault();
 
     // Check if all required fields are filled
-    if (!date || !mealType || !time || !numberOfGuests || !occasion) {
+    if (!date || !mealType || !time || !numberOfGuests || !dineIN) {
       alert("Please fill out all required fields.");
       return;
     }
 
-    submitData({ date, mealType, time, numberOfGuests, occasion });
+    submitData({ date, mealType, time, numberOfGuests, dineIN });
   };
 
   // Check if the form is valid
   const isFormValid = () => {
-    return date && mealType && time && numberOfGuests && occasion;
+    return date && mealType && time && numberOfGuests && dineIN;
   };
 
   return (
@@ -123,10 +128,25 @@ const ReservationForm = ({ dispatchOnDateChange, submitData }) => {
           required
         >
           <option value="" hidden>Select Meal Type</option>
-          {isToday && currentHour < 17 && <option value="Lunch">Lunch (12 PM - 5 PM)</option>}
+          {isToday&& currentHour <= 6 && 
+          (
+            <>
+          <option value="Breakfast">Breakfast (6 AM - 11 AM)</option>
+          <option value="Lunch">Lunch (12 PM - 5 PM)</option>
+          <option value="Dinner">Dinner (6 PM - 11 PM)</option>
+            </>
+          )}
+          {isToday && currentHour >= 12 && 
+          (
+            <>
+            <option value="Lunch">Lunch (12 PM - 5 PM)</option>
+            <option value="Dinner">Dinner (6 PM - 11 PM)</option>
+            </>
+          ) }
           {isToday && currentHour >= 17 && <option value="Dinner">Dinner (6 PM - 11 PM)</option>}
           {new Date(date) > new Date() && (
             <>
+              <option value="Breakfast">Breakfast (6 AM - 11 AM)</option>
               <option value="Lunch">Lunch (12 PM - 5 PM)</option>
               <option value="Dinner">Dinner (6 PM - 11 PM)</option>
             </>
@@ -175,19 +195,21 @@ const ReservationForm = ({ dispatchOnDateChange, submitData }) => {
             />
           </FormField>
 
-          <FormField label="Occasion" htmlFor="reservation-occasion">
-            <select
-              id="reservation-occasion"
-              value={occasion}
-              onChange={(e) => setOccasion(e.target.value)}
-              required
-            >
-              <option value="">Select Occasion</option>
-              {occasions.map((occasion) => (
-                <option key={occasion} value={occasion}>{occasion}</option>
-              ))}
-            </select>
-          </FormField>
+          <FormField label="Dine In">
+  <div className="dine-in-options">
+    {dineOptions.map((option) => (
+      <button
+        key={option}
+        type="button"
+        className={`dine-in-btn ${dineIN === option ? "selected" : ""}`}
+        onClick={() => setDineIN(option)}
+      >
+        {option}
+      </button>
+    ))}
+  </div>
+</FormField>
+
         </>
       )}
 

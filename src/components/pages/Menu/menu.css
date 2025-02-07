@@ -1,87 +1,119 @@
 /* Menu Container */
 #menu {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f8f8f8; /* Light background */
+  text-align: center;
+  padding: 100px 5%;
+  background: #f8f9fa;
+}
+
+/* Title Styling */
+#menu-title {
+  font-size: 3rem;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Menu Sections (Evenly Distributed) */
+.menu-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Section Headers (Category Titles) */
+.article-title {
+  font-size: 2.2rem;
+  color: #1e4d2b; /* Deep green */
+  text-align: center;
+  border-bottom: 4px solid #27ae60;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Menu Entry (Dish Item) */
+.menu-entry {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 100%;
+  text-align: left;
+  border-left: 5px solid #27ae60;
+}
+
+.menu-entry:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Menu Item Name & Price */
+.menu-entry h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 15px;
+}
+
+.menu-entry .title {
+  flex-grow: 1;
+}
+
+.menu-entry .price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+/* Description Styling */
+.menu-entry p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin: 10px 0 0;
+  line-height: 1.6;
+}
+
+/* Responsive Design (Mobile) */
+@media (max-width: 1024px) {
+  .menu-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
-  
-  /* Title Styling */
+
   #menu-title {
     font-size: 2.5rem;
-    color: #2c3e50; /* Dark blue-gray */
-    font-weight: bold;
-    margin-bottom: 20px;
   }
-  
-  /* Menu Sections */
-  .menu-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px 0;
-  }
-  
-  /* Individual Menu Articles */
-  .article-title {
-    font-size: 1.8rem;
-    color: #143b01; /* Orange highlight */
-    border-bottom: 3px solid #3a6b02;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-  }
-  
-  /* Menu Entry */
+
   .menu-entry {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    width: 90%;
+    margin: auto;
   }
-  
-  .menu-entry:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  #menu {
+    padding: 80px 5%;
   }
-  
-  /* Menu Item Name and Price */
-  .menu-entry h3 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #34495e; /* Dark gray-blue */
-    margin-bottom: 5px;
+
+  .menu-section {
+    grid-template-columns: 1fr;
   }
-  
-  .menu-entry .title {
-    flex-grow: 1;
-    text-align: left;
+
+  .menu-entry {
+    width: 100%;
+    max-width: 400px;
   }
-  
-  .menu-entry .price {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #27ae60; /* Green for price */
-  }
-  
-  /* Description Styling */
-  .menu-entry p {
-    font-size: 1rem;
-    color: #7f8c8d; /* Soft gray */
-    margin: 0;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .menu-section {
-      grid-template-columns: 1fr;
-    }
-    #menu-title {
-      font-size: 2rem;
-    }
-  }
-  
+}
