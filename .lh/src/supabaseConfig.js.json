@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/supabaseConfig.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1739107841170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739107883748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+import { createClient } from \"@supabase/supabase-js\";\r\n+\r\n+const SUPABASE_URL = \"YOUR_SUPABASE_URL\";\r\n+const SUPABASE_ANON_KEY = \"YOUR_SUPABASE_ANON_KEY\";\r\n+\r\n+export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);\r\n"
+                },
+                {
+                    "date": 1739107937163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { createClient } from \"@supabase/supabase-js\";\r\n \r\n-const SUPABASE_URL = \"YOUR_SUPABASE_URL\";\r\n-const SUPABASE_ANON_KEY = \"YOUR_SUPABASE_ANON_KEY\";\r\n+const SUPABASE_URL = \"https://hmhxzeucvxzeqnpwzuwk.supabase.co\";\r\n+const SUPABASE_ANON_KEY = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhtaHh6ZXVjdnh6ZXFucHd6dXdrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzkxMDczNTksImV4cCI6MjA1NDY4MzM1OX0.NUvtw8YfL0xcPT19a89mNXn860-5q_53c1czIsHueII\";\r\n \r\n export const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);\r\n"
+                }
+            ],
+            "date": 1739107841169,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

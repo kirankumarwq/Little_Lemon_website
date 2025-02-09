@@ -1,0 +1,358 @@
+{
+    "sourceFile": "src/components/pages/auth/auth.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 85,
+            "patches": [
+                {
+                    "date": 1739105071671,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739105251124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,5 +64,22 @@\n     width: 100%;\r\n     font-size: 1rem;\r\n     border-radius: 5px;\r\n   }\r\n+  .message {\r\n+    color: green;\r\n+    font-size: 0.9rem;\r\n+    margin-bottom: 10px;\r\n+  }\r\n+  \r\n+  .logout-btn {\r\n+    background: red;\r\n+    color: white;\r\n+    border: none;\r\n+    padding: 10px;\r\n+    margin-top: 10px;\r\n+    cursor: pointer;\r\n+    width: 100%;\r\n+    font-size: 1rem;\r\n+    border-radius: 5px;\r\n+  }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739114907393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,5 +81,49 @@\n     width: 100%;\r\n     font-size: 1rem;\r\n     border-radius: 5px;\r\n   }\r\n+  .popup {\r\n+    position: fixed;\r\n+    top: 20%;\r\n+    left: 50%;\r\n+    transform: translate(-50%, -50%);\r\n+    background: #2ecc71;\r\n+    color: white;\r\n+    padding: 15px 25px;\r\n+    border-radius: 10px;\r\n+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);\r\n+    text-align: center;\r\n+    font-size: 1.2rem;\r\n+    font-weight: bold;\r\n+    display: flex;\r\n+    align-items: center;\r\n+    gap: 10px;\r\n+    animation: fadeIn 0.5s ease-out, fadeOut 0.5s ease-out 2.5s;\r\n+  }\r\n+  \r\n+  .check-icon {\r\n+    font-size: 1.5rem;\r\n+  }\r\n+  \r\n+  @keyframes fadeIn {\r\n+    from {\r\n+      opacity: 0;\r\n+      transform: translate(-50%, -70%);\r\n+    }\r\n+    to {\r\n+      opacity: 1;\r\n+      transform: translate(-50%, -50%);\r\n+    }\r\n+  }\r\n+  \r\n+  @keyframes fadeOut {\r\n+    from {\r\n+      opacity: 1;\r\n+      transform: translate(-50%, -50%);\r\n+    }\r\n+    to {\r\n+      opacity: 0;\r\n+      transform: translate(-50%, -70%);\r\n+    }\r\n+  }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739115175214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,10 +83,10 @@\n     border-radius: 5px;\r\n   }\r\n   .popup {\r\n     position: fixed;\r\n-    top: 20%;\r\n-    left: 50%;\r\n+    top: 300%;\r\n+    left: 100%;\r\n     transform: translate(-50%, -50%);\r\n     background: #2ecc71;\r\n     color: white;\r\n     padding: 15px 25px;\r\n"
+                },
+                {
+                    "date": 1739115188362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n     border-radius: 5px;\r\n   }\r\n   .popup {\r\n     position: fixed;\r\n-    top: 300%;\r\n+    top: 30%;\r\n     left: 100%;\r\n     transform: translate(-50%, -50%);\r\n     background: #2ecc71;\r\n     color: white;\r\n"
+                },
+                {
+                    "date": 1739115202687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n   }\r\n   .popup {\r\n     position: fixed;\r\n     top: 30%;\r\n-    left: 100%;\r\n+    left: 70%;\r\n     transform: translate(-50%, -50%);\r\n     background: #2ecc71;\r\n     color: white;\r\n     padding: 15px 25px;\r\n"
+                },
+                {
+                    "date": 1739115222095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n     border-radius: 5px;\r\n   }\r\n   .popup {\r\n     position: fixed;\r\n-    top: 30%;\r\n+    top: 50%;\r\n     left: 70%;\r\n     transform: translate(-50%, -50%);\r\n     background: #2ecc71;\r\n     color: white;\r\n"
+                },
+                {
+                    "date": 1739115247498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n     border-radius: 5px;\r\n   }\r\n   .popup {\r\n     position: fixed;\r\n-    top: 50%;\r\n+    top: 60%;\r\n     left: 70%;\r\n     transform: translate(-50%, -50%);\r\n     background: #2ecc71;\r\n     color: white;\r\n"
+                },
+                {
+                    "date": 1739115259882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n     border-radius: 5px;\r\n   }\r\n   .popup {\r\n     position: fixed;\r\n-    top: 60%;\r\n+    top: 10%;\r\n     left: 70%;\r\n     transform: translate(-50%, -50%);\r\n     background: #2ecc71;\r\n     color: white;\r\n"
+                },
+                {
+                    "date": 1739115267999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n     border-radius: 5px;\r\n   }\r\n   .popup {\r\n     position: fixed;\r\n-    top: 10%;\r\n+    top: 20%;\r\n     left: 70%;\r\n     transform: translate(-50%, -50%);\r\n     background: #2ecc71;\r\n     color: white;\r\n"
+                },
+                {
+                    "date": 1739115283095,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n   }\r\n   .popup {\r\n     position: fixed;\r\n     top: 20%;\r\n-    left: 70%;\r\n+    left: 80%;\r\n     transform: translate(-50%, -50%);\r\n     background: #2ecc71;\r\n     color: white;\r\n     padding: 15px 25px;\r\n"
+                },
+                {
+                    "date": 1739115337645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,10 @@\n   }\r\n   .popup {\r\n     position: fixed;\r\n     top: 20%;\r\n-    left: 80%;\r\n+    right: 80%;\r\n+\r\n     transform: translate(-50%, -50%);\r\n     background: #2ecc71;\r\n     color: white;\r\n     padding: 15px 25px;\r\n"
+                },
+                {
+                    "date": 1739115352017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n   }\r\n   .popup {\r\n     position: fixed;\r\n     top: 20%;\r\n-    right: 80%;\r\n+    left: 80%;\r\n \r\n     transform: translate(-50%, -50%);\r\n     background: #2ecc71;\r\n     color: white;\r\n"
+                },
+                {
+                    "date": 1739115416478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,9 +82,9 @@\n     font-size: 1rem;\r\n     border-radius: 5px;\r\n   }\r\n   .popup {\r\n-    position: fixed;\r\n+    position:absolute;\r\n     top: 20%;\r\n     left: 80%;\r\n \r\n     transform: translate(-50%, -50%);\r\n"
+                },
+                {
+                    "date": 1739115447906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,9 +82,9 @@\n     font-size: 1rem;\r\n     border-radius: 5px;\r\n   }\r\n   .popup {\r\n-    position:absolute;\r\n+    position:relative;\r\n     top: 20%;\r\n     left: 80%;\r\n \r\n     transform: translate(-50%, -50%);\r\n"
+                },
+                {
+                    "date": 1739115462207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,9 +83,9 @@\n     border-radius: 5px;\r\n   }\r\n   .popup {\r\n     position:relative;\r\n-    top: 20%;\r\n+    top: 30%;\r\n     left: 80%;\r\n \r\n     transform: translate(-50%, -50%);\r\n     background: #2ecc71;\r\n"
+                },
+                {
+                    "date": 1739115471817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n   }\r\n   .popup {\r\n     position:relative;\r\n     top: 30%;\r\n-    left: 80%;\r\n+    left: 100%;\r\n \r\n     transform: translate(-50%, -50%);\r\n     background: #2ecc71;\r\n     color: white;\r\n"
+                },
+                {
+                    "date": 1739115491848,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,12 +82,11 @@\n     font-size: 1rem;\r\n     border-radius: 5px;\r\n   }\r\n   .popup {\r\n-    position:relative;\r\n-    top: 30%;\r\n-    left: 100%;\r\n-\r\n+    position: fixed;\r\n+    top: 20%;\r\n+    left: 80%;\r\n     transform: translate(-50%, -50%);\r\n     background: #2ecc71;\r\n     color: white;\r\n     padding: 15px 25px;\r\n"
+                },
+                {
+                    "date": 1739116204375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,47 +83,46 @@\n     border-radius: 5px;\r\n   }\r\n   .popup {\r\n     position: fixed;\r\n-    top: 20%;\r\n-    left: 80%;\r\n-    transform: translate(-50%, -50%);\r\n+    top: 20px;\r\n+    right: 20px;\r\n     background: #2ecc71;\r\n     color: white;\r\n-    padding: 15px 25px;\r\n-    border-radius: 10px;\r\n+    padding: 15px 20px;\r\n+    border-radius: 8px;\r\n     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);\r\n     text-align: center;\r\n-    font-size: 1.2rem;\r\n+    font-size: 1rem;\r\n     font-weight: bold;\r\n     display: flex;\r\n     align-items: center;\r\n     gap: 10px;\r\n-    animation: fadeIn 0.5s ease-out, fadeOut 0.5s ease-out 2.5s;\r\n+    animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 2.5s;\r\n   }\r\n   \r\n   .check-icon {\r\n     font-size: 1.5rem;\r\n   }\r\n   \r\n-  @keyframes fadeIn {\r\n+  @keyframes slideIn {\r\n     from {\r\n       opacity: 0;\r\n-      transform: translate(-50%, -70%);\r\n+      transform: translateX(50px);\r\n     }\r\n     to {\r\n       opacity: 1;\r\n-      transform: translate(-50%, -50%);\r\n+      transform: translateX(0);\r\n     }\r\n   }\r\n   \r\n   @keyframes fadeOut {\r\n     from {\r\n       opacity: 1;\r\n-      transform: translate(-50%, -50%);\r\n+      transform: translateX(0);\r\n     }\r\n     to {\r\n       opacity: 0;\r\n-      transform: translate(-50%, -70%);\r\n+      transform: translateX(50px);\r\n     }\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739120500081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,30 +42,30 @@\n     background: #ffcc00;\r\n   }\r\n   \r\n   .google-btn {\r\n-    background: #db4437;\r\n-    color: white;\r\n-    border: none;\r\n-    padding: 10px;\r\n-    margin-top: 10px;\r\n+    display: flex;\r\n+    align-items: center;\r\n+    gap: 10px;\r\n+    background: white;\r\n+    color: black;\r\n+    border: 1px solid #ccc;\r\n+    padding: 10px 15px;\r\n+    border-radius: 5px;\r\n     cursor: pointer;\r\n-    width: 100%;\r\n     font-size: 1rem;\r\n-    border-radius: 5px;\r\n+    font-weight: bold;\r\n+    transition: 0.3s ease-in-out;\r\n   }\r\n   \r\n-  .facebook-btn {\r\n-    background: #4267b2;\r\n-    color: white;\r\n-    border: none;\r\n-    padding: 10px;\r\n-    margin-top: 10px;\r\n-    cursor: pointer;\r\n-    width: 100%;\r\n-    font-size: 1rem;\r\n-    border-radius: 5px;\r\n+  .google-btn:hover {\r\n+    background: #f4f4f4;\r\n   }\r\n+  \r\n+  .google-icon {\r\n+    font-size: 1.2rem;\r\n+    color: #db4437; /* Google Red */\r\n+  }\r\n   .message {\r\n     color: green;\r\n     font-size: 0.9rem;\r\n     margin-bottom: 10px;\r\n"
+                },
+                {
+                    "date": 1739120535966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,8 @@\n     background: #ffcc00;\r\n   }\r\n   \r\n   .google-btn {\r\n-    display: flex;\r\n     align-items: center;\r\n     gap: 10px;\r\n     background: white;\r\n     color: black;\r\n"
+                },
+                {
+                    "date": 1739120610394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,19 +42,17 @@\n     background: #ffcc00;\r\n   }\r\n   \r\n   .google-btn {\r\n-    align-items: center;\r\n-    gap: 10px;\r\n-    background: white;\r\n+    background: #f4ce14;\r\n     color: black;\r\n-    border: 1px solid #ccc;\r\n-    padding: 10px 15px;\r\n-    border-radius: 5px;\r\n-    cursor: pointer;\r\n     font-size: 1rem;\r\n     font-weight: bold;\r\n-    transition: 0.3s ease-in-out;\r\n+    border: none;\r\n+    padding: 10px;\r\n+    cursor: pointer;\r\n+    border-radius: 5px;\r\n+    transition: background 0.3s;\r\n   }\r\n   \r\n   .google-btn:hover {\r\n     background: #f4f4f4;\r\n"
+                },
+                {
+                    "date": 1739120623606,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,17 +42,19 @@\n     background: #ffcc00;\r\n   }\r\n   \r\n   .google-btn {\r\n-    background: #f4ce14;\r\n+    align-items: center;\r\n+    gap: 10px;\r\n+    background: white;\r\n     color: black;\r\n+    border: 1px solid #ccc;\r\n+    padding: 10px 15px;\r\n+    border-radius: 5px;\r\n+    cursor: pointer;\r\n     font-size: 1rem;\r\n     font-weight: bold;\r\n-    border: none;\r\n-    padding: 10px;\r\n-    cursor: pointer;\r\n-    border-radius: 5px;\r\n-    transition: background 0.3s;\r\n+    transition: 0.3s ease-in-out;\r\n   }\r\n   \r\n   .google-btn:hover {\r\n     background: #f4f4f4;\r\n"
+                },
+                {
+                    "date": 1739120632153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,9 @@\n     background: #ffcc00;\r\n   }\r\n   \r\n   .google-btn {\r\n+    display: flex;\r\n     align-items: center;\r\n     gap: 10px;\r\n     background: white;\r\n     color: black;\r\n"
+                },
+                {
+                    "date": 1739120653784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n     background: #ffcc00;\r\n   }\r\n   \r\n   .google-btn {\r\n-    display: flex;\r\n+    display: flex-center;\r\n     align-items: center;\r\n     gap: 10px;\r\n     background: white;\r\n     color: black;\r\n"
+                },
+                {
+                    "date": 1739120672795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n     border-radius: 5px;\r\n   }\r\n   \r\n   .auth-container button {\r\n+    display: flex-center;\r\n     background: #f4ce14;\r\n     color: black;\r\n     font-size: 1rem;\r\n     font-weight: bold;\r\n"
+                },
+                {
+                    "date": 1739120686477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,8 @@\n     border-radius: 5px;\r\n   }\r\n   \r\n   .auth-container button {\r\n-    display: flex-center;\r\n     background: #f4ce14;\r\n     color: black;\r\n     font-size: 1rem;\r\n     font-weight: bold;\r\n@@ -43,9 +42,9 @@\n     background: #ffcc00;\r\n   }\r\n   \r\n   .google-btn {\r\n-    display: flex-center;\r\n+    display: flex;\r\n     align-items: center;\r\n     gap: 10px;\r\n     background: white;\r\n     color: black;\r\n"
+                },
+                {
+                    "date": 1739120740625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n   }\r\n   \r\n   .auth-container button {\r\n     background: #f4ce14;\r\n+    align-items: center;\r\n     color: black;\r\n     font-size: 1rem;\r\n     font-weight: bold;\r\n     border: none;\r\n"
+                },
+                {
+                    "date": 1739120752598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n     border-radius: 5px;\r\n   }\r\n   \r\n   .auth-container button {\r\n+    display: flex;\r\n     background: #f4ce14;\r\n     align-items: center;\r\n     color: black;\r\n     font-size: 1rem;\r\n"
+                },
+                {
+                    "date": 1739120766424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     border-radius: 5px;\r\n   }\r\n   \r\n   .auth-container button {\r\n-    display: flex;\r\n+    display: none;\r\n     background: #f4ce14;\r\n     align-items: center;\r\n     color: black;\r\n     font-size: 1rem;\r\n"
+                },
+                {
+                    "date": 1739120779969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     border-radius: 5px;\r\n   }\r\n   \r\n   .auth-container button {\r\n-    display: none;\r\n+    display: inline-block;\r\n     background: #f4ce14;\r\n     align-items: center;\r\n     color: black;\r\n     font-size: 1rem;\r\n"
+                },
+                {
+                    "date": 1739120796527,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     background: #ffcc00;\r\n   }\r\n   \r\n   .google-btn {\r\n-    display: flex;\r\n+    display: inline-flex;\r\n     align-items: center;\r\n     gap: 10px;\r\n     background: white;\r\n     color: black;\r\n"
+                },
+                {
+                    "date": 1739120810398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n     background: #ffcc00;\r\n   }\r\n   \r\n   .google-btn {\r\n-    display: inline-flex;\r\n+    display: inline-block;\r\n     align-items: center;\r\n     gap: 10px;\r\n     background: white;\r\n     color: black;\r\n"
+                },
+                {
+                    "date": 1739122877064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,63 +1,70 @@\n+/* Auth Container */\r\n .auth-container {\r\n     max-width: 400px;\r\n-    margin: auto;\r\n+    margin: 50px auto;\r\n     padding: 2rem;\r\n     text-align: center;\r\n     background: #fff;\r\n     border-radius: 10px;\r\n     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\r\n   }\r\n   \r\n+  /* Heading */\r\n   .auth-container h2 {\r\n     color: #495e57;\r\n+    font-size: 1.8rem;\r\n+    margin-bottom: 0.5rem;\r\n   }\r\n   \r\n-  .auth-container form {\r\n+  /* Typing Effect */\r\n+  .typing-text {\r\n+    font-size: 1.2rem;\r\n+    font-weight: bold;\r\n+    color: #333;\r\n+    min-height: 30px;\r\n+    display: inline-block;\r\n+    overflow: hidden;\r\n+    white-space: nowrap;\r\n+    border-right: 3px solid #f4ce14;\r\n+    animation: blink 0.7s step-end infinite alternate;\r\n+  }\r\n+  \r\n+  @keyframes blink {\r\n+    from {\r\n+      border-color: #f4ce14;\r\n+    }\r\n+    to {\r\n+      border-color: transparent;\r\n+    }\r\n+  }\r\n+  \r\n+  /* Auth Buttons */\r\n+  .auth-buttons {\r\n     display: flex;\r\n     flex-direction: column;\r\n     gap: 1rem;\r\n+    margin-top: 1.5rem;\r\n   }\r\n   \r\n-  .auth-container input {\r\n-    width: 100%;\r\n-    padding: 10px;\r\n-    font-size: 1rem;\r\n-    border: 1px solid #ccc;\r\n-    border-radius: 5px;\r\n-  }\r\n-  \r\n-  .auth-container button {\r\n-    display: inline-block;\r\n-    background: #f4ce14;\r\n+  .auth-btn,\r\n+  .google-btn {\r\n+    display: flex;\r\n     align-items: center;\r\n-    color: black;\r\n+    justify-content: center;\r\n+    gap: 10px;\r\n+    padding: 12px;\r\n     font-size: 1rem;\r\n     font-weight: bold;\r\n-    border: none;\r\n-    padding: 10px;\r\n+    border-radius: 5px;\r\n     cursor: pointer;\r\n-    border-radius: 5px;\r\n-    transition: background 0.3s;\r\n+    transition: 0.3s ease-in-out;\r\n   }\r\n   \r\n-  .auth-container button:hover {\r\n-    background: #ffcc00;\r\n-  }\r\n-  \r\n   .google-btn {\r\n-    display: inline-block;\r\n-    align-items: center;\r\n-    gap: 10px;\r\n     background: white;\r\n     color: black;\r\n     border: 1px solid #ccc;\r\n-    padding: 10px 15px;\r\n-    border-radius: 5px;\r\n-    cursor: pointer;\r\n-    font-size: 1rem;\r\n-    font-weight: bold;\r\n-    transition: 0.3s ease-in-out;\r\n   }\r\n   \r\n   .google-btn:hover {\r\n     background: #f4f4f4;\r\n@@ -66,25 +73,20 @@\n   .google-icon {\r\n     font-size: 1.2rem;\r\n     color: #db4437; /* Google Red */\r\n   }\r\n-  .message {\r\n-    color: green;\r\n-    font-size: 0.9rem;\r\n-    margin-bottom: 10px;\r\n-  }\r\n   \r\n-  .logout-btn {\r\n-    background: red;\r\n-    color: white;\r\n+  .auth-btn {\r\n+    background: #f4ce14;\r\n+    color: black;\r\n     border: none;\r\n-    padding: 10px;\r\n-    margin-top: 10px;\r\n-    cursor: pointer;\r\n-    width: 100%;\r\n-    font-size: 1rem;\r\n-    border-radius: 5px;\r\n   }\r\n+  \r\n+  .auth-btn:hover {\r\n+    background: #ffcc00;\r\n+  }\r\n+  \r\n+  /* Success Pop-up */\r\n   .popup {\r\n     position: fixed;\r\n     top: 20px;\r\n     right: 20px;\r\n@@ -92,11 +94,8 @@\n     color: white;\r\n     padding: 15px 20px;\r\n     border-radius: 8px;\r\n     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);\r\n-    text-align: center;\r\n-    font-size: 1rem;\r\n-    font-weight: bold;\r\n     display: flex;\r\n     align-items: center;\r\n     gap: 10px;\r\n     animation: slideIn 0.5s ease-out, fadeOut 0.5s ease-out 2.5s;\r\n@@ -105,8 +104,9 @@\n   .check-icon {\r\n     font-size: 1.5rem;\r\n   }\r\n   \r\n+  /* Animations */\r\n   @keyframes slideIn {\r\n     from {\r\n       opacity: 0;\r\n       transform: translateX(50px);\r\n@@ -119,12 +119,18 @@\n   \r\n   @keyframes fadeOut {\r\n     from {\r\n       opacity: 1;\r\n-      transform: translateX(0);\r\n     }\r\n     to {\r\n       opacity: 0;\r\n-      transform: translateX(50px);\r\n     }\r\n   }\r\n+  \r\n+  /* Responsive */\r\n+  @media (max-width: 500px) {\r\n+    .auth-container {\r\n+      width: 90%;\r\n+      padding: 1.5rem;\r\n+    }\r\n+  }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739124230702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,21 +22,22 @@\n     font-weight: bold;\r\n     color: #333;\r\n     min-height: 30px;\r\n     display: inline-block;\r\n+    white-space: nowrap;\r\n     overflow: hidden;\r\n-    white-space: nowrap;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: blink 0.7s step-end infinite alternate;\r\n+    animation: typing 3s steps(20) infinite alternate, blink 0.7s step-end infinite;\r\n   }\r\n   \r\n+  @keyframes typing {\r\n+    0% { width: 0; }\r\n+    100% { width: 100%; }\r\n+  }\r\n+  \r\n   @keyframes blink {\r\n-    from {\r\n-      border-color: #f4ce14;\r\n-    }\r\n-    to {\r\n-      border-color: transparent;\r\n-    }\r\n+    from { border-color: #f4ce14; }\r\n+    to { border-color: transparent; }\r\n   }\r\n   \r\n   /* Auth Buttons */\r\n   .auth-buttons {\r\n@@ -71,9 +72,9 @@\n   }\r\n   \r\n   .google-icon {\r\n     font-size: 1.2rem;\r\n-    color: #db4437; /* Google Red */\r\n+    color: #db4437;\r\n   }\r\n   \r\n   .auth-btn {\r\n     background: #f4ce14;\r\n@@ -84,8 +85,49 @@\n   .auth-btn:hover {\r\n     background: #ffcc00;\r\n   }\r\n   \r\n+  /* Login Form */\r\n+  .login-form {\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+    gap: 1rem;\r\n+    margin-top: 1rem;\r\n+  }\r\n+  \r\n+  .login-form input {\r\n+    width: 100%;\r\n+    padding: 10px;\r\n+    font-size: 1rem;\r\n+    border: 1px solid #ccc;\r\n+    border-radius: 5px;\r\n+  }\r\n+  \r\n+  .login-form button {\r\n+    background: #f4ce14;\r\n+    color: black;\r\n+    font-size: 1rem;\r\n+    font-weight: bold;\r\n+    border: none;\r\n+    padding: 10px;\r\n+    cursor: pointer;\r\n+    border-radius: 5px;\r\n+    transition: background 0.3s;\r\n+  }\r\n+  \r\n+  .login-form button:hover {\r\n+    background: #ffcc00;\r\n+  }\r\n+  \r\n+  .back-btn {\r\n+    background: #ccc;\r\n+    color: black;\r\n+  }\r\n+  \r\n+  .back-btn:hover {\r\n+    background: #bbb;\r\n+  }\r\n+  \r\n   /* Success Pop-up */\r\n   .popup {\r\n     position: fixed;\r\n     top: 20px;\r\n@@ -106,25 +148,15 @@\n   }\r\n   \r\n   /* Animations */\r\n   @keyframes slideIn {\r\n-    from {\r\n-      opacity: 0;\r\n-      transform: translateX(50px);\r\n-    }\r\n-    to {\r\n-      opacity: 1;\r\n-      transform: translateX(0);\r\n-    }\r\n+    from { opacity: 0; transform: translateX(50px); }\r\n+    to { opacity: 1; transform: translateX(0); }\r\n   }\r\n   \r\n   @keyframes fadeOut {\r\n-    from {\r\n-      opacity: 1;\r\n-    }\r\n-    to {\r\n-      opacity: 0;\r\n-    }\r\n+    from { opacity: 1; }\r\n+    to { opacity: 0; }\r\n   }\r\n   \r\n   /* Responsive */\r\n   @media (max-width: 500px) {\r\n"
+                },
+                {
+                    "date": 1739124265227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 3s steps(20) infinite alternate, blink 0.7s step-end infinite;\r\n+    animation: typing 3s steps(20) infinite , blink 0.7s step-end infinite;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739124283056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,10 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 3s steps(20) infinite , blink 0.7s step-end infinite;\r\n-  }\r\n+    animation: typing 3s steps(20) infinite;\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n     100% { width: 100%; }\r\n"
+                },
+                {
+                    "date": 1739124305192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,10 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 3s steps(20) infinite;\r\n+    animation: typing 3s steps(20) infinite ;\r\n+  }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n     100% { width: 100%; }\r\n"
+                },
+                {
+                    "date": 1739124321684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 3s steps(20) infinite ;\r\n+    animation: typing 5s steps(20) infinite ;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739124348884,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 5s steps(20) infinite ;\r\n+    animation: typing 5s steps(15) infinite ;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739124387863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 5s steps(15) infinite ;\r\n+    animation: typing 5s ;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739124410621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 5s ;\r\n+    animation: typing 5s steps() infinite ;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739124425725,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 5s steps() infinite ;\r\n+    animation: typing 5s steps(5) infinite ;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739124443601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 5s steps(5) infinite ;\r\n+    animation: typing 5s steps(0) infinite ;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739124449363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 5s steps(0) infinite ;\r\n+    animation: typing 15s steps(0) infinite ;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739124470556,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 15s steps(0) infinite ;\r\n+    animation: typing 120s steps(0) infinite ;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739124486941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 120s steps(0) infinite ;\r\n+    animation: typing 30s steps(0) infinite ;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739124591582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 30s steps(0) infinite ;\r\n+    animation: typing 30s steps(5) infinite ;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739124611741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 30s steps(5) infinite ;\r\n+    animation: typing 30s steps(20) infinite ;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739124620704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 30s steps(20) infinite ;\r\n+    animation: typing 30s steps(0) infinite ;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739124803181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,11 @@\n   \r\n   .back-btn:hover {\r\n     background: #bbb;\r\n   }\r\n-  \r\n+  .auth-container{\r\n+    background: #ffcc00;\r\n+  }\r\n   /* Success Pop-up */\r\n   .popup {\r\n     position: fixed;\r\n     top: 20px;\r\n"
+                },
+                {
+                    "date": 1739124844479,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -126,9 +126,9 @@\n   .back-btn:hover {\r\n     background: #bbb;\r\n   }\r\n   .auth-container{\r\n-    background: #ffcc00;\r\n+    \r\n   }\r\n   /* Success Pop-up */\r\n   .popup {\r\n     position: fixed;\r\n"
+                },
+                {
+                    "date": 1739124887315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,16 @@\n   \r\n   .back-btn:hover {\r\n     background: #bbb;\r\n   }\r\n-  .auth-container{\r\n+  .auth-container.signup-container {\r\n+    max-width: 400px;\r\n+    margin: 50px auto;\r\n+    padding: 2rem;\r\n+    text-align: center;\r\n+    background: #fff;\r\n+    border-radius: 10px;\r\n+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\r\n     \r\n   }\r\n   /* Success Pop-up */\r\n   .popup {\r\n"
+                },
+                {
+                    "date": 1739124906974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -130,9 +130,9 @@\n     max-width: 400px;\r\n     margin: 50px auto;\r\n     padding: 2rem;\r\n     text-align: center;\r\n-    background: #fff;\r\n+    background: #79d65d;\r\n     border-radius: 10px;\r\n     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\r\n     \r\n   }\r\n"
+                },
+                {
+                    "date": 1739124948908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,17 +125,10 @@\n   \r\n   .back-btn:hover {\r\n     background: #bbb;\r\n   }\r\n-  .auth-container.signup-container {\r\n-    max-width: 400px;\r\n-    margin: 50px auto;\r\n-    padding: 2rem;\r\n-    text-align: center;\r\n-    background: #79d65d;\r\n-    border-radius: 10px;\r\n-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\r\n-    \r\n+  .Signup-btn{\r\n+    background: #f4ce14;\r\n   }\r\n   /* Success Pop-up */\r\n   .popup {\r\n     position: fixed;\r\n"
+                },
+                {
+                    "date": 1739125161035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,11 +125,14 @@\n   \r\n   .back-btn:hover {\r\n     background: #bbb;\r\n   }\r\n-  .Signup-btn{\r\n+  .a{\r\n     background: #f4ce14;\r\n   }\r\n+  .signup-button {\r\n+    background: #f4ce14;\r\n+  }\r\n   /* Success Pop-up */\r\n   .popup {\r\n     position: fixed;\r\n     top: 20px;\r\n"
+                },
+                {
+                    "date": 1739125175894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -130,9 +130,18 @@\n     background: #f4ce14;\r\n   }\r\n   .signup-button {\r\n     background: #f4ce14;\r\n+    color: black;\r\n+    font-size: 1rem;\r\n+    font-weight: bold;\r\n+    border: none;\r\n+    padding: 10px;\r\n+    cursor: pointer;\r\n+    border-radius: 5px;\r\n+    transition: background 0.3s;\r\n   }\r\n+  }\r\n   /* Success Pop-up */\r\n   .popup {\r\n     position: fixed;\r\n     top: 20px;\r\n"
+                },
+                {
+                    "date": 1739125190073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -139,9 +139,9 @@\n     cursor: pointer;\r\n     border-radius: 5px;\r\n     transition: background 0.3s;\r\n   }\r\n-  }\r\n+  \r\n   /* Success Pop-up */\r\n   .popup {\r\n     position: fixed;\r\n     top: 20px;\r\n"
+                },
+                {
+                    "date": 1739125274453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -128,8 +128,14 @@\n   }\r\n   .a{\r\n     background: #f4ce14;\r\n   }\r\n+  .signup-form{\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+    gap: 1rem;\r\n+    margin-top: 1rem;\r\n+  }\r\n   .signup-button {\r\n     background: #f4ce14;\r\n     color: black;\r\n     font-size: 1rem;\r\n"
+                },
+                {
+                    "date": 1739125569757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 30s steps(0) infinite ;\r\n+    animation: typing 30s steps(20) infinite both, blink 1s infinite;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739125580087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 30s steps(20) infinite both, blink 1s infinite;\r\n+    animation: typing 30s steps(20) infinite ;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739125604081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 30s steps(20) infinite ;\r\n+    animation: typing 30s steps(0) infinite normal, blink 1s steps(1) infinite normal;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739125650375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,18 +16,18 @@\n     margin-bottom: 0.5rem;\r\n   }\r\n   \r\n   /* Typing Effect */\r\n-  .typing-text {\r\n+.typing-text {\r\n     font-size: 1.2rem;\r\n     font-weight: bold;\r\n     color: #333;\r\n     min-height: 30px;\r\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 30s steps(0) infinite normal, blink 1s steps(1) infinite normal;\r\n+    animation: typing 3s steps(20) infinite alternate, blink 0.7s step-end infinite;\r\n   }\r\n   \r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n"
+                },
+                {
+                    "date": 1739125734653,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,21 +25,36 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 3s steps(20) infinite alternate, blink 0.7s step-end infinite;\r\n+    animation: typing 3s steps(20) forwards, pause 5s steps(1) 3s forwards, delete 3s steps(20) 8s forwards, blink 0.7s step-end infinite;\r\n   }\r\n   \r\n+  /* Typing animation */\r\n   @keyframes typing {\r\n     0% { width: 0; }\r\n     100% { width: 100%; }\r\n   }\r\n   \r\n+  /* Pause for 5s after typing */\r\n+  @keyframes pause {\r\n+    0% { width: 100%; }\r\n+    100% { width: 100%; }\r\n+  }\r\n+  \r\n+  /* Delete effect */\r\n+  @keyframes delete {\r\n+    0% { width: 100%; }\r\n+    100% { width: 0; }\r\n+  }\r\n+  \r\n+  /* Blinking cursor */\r\n   @keyframes blink {\r\n     from { border-color: #f4ce14; }\r\n     to { border-color: transparent; }\r\n   }\r\n   \r\n+  \r\n   /* Auth Buttons */\r\n   .auth-buttons {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1739125761024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 3s steps(20) forwards, pause 5s steps(1) 3s forwards, delete 3s steps(20) 8s forwards, blink 0.7s step-end infinite;\r\n+    animation: typing 3s steps(2) forwards, pause 5s steps(1) 3s forwards, delete 3s steps(20) 8s forwards, blink 0.7s step-end infinite;\r\n   }\r\n   \r\n   /* Typing animation */\r\n   @keyframes typing {\r\n"
+                },
+                {
+                    "date": 1739125830881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n     margin-bottom: 0.5rem;\r\n   }\r\n   \r\n   /* Typing Effect */\r\n+/* Typing Effect */\r\n .typing-text {\r\n     font-size: 1.2rem;\r\n     font-weight: bold;\r\n     color: #333;\r\n@@ -25,36 +26,38 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 3s steps(2) forwards, pause 5s steps(1) 3s forwards, delete 3s steps(20) 8s forwards, blink 0.7s step-end infinite;\r\n+    animation: typing 3s steps(20) forwards, pause 5s steps(1) 3s forwards, delete 3s steps(20) 8s forwards, pause 2s steps(1) 11s forwards;\r\n+    animation-iteration-count: infinite;\r\n   }\r\n   \r\n   /* Typing animation */\r\n   @keyframes typing {\r\n-    0% { width: 0; }\r\n-    100% { width: 100%; }\r\n+    from { width: 0; }\r\n+    to { width: 100%; }\r\n   }\r\n   \r\n-  /* Pause for 5s after typing */\r\n+  /* Pause at full text */\r\n   @keyframes pause {\r\n-    0% { width: 100%; }\r\n-    100% { width: 100%; }\r\n+    from { width: 100%; }\r\n+    to { width: 100%; }\r\n   }\r\n   \r\n-  /* Delete effect */\r\n+  /* Deleting effect */\r\n   @keyframes delete {\r\n-    0% { width: 100%; }\r\n-    100% { width: 0; }\r\n+    from { width: 100%; }\r\n+    to { width: 0; }\r\n   }\r\n   \r\n-  /* Blinking cursor */\r\n+  /* Cursor blinking effect */\r\n   @keyframes blink {\r\n     from { border-color: #f4ce14; }\r\n     to { border-color: transparent; }\r\n   }\r\n   \r\n   \r\n+  \r\n   /* Auth Buttons */\r\n   .auth-buttons {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1739125956768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,9 @@\n     font-size: 1.8rem;\r\n     margin-bottom: 0.5rem;\r\n   }\r\n   \r\n-  /* Typing Effect */\r\n-/* Typing Effect */\r\n+ /* Typing Effect */\r\n .typing-text {\r\n     font-size: 1.2rem;\r\n     font-weight: bold;\r\n     color: #333;\r\n@@ -26,38 +25,43 @@\n     display: inline-block;\r\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n-    animation: typing 3s steps(20) forwards, pause 5s steps(1) 3s forwards, delete 3s steps(20) 8s forwards, pause 2s steps(1) 11s forwards;\r\n+    width: 0;\r\n+    animation: typing 4s steps(20, end) 1s forwards, \r\n+               pause 6s steps(1) 5s forwards, \r\n+               delete 4s steps(20, end) 11s forwards, \r\n+               pause 3s steps(1) 15s forwards, \r\n+               blink 0.7s step-end infinite;\r\n     animation-iteration-count: infinite;\r\n   }\r\n   \r\n-  /* Typing animation */\r\n+  /* Typing Animation */\r\n   @keyframes typing {\r\n     from { width: 0; }\r\n     to { width: 100%; }\r\n   }\r\n   \r\n-  /* Pause at full text */\r\n+  /* Pause Effect */\r\n   @keyframes pause {\r\n     from { width: 100%; }\r\n     to { width: 100%; }\r\n   }\r\n   \r\n-  /* Deleting effect */\r\n+  /* Deleting Effect */\r\n   @keyframes delete {\r\n     from { width: 100%; }\r\n     to { width: 0; }\r\n   }\r\n   \r\n-  /* Cursor blinking effect */\r\n+  /* Cursor Blinking */\r\n   @keyframes blink {\r\n-    from { border-color: #f4ce14; }\r\n-    to { border-color: transparent; }\r\n+    50% { border-color: transparent; }\r\n   }\r\n   \r\n   \r\n   \r\n+  \r\n   /* Auth Buttons */\r\n   .auth-buttons {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1739125997933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -57,11 +57,8 @@\n   @keyframes blink {\r\n     50% { border-color: transparent; }\r\n   }\r\n   \r\n-  \r\n-  \r\n-  \r\n   /* Auth Buttons */\r\n   .auth-buttons {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1739126094851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,13 +26,12 @@\n     white-space: nowrap;\r\n     overflow: hidden;\r\n     border-right: 3px solid #f4ce14;\r\n     width: 0;\r\n-    animation: typing 4s steps(20, end) 1s forwards, \r\n-               pause 6s steps(1) 5s forwards, \r\n-               delete 4s steps(20, end) 11s forwards, \r\n-               pause 3s steps(1) 15s forwards, \r\n-               blink 0.7s step-end infinite;\r\n+    animation: typing 5s steps(20, end) forwards, \r\n+               pause 6s steps(1, end) 5s forwards, \r\n+               delete 5s steps(20, end) 11s forwards, \r\n+               pause 3s steps(1, end) 16s forwards;\r\n     animation-iteration-count: infinite;\r\n   }\r\n   \r\n   /* Typing Animation */\r\n@@ -57,8 +56,19 @@\n   @keyframes blink {\r\n     50% { border-color: transparent; }\r\n   }\r\n   \r\n+  /* Ensure cursor blinks at the right time */\r\n+  .typing-text::after {\r\n+    content: \"\";\r\n+    display: inline-block;\r\n+    width: 3px;\r\n+    height: 1em;\r\n+    background-color: #f4ce14;\r\n+    animation: blink 0.7s infinite;\r\n+  }\r\n+  \r\n+  \r\n   /* Auth Buttons */\r\n   .auth-buttons {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1739126292818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,42 +33,21 @@\n                pause 3s steps(1, end) 16s forwards;\r\n     animation-iteration-count: infinite;\r\n   }\r\n   \r\n-  /* Typing Animation */\r\n-  @keyframes typing {\r\n-    from { width: 0; }\r\n-    to { width: 100%; }\r\n+  .typing-text::after {\r\n+    content: \"Login\";\r\n+    animation: swapText 6s infinite;\r\n   }\r\n   \r\n-  /* Pause Effect */\r\n-  @keyframes pause {\r\n-    from { width: 100%; }\r\n-    to { width: 100%; }\r\n+  /* Word Swapping Animation */\r\n+  @keyframes swapText {\r\n+    0% { content: \"Login\"; }\r\n+    50% { content: \"Sign Up\"; }\r\n+    100% { content: \"Login\"; }\r\n   }\r\n   \r\n-  /* Deleting Effect */\r\n-  @keyframes delete {\r\n-    from { width: 100%; }\r\n-    to { width: 0; }\r\n-  }\r\n   \r\n-  /* Cursor Blinking */\r\n-  @keyframes blink {\r\n-    50% { border-color: transparent; }\r\n-  }\r\n-  \r\n-  /* Ensure cursor blinks at the right time */\r\n-  .typing-text::after {\r\n-    content: \"\";\r\n-    display: inline-block;\r\n-    width: 3px;\r\n-    height: 1em;\r\n-    background-color: #f4ce14;\r\n-    animation: blink 0.7s infinite;\r\n-  }\r\n-  \r\n-  \r\n   /* Auth Buttons */\r\n   .auth-buttons {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1739126447929,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,29 +15,12 @@\n     font-size: 1.8rem;\r\n     margin-bottom: 0.5rem;\r\n   }\r\n   \r\n- /* Typing Effect */\r\n-.typing-text {\r\n-    font-size: 1.2rem;\r\n-    font-weight: bold;\r\n-    color: #333;\r\n-    min-height: 30px;\r\n-    display: inline-block;\r\n-    white-space: nowrap;\r\n-    overflow: hidden;\r\n-    border-right: 3px solid #f4ce14;\r\n-    width: 0;\r\n-    animation: typing 5s steps(20, end) forwards, \r\n-               pause 6s steps(1, end) 5s forwards, \r\n-               delete 5s steps(20, end) 11s forwards, \r\n-               pause 3s steps(1, end) 16s forwards;\r\n-    animation-iteration-count: infinite;\r\n-  }\r\n-  \r\n-  .typing-text::after {\r\n+ /* Word Swapping Effect */\r\n+.typing-text::after {\r\n     content: \"Login\";\r\n-    animation: swapText 6s infinite;\r\n+    animation: swapText 6s infinite ease-in-out;\r\n   }\r\n   \r\n   /* Word Swapping Animation */\r\n   @keyframes swapText {\r\n"
+                },
+                {
+                    "date": 1739126526256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,22 +15,27 @@\n     font-size: 1.8rem;\r\n     margin-bottom: 0.5rem;\r\n   }\r\n   \r\n- /* Word Swapping Effect */\r\n+ /* Word Swapping Effect with Blinker */\r\n .typing-text::after {\r\n-    content: \"Login\";\r\n-    animation: swapText 6s infinite ease-in-out;\r\n+    content: \"Login |\";\r\n+    animation: swapText 6s infinite ease-in-out, blink 0.7s step-end infinite;\r\n   }\r\n   \r\n   /* Word Swapping Animation */\r\n   @keyframes swapText {\r\n-    0% { content: \"Login\"; }\r\n-    50% { content: \"Sign Up\"; }\r\n-    100% { content: \"Login\"; }\r\n+    0% { content: \"Login |\"; }\r\n+    50% { content: \"Sign Up |\"; }\r\n+    100% { content: \"Login |\"; }\r\n   }\r\n   \r\n+  /* Blinking Cursor */\r\n+  @keyframes blink {\r\n+    50% { opacity: 0; }\r\n+  }\r\n   \r\n+  \r\n   /* Auth Buttons */\r\n   .auth-buttons {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1739126796553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,27 +15,35 @@\n     font-size: 1.8rem;\r\n     margin-bottom: 0.5rem;\r\n   }\r\n   \r\n- /* Word Swapping Effect with Blinker */\r\n+ /* Word Swapping Effect */\r\n .typing-text::after {\r\n-    content: \"Login |\";\r\n-    animation: swapText 6s infinite ease-in-out, blink 0.7s step-end infinite;\r\n+    content: \"Login\";\r\n+    animation: swapText 6s infinite ease-in-out;\r\n   }\r\n   \r\n+  /* Blinking Cursor */\r\n+  .typing-text::before {\r\n+    content: \"|\";\r\n+    margin-left: 5px;\r\n+    animation: blink 0.7s step-end infinite;\r\n+  }\r\n+  \r\n   /* Word Swapping Animation */\r\n   @keyframes swapText {\r\n-    0% { content: \"Login |\"; }\r\n-    50% { content: \"Sign Up |\"; }\r\n-    100% { content: \"Login |\"; }\r\n+    0% { content: \"Login\"; }\r\n+    50% { content: \"Sign Up\"; }\r\n+    100% { content: \"Login\"; }\r\n   }\r\n   \r\n-  /* Blinking Cursor */\r\n+  /* Cursor Blinking Effect */\r\n   @keyframes blink {\r\n     50% { opacity: 0; }\r\n   }\r\n   \r\n   \r\n+  \r\n   /* Auth Buttons */\r\n   .auth-buttons {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1739126848498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,19 +22,18 @@\n     animation: swapText 6s infinite ease-in-out;\r\n   }\r\n   \r\n   /* Blinking Cursor */\r\n-  .typing-text::before {\r\n-    content: \"|\";\r\n-    margin-left: 5px;\r\n-    animation: blink 0.7s step-end infinite;\r\n+  .typing-text::after {\r\n+    content: \"Login |\";\r\n+    animation: swapText 6s infinite ease-in-out, blink 0.7s step-end infinite;\r\n   }\r\n   \r\n   /* Word Swapping Animation */\r\n   @keyframes swapText {\r\n-    0% { content: \"Login\"; }\r\n-    50% { content: \"Sign Up\"; }\r\n-    100% { content: \"Login\"; }\r\n+    0% { content: \"Login |\"; }\r\n+    50% { content: \"Sign Up |\"; }\r\n+    100% { content: \"Login |\"; }\r\n   }\r\n   \r\n   /* Cursor Blinking Effect */\r\n   @keyframes blink {\r\n@@ -42,8 +41,9 @@\n   }\r\n   \r\n   \r\n   \r\n+  \r\n   /* Auth Buttons */\r\n   .auth-buttons {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1739126858912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,33 +17,33 @@\n   }\r\n   \r\n  /* Word Swapping Effect */\r\n .typing-text::after {\r\n-    content: \"Login\";\r\n-    animation: swapText 6s infinite ease-in-out;\r\n-  }\r\n+  content: \"Login\";\r\n+  animation: swapText 6s infinite ease-in-out;\r\n+}\r\n+\r\n+/* Blinking Cursor */\r\n+.typing-text::after {\r\n+  content: \"Login |\";\r\n+  animation: swapText 6s infinite ease-in-out, blink 0.7s step-end infinite;\r\n+}\r\n+\r\n+/* Word Swapping Animation */\r\n+@keyframes swapText {\r\n+  0% { content: \"Login |\"; }\r\n+  50% { content: \"Sign Up |\"; }\r\n+  100% { content: \"Login |\"; }\r\n+}\r\n+\r\n+/* Cursor Blinking Effect */\r\n+@keyframes blink {\r\n+  50% { opacity: 0; }\r\n+}\r\n+\r\n   \r\n-  /* Blinking Cursor */\r\n-  .typing-text::after {\r\n-    content: \"Login |\";\r\n-    animation: swapText 6s infinite ease-in-out, blink 0.7s step-end infinite;\r\n-  }\r\n   \r\n-  /* Word Swapping Animation */\r\n-  @keyframes swapText {\r\n-    0% { content: \"Login |\"; }\r\n-    50% { content: \"Sign Up |\"; }\r\n-    100% { content: \"Login |\"; }\r\n-  }\r\n   \r\n-  /* Cursor Blinking Effect */\r\n-  @keyframes blink {\r\n-    50% { opacity: 0; }\r\n-  }\r\n-  \r\n-  \r\n-  \r\n-  \r\n   /* Auth Buttons */\r\n   .auth-buttons {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1739126871368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,33 +17,33 @@\n   }\r\n   \r\n  /* Word Swapping Effect */\r\n .typing-text::after {\r\n-  content: \"Login\";\r\n-  animation: swapText 6s infinite ease-in-out;\r\n-}\r\n-\r\n-/* Blinking Cursor */\r\n-.typing-text::after {\r\n-  content: \"Login |\";\r\n-  animation: swapText 6s infinite ease-in-out, blink 0.7s step-end infinite;\r\n-}\r\n-\r\n-/* Word Swapping Animation */\r\n-@keyframes swapText {\r\n-  0% { content: \"Login |\"; }\r\n-  50% { content: \"Sign Up |\"; }\r\n-  100% { content: \"Login |\"; }\r\n-}\r\n-\r\n-/* Cursor Blinking Effect */\r\n-@keyframes blink {\r\n-  50% { opacity: 0; }\r\n-}\r\n-\r\n+    content: \"Login\";\r\n+    animation: swapText 6s infinite ease-in-out;\r\n+  }\r\n   \r\n+  /* Blinking Cursor */\r\n+  .typing-text::before {\r\n+    content: \"|\";\r\n+    margin-left: 5px;\r\n+    animation: blink 0.7s step-end infinite;\r\n+  }\r\n   \r\n+  /* Word Swapping Animation */\r\n+  @keyframes swapText {\r\n+    0% { content: \"Login\"; }\r\n+    50% { content: \"Sign Up\"; }\r\n+    100% { content: \"Login\"; }\r\n+  }\r\n   \r\n+  /* Cursor Blinking Effect */\r\n+  @keyframes blink {\r\n+    50% { opacity: 0; }\r\n+  }\r\n+  \r\n+  \r\n+  \r\n   /* Auth Buttons */\r\n   .auth-buttons {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1739126896113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   }\r\n   \r\n   /* Blinking Cursor */\r\n   .typing-text::before {\r\n-    content: \"|\";\r\n+    content: \"login |\";\r\n     margin-left: 5px;\r\n     animation: blink 0.7s step-end infinite;\r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1739126903097,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n   }\r\n   \r\n   /* Blinking Cursor */\r\n   .typing-text::before {\r\n-    content: \"login |\";\r\n+    content: \"|\";\r\n     margin-left: 5px;\r\n     animation: blink 0.7s step-end infinite;\r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1739127007485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n   \r\n   /* Blinking Cursor */\r\n   .typing-text::before {\r\n     content: \"|\";\r\n-    margin-left: 5px;\r\n+    margin-rigth: 5px;\r\n     animation: blink 0.7s step-end infinite;\r\n   }\r\n   \r\n   /* Word Swapping Animation */\r\n"
+                },
+                {
+                    "date": 1739127017504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n   \r\n   /* Blinking Cursor */\r\n   .typing-text::before {\r\n     content: \"|\";\r\n-    margin-rigth: 5px;\r\n+    margin-right: 5px;\r\n     animation: blink 0.7s step-end infinite;\r\n   }\r\n   \r\n   /* Word Swapping Animation */\r\n"
+                },
+                {
+                    "date": 1739127062718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,9 @@\n   }\r\n   \r\n   /* Blinking Cursor */\r\n   .typing-text::before {\r\n+    content: align-right;\r\n     content: \"|\";\r\n     margin-right: 5px;\r\n     animation: blink 0.7s step-end infinite;\r\n   }\r\n"
+                },
+                {
+                    "date": 1739127089262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,15 +17,14 @@\n   }\r\n   \r\n  /* Word Swapping Effect */\r\n .typing-text::after {\r\n-    content: \"Login\";\r\n+    content: \"Login |\";\r\n     animation: swapText 6s infinite ease-in-out;\r\n   }\r\n   \r\n   /* Blinking Cursor */\r\n   .typing-text::before {\r\n-    content: align-right;\r\n     content: \"|\";\r\n     margin-right: 5px;\r\n     animation: blink 0.7s step-end infinite;\r\n   }\r\n"
+                },
+                {
+                    "date": 1739127411894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,20 +16,20 @@\n     margin-bottom: 0.5rem;\r\n   }\r\n   \r\n  /* Word Swapping Effect */\r\n-.typing-text::after {\r\n-    content: \"Login |\";\r\n-    animation: swapText 6s infinite ease-in-out;\r\n-  }\r\n-  \r\n-  /* Blinking Cursor */\r\n-  .typing-text::before {\r\n+ /* Blinking Cursor */\r\n+ .typing-text::before {\r\n     content: \"|\";\r\n     margin-right: 5px;\r\n     animation: blink 0.7s step-end infinite;\r\n   }\r\n+.typing-text::after {\r\n+    content: \"Login\";\r\n+    animation: swapText 6s infinite ease-in-out;\r\n+  }\r\n   \r\n+  \r\n   /* Word Swapping Animation */\r\n   @keyframes swapText {\r\n     0% { content: \"Login\"; }\r\n     50% { content: \"Sign Up\"; }\r\n"
+                },
+                {
+                    "date": 1739127909526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,34 +16,35 @@\n     margin-bottom: 0.5rem;\r\n   }\r\n   \r\n  /* Word Swapping Effect */\r\n- /* Blinking Cursor */\r\n- .typing-text::before {\r\n-    content: \"|\";\r\n-    margin-right: 5px;\r\n-    animation: blink 0.7s step-end infinite;\r\n-  }\r\n .typing-text::after {\r\n-    content: \"Login\";\r\n+    content: \"Login\"; /* Default text */\r\n     animation: swapText 6s infinite ease-in-out;\r\n   }\r\n   \r\n+  /* Cursor Blinking After Text */\r\n+  .typing-text::after {\r\n+    content: \"Login |\";\r\n+    animation: swapText 6s infinite ease-in-out, blink 0.7s step-end infinite;\r\n+  }\r\n   \r\n   /* Word Swapping Animation */\r\n   @keyframes swapText {\r\n-    0% { content: \"Login\"; }\r\n-    50% { content: \"Sign Up\"; }\r\n-    100% { content: \"Login\"; }\r\n+    0% { content: \"Login |\"; }\r\n+    50% { content: \"Sign Up |\"; }\r\n+    100% { content: \"Login |\"; }\r\n   }\r\n   \r\n   /* Cursor Blinking Effect */\r\n   @keyframes blink {\r\n-    50% { opacity: 0; }\r\n+    50% { content: \"Login \"; } /* Cursor disappears */\r\n+    100% { content: \"Login |\"; } /* Cursor appears */\r\n   }\r\n   \r\n   \r\n   \r\n+  \r\n   /* Auth Buttons */\r\n   .auth-buttons {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1739127933679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n   \r\n   /* Cursor Blinking Effect */\r\n   @keyframes blink {\r\n     50% { content: \"Login \"; } /* Cursor disappears */\r\n-    100% { content: \"Login |\"; } /* Cursor appears */\r\n+    100% { content: \"sign up |\"; } /* Cursor appears */\r\n   }\r\n   \r\n   \r\n   \r\n"
+                },
+                {
+                    "date": 1739127953516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,35 +16,34 @@\n     margin-bottom: 0.5rem;\r\n   }\r\n   \r\n  /* Word Swapping Effect */\r\n+ /* Blinking Cursor */\r\n+ .typing-text::before {\r\n+    content: \"|\";\r\n+    margin-right: 5px;\r\n+    animation: blink 0.7s step-end infinite;\r\n+  }\r\n .typing-text::after {\r\n-    content: \"Login\"; /* Default text */\r\n+    content: \"Login\";\r\n     animation: swapText 6s infinite ease-in-out;\r\n   }\r\n   \r\n-  /* Cursor Blinking After Text */\r\n-  .typing-text::after {\r\n-    content: \"Login |\";\r\n-    animation: swapText 6s infinite ease-in-out, blink 0.7s step-end infinite;\r\n-  }\r\n   \r\n   /* Word Swapping Animation */\r\n   @keyframes swapText {\r\n-    0% { content: \"Login |\"; }\r\n-    50% { content: \"Sign Up |\"; }\r\n-    100% { content: \"Login |\"; }\r\n+    0% { content: \"Login\"; }\r\n+    50% { content: \"Sign Up\"; }\r\n+    100% { content: \"Login\"; }\r\n   }\r\n   \r\n   /* Cursor Blinking Effect */\r\n   @keyframes blink {\r\n-    50% { content: \"Login \"; } /* Cursor disappears */\r\n-    100% { content: \"sign up |\"; } /* Cursor appears */\r\n+    50% { opacity: 0; }\r\n   }\r\n   \r\n   \r\n   \r\n-  \r\n   /* Auth Buttons */\r\n   .auth-buttons {\r\n     display: flex;\r\n     flex-direction: column;\r\n"
+                }
+            ],
+            "date": 1739105071671,
+            "name": "Commit-0",
+            "content": ".auth-container {\r\n    max-width: 400px;\r\n    margin: auto;\r\n    padding: 2rem;\r\n    text-align: center;\r\n    background: #fff;\r\n    border-radius: 10px;\r\n    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\r\n  }\r\n  \r\n  .auth-container h2 {\r\n    color: #495e57;\r\n  }\r\n  \r\n  .auth-container form {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 1rem;\r\n  }\r\n  \r\n  .auth-container input {\r\n    width: 100%;\r\n    padding: 10px;\r\n    font-size: 1rem;\r\n    border: 1px solid #ccc;\r\n    border-radius: 5px;\r\n  }\r\n  \r\n  .auth-container button {\r\n    background: #f4ce14;\r\n    color: black;\r\n    font-size: 1rem;\r\n    font-weight: bold;\r\n    border: none;\r\n    padding: 10px;\r\n    cursor: pointer;\r\n    border-radius: 5px;\r\n    transition: background 0.3s;\r\n  }\r\n  \r\n  .auth-container button:hover {\r\n    background: #ffcc00;\r\n  }\r\n  \r\n  .google-btn {\r\n    background: #db4437;\r\n    color: white;\r\n    border: none;\r\n    padding: 10px;\r\n    margin-top: 10px;\r\n    cursor: pointer;\r\n    width: 100%;\r\n    font-size: 1rem;\r\n    border-radius: 5px;\r\n  }\r\n  \r\n  .facebook-btn {\r\n    background: #4267b2;\r\n    color: white;\r\n    border: none;\r\n    padding: 10px;\r\n    margin-top: 10px;\r\n    cursor: pointer;\r\n    width: 100%;\r\n    font-size: 1rem;\r\n    border-radius: 5px;\r\n  }\r\n  "
+        }
+    ]
+}

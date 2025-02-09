@@ -1,0 +1,66 @@
+{
+    "sourceFile": "src/App.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1739105147394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739105327800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,16 +6,18 @@\n import ConfirmedReservation from \"./components/pages/Reservations/confirmedReservation\"; // This component\r\n import NotFound from \"./components/pages/NotFound/NotFound\";\r\n import Login from \"./pages/auth/Login\";\r\n import Signup from \"./pages/auth/Signup\";\r\n+import Profile from \"./components/pages/auth/Profile\";  \r\n \r\n const App = () => {\r\n   return (\r\n     <>\r\n       <Layout>\r\n         <Routes>\r\n           <Route path=\"/login\" element={<Login />} />\r\n           <Route path=\"/signup\" element={<Signup />} />\r\n+          <Route path=\"/profile\" element={<Profile />} />\r\n           <Route path=\"/\" element={<Home />} />\r\n           <Route path=\"/home\" element={<Home />} />\r\n           <Route path=\"/menu\" element={<Menu />} />\r\n           <Route path=\"/reservations\" element={<Reservations />} />\r\n"
+                },
+                {
+                    "date": 1739105348648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n   return (\r\n     <>\r\n       <Layout>\r\n         <Routes>\r\n-          <Route path=\"/login\" element={<Login />} />\r\n-          <Route path=\"/signup\" element={<Signup />} />\r\n-          <Route path=\"/profile\" element={<Profile />} />\r\n+        <Route path=\"/login\" element={user ? <Navigate to=\"/\" /> : <Login />} />\r\n+        <Route path=\"/signup\" element={user ? <Navigate to=\"/\" /> : <Signup />} />\r\n+        <Route path=\"/profile\" element={user ? <Profile /> : <Navigate to=\"/login\" />} />\r\n           <Route path=\"/\" element={<Home />} />\r\n           <Route path=\"/home\" element={<Home />} />\r\n           <Route path=\"/menu\" element={<Menu />} />\r\n           <Route path=\"/reservations\" element={<Reservations />} />\r\n"
+                },
+                {
+                    "date": 1739105391752,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n import Menu from \"./components/pages/Menu/menu\";\r\n import Reservations from \"./components/pages/Reservations/Reservations\";\r\n import ConfirmedReservation from \"./components/pages/Reservations/confirmedReservation\"; // This component\r\n import NotFound from \"./components/pages/NotFound/NotFound\";\r\n-import Login from \"./pages/auth/Login\";\r\n-import Signup from \"./pages/auth/Signup\";\r\n+import Login from \"./components./pages/auth/Login\";\r\n+import Signup from \"./components./pages/auth/Signup\";\r\n import Profile from \"./components/pages/auth/Profile\";  \r\n \r\n const App = () => {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1739105597736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import Menu from \"./components/pages/Menu/menu\";\r\n import Reservations from \"./components/pages/Reservations/Reservations\";\r\n import ConfirmedReservation from \"./components/pages/Reservations/confirmedReservation\"; // This component\r\n import NotFound from \"./components/pages/NotFound/NotFound\";\r\n-import Login from \"./components./pages/auth/Login\";\r\n+import Login from \"./components/pages/auth/Login\";\r\n import Signup from \"./components./pages/auth/Signup\";\r\n import Profile from \"./components/pages/auth/Profile\";  \r\n \r\n const App = () => {\r\n"
+                },
+                {
+                    "date": 1739105605866,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import Reservations from \"./components/pages/Reservations/Reservations\";\r\n import ConfirmedReservation from \"./components/pages/Reservations/confirmedReservation\"; // This component\r\n import NotFound from \"./components/pages/NotFound/NotFound\";\r\n import Login from \"./components/pages/auth/Login\";\r\n-import Signup from \"./components./pages/auth/Signup\";\r\n+import Signup from \"./components/pages/auth/Signup\";\r\n import Profile from \"./components/pages/auth/Profile\";  \r\n \r\n const App = () => {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1739105620397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n import ConfirmedReservation from \"./components/pages/Reservations/confirmedReservation\"; // This component\r\n import NotFound from \"./components/pages/NotFound/NotFound\";\r\n import Login from \"./components/pages/auth/Login\";\r\n import Signup from \"./components/pages/auth/Signup\";\r\n-import Profile from \"./components/pages/auth/Profile\";  \r\n+import Profile from \"./components/pages/auth/Profile\";\r\n \r\n const App = () => {\r\n   return (\r\n     <>\r\n"
+                },
+                {
+                    "date": 1739105857024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,11 +13,11 @@\n   return (\r\n     <>\r\n       <Layout>\r\n         <Routes>\r\n-        <Route path=\"/login\" element={user ? <Navigate to=\"/\" /> : <Login />} />\r\n-        <Route path=\"/signup\" element={user ? <Navigate to=\"/\" /> : <Signup />} />\r\n-        <Route path=\"/profile\" element={user ? <Profile /> : <Navigate to=\"/login\" />} />\r\n+          <Route path=\"/login\" element={<Login />} />\r\n+          <Route path=\"/signup\" element={<Signup />} />\r\n+          <Route path=\"/profile\" element={<Profile />} />\r\n           <Route path=\"/\" element={<Home />} />\r\n           <Route path=\"/home\" element={<Home />} />\r\n           <Route path=\"/menu\" element={<Menu />} />\r\n           <Route path=\"/reservations\" element={<Reservations />} />\r\n"
+                },
+                {
+                    "date": 1739109229134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,24 @@\n import NotFound from \"./components/pages/NotFound/NotFound\";\r\n import Login from \"./components/pages/auth/Login\";\r\n import Signup from \"./components/pages/auth/Signup\";\r\n import Profile from \"./components/pages/auth/Profile\";\r\n+function App() {\r\n+  const [user, setUser] = useState(null);\r\n \r\n+  useEffect(() => {\r\n+    supabase.auth.getUser().then(({ data, error }) => {\r\n+      if (!error) setUser(data);\r\n+    });\r\n+\r\n+    const { data: authListener } = supabase.auth.onAuthStateChange((event, session) => {\r\n+      setUser(session?.user || null);\r\n+    });\r\n+\r\n+    return () => {\r\n+      authListener.subscription.unsubscribe();\r\n+    };\r\n+  }, []);\r\n const App = () => {\r\n   return (\r\n     <>\r\n       <Layout>\r\n"
+                },
+                {
+                    "date": 1739109240367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,6 +45,6 @@\n       </Layout>\r\n     </>\r\n   );\r\n };\r\n-\r\n+}\r\n export default App;\r\n"
+                },
+                {
+                    "date": 1739109334912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import { useEffect, useState } from \"react\";\r\n+import { supabase } from \"../../../supabaseConfig\";\r\n import { Route, Routes } from \"react-router-dom\";\r\n import Layout from \"./components/layout/Layout\";\r\n import Home from \"./components/pages/Home/Home\";\r\n import Menu from \"./components/pages/Menu/menu\";\r\n@@ -7,9 +9,9 @@\n import NotFound from \"./components/pages/NotFound/NotFound\";\r\n import Login from \"./components/pages/auth/Login\";\r\n import Signup from \"./components/pages/auth/Signup\";\r\n import Profile from \"./components/pages/auth/Profile\";\r\n-function App() {\r\n+const App = () => {\r\n   const [user, setUser] = useState(null);\r\n \r\n   useEffect(() => {\r\n     supabase.auth.getUser().then(({ data, error }) => {\r\n@@ -23,9 +25,9 @@\n     return () => {\r\n       authListener.subscription.unsubscribe();\r\n     };\r\n   }, []);\r\n-const App = () => {\r\n+\r\n   return (\r\n     <>\r\n       <Layout>\r\n         <Routes>\r\n"
+                },
+                {
+                    "date": 1739109343000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,6 +47,5 @@\n       </Layout>\r\n     </>\r\n   );\r\n };\r\n-}\r\n export default App;\r\n"
+                },
+                {
+                    "date": 1739109369760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import { useEffect, useState } from \"react\";\r\n-import { supabase } from \"../../../supabaseConfig\";\r\n+import { supabase } from \"./supabaseConfig\";\r\n import { Route, Routes } from \"react-router-dom\";\r\n import Layout from \"./components/layout/Layout\";\r\n import Home from \"./components/pages/Home/Home\";\r\n import Menu from \"./components/pages/Menu/menu\";\r\n"
+                }
+            ],
+            "date": 1739105147394,
+            "name": "Commit-0",
+            "content": "import { Route, Routes } from \"react-router-dom\";\r\nimport Layout from \"./components/layout/Layout\";\r\nimport Home from \"./components/pages/Home/Home\";\r\nimport Menu from \"./components/pages/Menu/menu\";\r\nimport Reservations from \"./components/pages/Reservations/Reservations\";\r\nimport ConfirmedReservation from \"./components/pages/Reservations/confirmedReservation\"; // This component\r\nimport NotFound from \"./components/pages/NotFound/NotFound\";\r\nimport Login from \"./pages/auth/Login\";\r\nimport Signup from \"./pages/auth/Signup\";\r\n\r\nconst App = () => {\r\n  return (\r\n    <>\r\n      <Layout>\r\n        <Routes>\r\n          <Route path=\"/login\" element={<Login />} />\r\n          <Route path=\"/signup\" element={<Signup />} />\r\n          <Route path=\"/\" element={<Home />} />\r\n          <Route path=\"/home\" element={<Home />} />\r\n          <Route path=\"/menu\" element={<Menu />} />\r\n          <Route path=\"/reservations\" element={<Reservations />} />\r\n          <Route\r\n            path=\"/confirmedReservation\"\r\n            element={<ConfirmedReservation />}\r\n          />\r\n          <Route path=\"*\" element={<NotFound />} />\r\n        </Routes>\r\n      </Layout>\r\n    </>\r\n  );\r\n};\r\n\r\nexport default App;\r\n"
+        }
+    ]
+}
