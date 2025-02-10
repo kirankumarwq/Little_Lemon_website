@@ -33,7 +33,7 @@
 }
 .login-img {
   width: 10rem; /* Adjust size */
-  height: auto;
+  height: 10 rem;
 }
 
 /* Login Button */
@@ -47,7 +47,7 @@
   padding: 8px 15px;
   font-size: 1rem;
   font-weight: bold;
-  text-align:justify;
+  text-align:center;
   border: none;
   cursor: pointer;
   border-radius: 50px;
@@ -130,8 +130,9 @@
 
 /* Prevent Mobile Profile Pic from Overlapping */
 @media (max-width: 768px) {
-  .login-btn {
+  .login-btn span {
     padding: 5px;
+    margin-left: 8px;
   }
 }
 
@@ -162,5 +163,12 @@
 @media (min-width: 768px) {
   .login-btn {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    position:static; /* or static */
+    margin-bottom: 0;   /* Remove any extra margin at the bottom */
+    padding-bottom: 5px; /* Reduce bottom padding if necessary */
   }
 }

@@ -32,7 +32,7 @@ header {
 }
 
 main {
-  padding-top: 10rem;
+  padding-top: 6rem;
   min-height: calc(100vh - 6.25rem - 18rem);
 }
 
@@ -147,4 +147,10 @@ img {
   font-size: 1.2rem;
   color: #666;
   max-width: 500px; /* Restrict width for better readability */
+}
+@media (max-width: 768px) {
+main#home {
+  margin-top: 0;        /* Remove top margin */
+  padding-top: 10px;    /* Minimal top padding if needed */
+}
 }

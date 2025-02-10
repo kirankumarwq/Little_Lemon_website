@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 41,
+            "activePatchIndex": 46,
             "patches": [
                 {
                     "date": 1738863606835,
@@ -172,6 +172,26 @@
                 {
                     "date": 1739198775963,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n     };\r\n   }, []);\r\n \r\n   // ✅ Use user profile pic if available, otherwise generate a random UI avatar\r\n-  const profilePic = user?.user_metadata?.avatar_url || `https://api.dicebear.com/9.x/initials/svg?seed=${user?.id || \"login.png\"}`;\r\n+  const profilePic = user?.user_metadata?.avatar_url || `https://api.dicebear.com/9.x/rings/svg?seed=${user?.id || \"login.png\"}`;\r\n \r\n   const navLinks = [\r\n     { name: \"Home\", path: \"/#home\", hashLink: true },\r\n     { name: \"About\", path: \"/#about\", hashLink: true },\r\n"
+                },
+                {
+                    "date": 1739199318673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import Header from \"./Header\";\r\n import Footer from \"./Footer\";\r\n import { supabase } from \"../../supabaseConfig\";\r\n import { useState, useEffect } from \"react\";\r\n+import BottomNav from \"./BottomNav\";\r\n \r\n const Layout = ({ children }) => {\r\n   const [user, setUser] = useState(null);\r\n \r\n@@ -52,8 +53,9 @@\n     <>\r\n       <Header navLinks={navLinks} mobileNavLink={mobileNavLink} />\r\n       <main id=\"home\">{children}</main>\r\n       <Footer navLinks={navLinks} />\r\n+      <BottomNav/>\r\n     </>\r\n   );\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1739206224979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n     };\r\n   }, []);\r\n \r\n   // ✅ Use user profile pic if available, otherwise generate a random UI avatar\r\n-  const profilePic = user?.user_metadata?.avatar_url || `https://api.dicebear.com/9.x/rings/svg?seed=${user?.id || \"login.png\"}`;\r\n+  const profilePic = user?.user_metadata?.avatar_url || `https://api.dicebear.com/9.x/rings/svg?seed=${user?.id || \"default\"}`;\r\n \r\n   const navLinks = [\r\n     { name: \"Home\", path: \"/#home\", hashLink: true },\r\n     { name: \"About\", path: \"/#about\", hashLink: true },\r\n"
+                },
+                {
+                    "date": 1739206833256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { supabase } from \"../../supabaseConfig\";\r\n import { useState, useEffect } from \"react\";\r\n import BottomNav from \"./BottomNav\";\r\n \r\n+\r\n const Layout = ({ children }) => {\r\n   const [user, setUser] = useState(null);\r\n \r\n   useEffect(() => {\r\n@@ -25,9 +26,9 @@\n     };\r\n   }, []);\r\n \r\n   // ✅ Use user profile pic if available, otherwise generate a random UI avatar\r\n-  const profilePic = user?.user_metadata?.avatar_url || `https://api.dicebear.com/9.x/rings/svg?seed=${user?.id || \"default\"}`;\r\n+  const profilePic = user?.user_metadata?.avatar_url || `https://api.dicebear.com/9.x/rings/svg?seed=${user?.id }`;\r\n \r\n   const navLinks = [\r\n     { name: \"Home\", path: \"/#home\", hashLink: true },\r\n     { name: \"About\", path: \"/#about\", hashLink: true },\r\n"
+                },
+                {
+                    "date": 1739207655812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n     navLinks.push({ name: \"Login\", path: \"/login\", hashLink: false });\r\n   }\r\n \r\n   const mobileNavLink = { \r\n-    name: user ? \"\" : \"Login\", \r\n+    name: user ? \"\" : \"LOGIN\", \r\n     path: user ? \"/profile\" : \"/login\", \r\n     hashLink: false, \r\n     icon: profilePic,  // ✅ Always provides a valid avatar\r\n   };\r\n"
+                },
+                {
+                    "date": 1739207666809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n     navLinks.push({ name: \"Login\", path: \"/login\", hashLink: false });\r\n   }\r\n \r\n   const mobileNavLink = { \r\n-    name: user ? \"\" : \"LOGIN\", \r\n+    name: user ? \"\" : \" LOGIN\", \r\n     path: user ? \"/profile\" : \"/login\", \r\n     hashLink: false, \r\n     icon: profilePic,  // ✅ Always provides a valid avatar\r\n   };\r\n"
                 }
             ],
             "date": 1738863606835,
