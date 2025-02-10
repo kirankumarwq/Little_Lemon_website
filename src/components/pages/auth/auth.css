@@ -25,7 +25,7 @@
   }
 .typing-text::after {
     content: "Login";
-    animation: swapText 6s infinite ease-in-out;
+    animation: swapText 8s infinite ease-in-out;
   }
   
   
@@ -161,6 +161,9 @@
     padding: 15px 20px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -171,15 +174,26 @@
     font-size: 1.5rem;
   }
   
-  /* Animations */
   @keyframes slideIn {
-    from { opacity: 0; transform: translateX(50px); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
   
   @keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(50px);
+    }
   }
   
   /* Responsive */
