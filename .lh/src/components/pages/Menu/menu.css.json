@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 20,
+            "activePatchIndex": 36,
             "patches": [
                 {
                     "date": 1738918899052,
@@ -88,6 +88,70 @@
                 {
                     "date": 1738920096586,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n   text-align: center;\r\n   border-bottom: 4px solid #27ae60;\r\n   padding-bottom: 5px;\r\n   margin-top: 10px;\r\n-  margin-bottom: 3px;\r\n+  margin-bottom: 10px;\r\n   width: fit-content;\r\n   margin-left: auto;\r\n   margin-right: auto;\r\n }\r\n"
+                },
+                {
+                    "date": 1739380148920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n .menu-section {\r\n   display: grid;\r\n   grid-template-columns: repeat(2, 1fr);\r\n   gap: 40px;\r\n-  max-width: 1200px;\r\n+  max-width: 768px;\r\n   margin: auto;\r\n   justify-content: center;\r\n   align-items: stretch;\r\n }\r\n"
+                },
+                {
+                    "date": 1739380177149,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n .menu-section {\r\n   display: grid;\r\n   grid-template-columns: repeat(2, 1fr);\r\n   gap: 40px;\r\n-  max-width: 768px;\r\n+  max-width: 600px;\r\n   margin: auto;\r\n   justify-content: center;\r\n   align-items: stretch;\r\n }\r\n"
+                },
+                {
+                    "date": 1739380207397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n .menu-section {\r\n   display: grid;\r\n   grid-template-columns: repeat(2, 1fr);\r\n   gap: 40px;\r\n-  max-width: 600px;\r\n+  max-width: 300px;\r\n   margin: auto;\r\n   justify-content: center;\r\n   align-items: stretch;\r\n }\r\n"
+                },
+                {
+                    "date": 1739380237545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,12 +19,12 @@\n .menu-section {\r\n   display: grid;\r\n   grid-template-columns: repeat(2, 1fr);\r\n   gap: 40px;\r\n-  max-width: 300px;\r\n+  max-width: 1200px;\r\n   margin: auto;\r\n   justify-content: center;\r\n-  align-items: stretch;\r\n+  align-items: center;\r\n }\r\n \r\n /* Section Headers (Category Titles) */\r\n .article-title {\r\n"
+                },
+                {
+                    "date": 1739380246223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n .menu-section {\r\n   display: grid;\r\n   grid-template-columns: repeat(2, 1fr);\r\n   gap: 40px;\r\n-  max-width: 1200px;\r\n+  max-width: 300px;\r\n   margin: auto;\r\n   justify-content: center;\r\n   align-items: center;\r\n }\r\n"
+                },
+                {
+                    "date": 1739380272980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \r\n /* Menu Sections (Evenly Distributed) */\r\n .menu-section {\r\n   display: grid;\r\n-  grid-template-columns: repeat(2, 1fr);\r\n+  grid-template-columns: repeat(1, 1fr);\r\n   gap: 40px;\r\n   max-width: 300px;\r\n   margin: auto;\r\n   justify-content: center;\r\n"
+                },
+                {
+                    "date": 1739380299980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,15 +16,15 @@\n }\r\n \r\n /* Menu Sections (Evenly Distributed) */\r\n .menu-section {\r\n-  display: grid;\r\n-  grid-template-columns: repeat(1, 1fr);\r\n+  display: flexbox;\r\n+  grid-template-columns: repeat(2, 1fr);\r\n   gap: 40px;\r\n-  max-width: 300px;\r\n+  max-width: 1200px;\r\n   margin: auto;\r\n   justify-content: center;\r\n-  align-items: center;\r\n+  align-items: stretch;\r\n }\r\n \r\n /* Section Headers (Category Titles) */\r\n .article-title {\r\n"
+                },
+                {
+                    "date": 1739380305718,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,8 @@\n \r\n /* Menu Sections (Evenly Distributed) */\r\n .menu-section {\r\n   display: flexbox;\r\n-  grid-template-columns: repeat(2, 1fr);\r\n   gap: 40px;\r\n   max-width: 1200px;\r\n   margin: auto;\r\n   justify-content: center;\r\n"
+                },
+                {
+                    "date": 1739380342863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,13 +16,21 @@\n }\r\n \r\n /* Menu Sections (Evenly Distributed) */\r\n .menu-section {\r\n-  display: flexbox;\r\n+  display: grid;\r\n+  grid-template-columns: repeat(2, 1fr);\r\n   gap: 40px;\r\n   max-width: 1200px;\r\n   margin: auto;\r\n+  align-items: center;\r\n   justify-content: center;\r\n+}\r\n+\r\n+@media (min-width: 769px) {\r\n+  .menu-section {\r\n+    grid-template-columns: repeat(2, minmax(300px, 1fr));\r\n+  }\r\n   align-items: stretch;\r\n }\r\n \r\n /* Section Headers (Category Titles) */\r\n"
+                },
+                {
+                    "date": 1739380356207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n @media (min-width: 769px) {\r\n   .menu-section {\r\n     grid-template-columns: repeat(2, minmax(300px, 1fr));\r\n   }\r\n-  align-items: stretch;\r\n+  \r\n }\r\n \r\n /* Section Headers (Category Titles) */\r\n .article-title {\r\n"
+                },
+                {
+                    "date": 1739380397734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,19 +21,12 @@\n   grid-template-columns: repeat(2, 1fr);\r\n   gap: 40px;\r\n   max-width: 1200px;\r\n   margin: auto;\r\n-  align-items: center;\r\n   justify-content: center;\r\n+  align-items: stretch;\r\n }\r\n \r\n-@media (min-width: 769px) {\r\n-  .menu-section {\r\n-    grid-template-columns: repeat(2, minmax(300px, 1fr));\r\n-  }\r\n-  \r\n-}\r\n-\r\n /* Section Headers (Category Titles) */\r\n .article-title {\r\n   font-size: 2.2rem;\r\n   color: #1e4d2b; /* Deep green */\r\n@@ -53,9 +46,9 @@\n   padding: 25px;\r\n   border-radius: 15px;\r\n   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\r\n   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;\r\n-  width: 100%;\r\n+  width: 60%;\r\n   text-align: left;\r\n   border-left: 5px solid #27ae60;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739380452853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,8 +49,9 @@\n   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;\r\n   width: 60%;\r\n   text-align: left;\r\n   border-left: 5px solid #27ae60;\r\n+  align-self: center;\r\n }\r\n \r\n .menu-entry:hover {\r\n   transform: translateY(-5px);\r\n"
+                },
+                {
+                    "date": 1739380462014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,9 @@\n   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;\r\n   width: 60%;\r\n   text-align: left;\r\n   border-left: 5px solid #27ae60;\r\n-  align-self: center;\r\n+  align-items: center;\r\n }\r\n \r\n .menu-entry:hover {\r\n   transform: translateY(-5px);\r\n"
+                },
+                {
+                    "date": 1739380484616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n   border-radius: 15px;\r\n   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\r\n   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;\r\n   width: 60%;\r\n-  text-align: left;\r\n+  text-align: center;\r\n   border-left: 5px solid #27ae60;\r\n   align-items: center;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739380493797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n   border-radius: 15px;\r\n   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\r\n   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;\r\n   width: 60%;\r\n-  text-align: center;\r\n+  text-align: left;\r\n   border-left: 5px solid #27ae60;\r\n   align-items: center;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1739380501128,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,9 +49,10 @@\n   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;\r\n   width: 60%;\r\n   text-align: left;\r\n   border-left: 5px solid #27ae60;\r\n-  align-items: center;\r\n+  margin-left: auto;\r\n+  margin-right: auto;\r\n }\r\n \r\n .menu-entry:hover {\r\n   transform: translateY(-5px);\r\n"
                 }
             ],
             "date": 1738918899052,
