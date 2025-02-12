@@ -128,7 +128,7 @@ const ReservationForm = ({ dispatchOnDateChange, submitData }) => {
           required
         >
           <option value="" hidden>Select Meal Type</option>
-          {isToday&& currentHour <= 6 && 
+          {isToday&& currentHour <= 6 && isToday && currentHour >= 6 &&
           (
             <>
           <option value="Breakfast">Breakfast (6 AM - 11 AM)</option>
@@ -136,7 +136,7 @@ const ReservationForm = ({ dispatchOnDateChange, submitData }) => {
           <option value="Dinner">Dinner (6 PM - 11 PM)</option>
             </>
           )}
-          {isToday && currentHour >= 12 && 
+          {isToday && currentHour >= 12 && isToday && currentHour <= 17 &&
           (
             <>
             <option value="Lunch">Lunch (12 PM - 5 PM)</option>

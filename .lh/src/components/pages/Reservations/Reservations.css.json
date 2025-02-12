@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 14,
+            "activePatchIndex": 15,
             "patches": [
                 {
                     "date": 1738922307179,
@@ -64,6 +64,10 @@
                 {
                     "date": 1738922760084,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n }\n \n .time-slots button {\n   padding: 10px 15px;\n-  font-size: 1rem;\n+  font-size: 0.9rem;\n   background-color: #f4ce14;\n   color: black;\n   border: none;\n   border-radius: 10px;\n"
+                },
+                {
+                    "date": 1739375480040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n /* Time Slot Container */\n .time-slots {\n   display: grid;\n   grid-template-columns: repeat(4, 1fr); /* 4 slots in a row for PC */\n-  gap: 5px;\n+  gap: 2px;\n   margin-top: 10px;\n }\n \n .time-slots button {\n"
                 }
             ],
             "date": 1738922307179,
