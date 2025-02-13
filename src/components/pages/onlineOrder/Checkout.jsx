@@ -31,13 +31,14 @@ const Checkout = () => {
 
   // ✅ Handle Payment Process
   const handlePayment = () => {
-    navigate("/order-confirmation", {
-        state: { cartItems, total }, // ✅ Pass cart items & total
-    });
     if (cartItems.length === 0) {
       alert("Your cart is empty!");
       return;
     }
+
+    navigate("/OrderConfirmation", {
+      state: { cartItems, total, paymentMethod }, // ✅ Pass cart items, total & payment method
+    });
 
     if (paymentMethod === "Online") {
       // Simulate Online Payment
@@ -48,15 +49,12 @@ const Checkout = () => {
     } else {
       // COD - Directly finalize order
       finalizeOrder();
-    
     }
   };
 
   // ✅ Finalize Order (Clear Cart & Redirect)
   const finalizeOrder = () => {
     setCartItems([]); // Clear cart after order
-    navigate("/OrderConfirmation"); // Redirect to confirmation page
-    window.location.reload(); // Refresh Order Online page
   };
 
   return (

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/pages/Home/Hero.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1739436826275,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1739436826275,
+            "name": "Commit-0",
+            "content": ".hero {\n  padding-top: 1.875rem;\n  background-color: #495e57;\n}\n\n.hero .container {\n  grid-template-columns: 1fr 1fr;\n  gap: 3.5rem;\n}\n\n.hero-information {\n  grid-column: 1;\n}\n\n.hero-information h1 {\n  padding-top: 1.875rem;\n  color: #f4ce14;\n  font-size: 3.5rem;\n  height: 2.5rem;\n  line-height: 2.5rem;\n}\n\n.hero-information h2 {\n  padding-top: 1.875rem;\n  color: #ffffff;\n  font-size: 2.25rem;\n  height: 2.25rem;\n  line-height: 2.25rem;\n}\n\n.hero-information p {\n  padding-top: 1.875rem;\n  margin-top: 1.5rem;\n  color: #ffffff;\n  font-size: 1.125rem;\n}\n\n.hero-information .button-primary {\n  display: inline-block;\n  margin-top: 2rem;\n}\n\n.hero-information .button-primary:hover,\n.hero-information .button-primary:focus {\n  border-color: #f4ce14;\n}\n\n.hero-image {\n  grid-column: 2;\n  width: 100%;\n  height: 24rem;\n  margin-bottom: -4.375rem;\n  justify-self: end;\n  border-radius: 1rem;\n  object-fit: cover;\n}\n\n@media (max-width: 792px) {\n  .hero .container {\n    grid-template-columns: 1fr;\n    grid-template-rows: auto auto;\n  }\n\n  .hero-information {\n    grid-row: 1;\n  }\n\n  .hero-image {\n    grid-column: 1;\n    grid-row: 2;\n  }\n}\n"
+        }
+    ]
+}

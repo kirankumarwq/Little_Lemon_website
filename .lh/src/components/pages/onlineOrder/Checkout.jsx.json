@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1739407647437,
@@ -32,6 +32,14 @@
                 {
                     "date": 1739410117411,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,10 +47,9 @@\n       }, 2000);\r\n     } else {\r\n       // COD - Directly finalize order\r\n       finalizeOrder();\r\n-     \r\n-      });\r\n+    \r\n     }\r\n   };\r\n \r\n   // ✅ Finalize Order (Clear Cart & Redirect)\r\n"
+                },
+                {
+                    "date": 1739449244223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,16 +30,17 @@\n   const total = subtotal + tax;\r\n \r\n   // ✅ Handle Payment Process\r\n   const handlePayment = () => {\r\n-    navigate(\"/order-confirmation\", {\r\n-        state: { cartItems, total }, // ✅ Pass cart items & total\r\n-    });\r\n     if (cartItems.length === 0) {\r\n       alert(\"Your cart is empty!\");\r\n       return;\r\n     }\r\n \r\n+    navigate(\"/order-confirmation\", {\r\n+      state: { cartItems, total, paymentMethod }, // ✅ Pass cart items, total & payment method\r\n+    });\r\n+\r\n     if (paymentMethod === \"Online\") {\r\n       // Simulate Online Payment\r\n       setTimeout(() => {\r\n         alert(\"Payment Successful! Redirecting...\");\r\n@@ -47,17 +48,14 @@\n       }, 2000);\r\n     } else {\r\n       // COD - Directly finalize order\r\n       finalizeOrder();\r\n-    \r\n     }\r\n   };\r\n \r\n   // ✅ Finalize Order (Clear Cart & Redirect)\r\n   const finalizeOrder = () => {\r\n     setCartItems([]); // Clear cart after order\r\n-    navigate(\"/OrderConfirmation\"); // Redirect to confirmation page\r\n-    window.location.reload(); // Refresh Order Online page\r\n   };\r\n \r\n   return (\r\n     <div className=\"checkout-container\">\r\n"
+                },
+                {
+                    "date": 1739449405669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,9 @@\n       alert(\"Your cart is empty!\");\r\n       return;\r\n     }\r\n \r\n-    navigate(\"/order-confirmation\", {\r\n+    navigate(\"/OrderConfirmation\", {\r\n       state: { cartItems, total, paymentMethod }, // ✅ Pass cart items, total & payment method\r\n     });\r\n \r\n     if (paymentMethod === \"Online\") {\r\n"
                 }
             ],
             "date": 1739407647437,
