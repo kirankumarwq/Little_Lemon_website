@@ -1,12 +1,13 @@
+import { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { supabase } from "../../supabaseConfig";
-import { useState, useEffect } from "react";
 import BottomNav from "./BottomNav";
-
+import { useCart } from "../../components/pages/onlineOrder/CartContext";
+import { supabase } from "../../supabaseConfig";
 
 const Layout = ({ children }) => {
   const [user, setUser] = useState(null);
+  const { totalItems = 0 } = useCart(); // ✅ Provide a default value
 
   useEffect(() => {
     const getUser = async () => {
@@ -26,15 +27,23 @@ const Layout = ({ children }) => {
     };
   }, []);
 
-  // ✅ Use user profile pic if available, otherwise generate a random UI avatar
-  const profilePic = user?.user_metadata?.avatar_url || `https://api.dicebear.com/9.x/rings/svg?seed=${user?.id }`;
+  useEffect(() => {
+    console.log("Updated Cart Count:", totalItems); // ✅ Check updates
+  }, [totalItems]);
+
+  const profilePic = user?.user_metadata?.avatar_url || 
+    `https://api.dicebear.com/9.x/rings/svg?seed=${user?.id}`;
 
   const navLinks = [
     { name: "Home", path: "/#home", hashLink: true },
     { name: "About", path: "/#about", hashLink: true },
     { name: "Menu", path: "/menu", hashLink: true },
     { name: "Reservations", path: "/reservations", hashLink: false },
-    { name: "Order Online", path: "/orderOnline", hashLink: false },
+    { 
+      name: `Order Online ${totalItems > 0 ? `(${totalItems})` : ""}`, // ✅ Show cart count dynamically
+      path: "/orderOnline", 
+      hashLink: true 
+    },
   ];
 
   if (user) {
@@ -47,7 +56,7 @@ const Layout = ({ children }) => {
     name: user ? "" : " LOGIN", 
     path: user ? "/profile" : "/login", 
     hashLink: false, 
-    icon: profilePic,  // ✅ Always provides a valid avatar
+    icon: profilePic, 
   };
 
   return (
@@ -55,7 +64,7 @@ const Layout = ({ children }) => {
       <Header navLinks={navLinks} mobileNavLink={mobileNavLink} />
       <main id="home">{children}</main>
       <Footer navLinks={navLinks} />
-      <BottomNav/>
+      <BottomNav />
     </>
   );
 };

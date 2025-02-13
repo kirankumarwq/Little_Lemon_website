@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/pages/onlineOrder/CartContext.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1739395122337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1739395122337,
+            "name": "Commit-0",
+            "content": "// src/context/CartContext.js\r\nimport React, { createContext, useContext, useReducer } from \"react\";\r\n\r\nconst CartContext = createContext();\r\n\r\nconst initialState = {\r\n  items: [], // each item: { id, name, price, quantity }\r\n};\r\n\r\nconst cartReducer = (state, action) => {\r\n  switch (action.type) {\r\n    case \"ADD_ITEM\": {\r\n      const existingItem = state.items.find(item => item.id === action.payload.id);\r\n      if (existingItem) {\r\n        return {\r\n          ...state,\r\n          items: state.items.map(item =>\r\n            item.id === action.payload.id\r\n              ? { ...item, quantity: item.quantity + 1 }\r\n              : item\r\n          ),\r\n        };\r\n      } else {\r\n        return {\r\n          ...state,\r\n          items: [...state.items, { ...action.payload, quantity: 1 }],\r\n        };\r\n      }\r\n    }\r\n    case \"REMOVE_ITEM\": {\r\n      return {\r\n        ...state,\r\n        items: state.items.filter(item => item.id !== action.payload),\r\n      };\r\n    }\r\n    case \"CLEAR_CART\": {\r\n      return initialState;\r\n    }\r\n    default:\r\n      return state;\r\n  }\r\n};\r\n\r\nexport const CartProvider = ({ children }) => {\r\n  const [state, dispatch] = useReducer(cartReducer, initialState);\r\n\r\n  const addItem = (item) => {\r\n    dispatch({ type: \"ADD_ITEM\", payload: item });\r\n  };\r\n\r\n  const removeItem = (id) => {\r\n    dispatch({ type: \"REMOVE_ITEM\", payload: id });\r\n  };\r\n\r\n  const clearCart = () => {\r\n    dispatch({ type: \"CLEAR_CART\" });\r\n  };\r\n\r\n  const totalPrice = state.items.reduce((acc, item) => acc + item.price * item.quantity, 0);\r\n\r\n  return (\r\n    <CartContext.Provider value={{ cart: state.items, addItem, removeItem, clearCart, totalPrice }}>\r\n      {children}\r\n    </CartContext.Provider>\r\n  );\r\n};\r\n\r\nexport const useCart = () => useContext(CartContext);\r\n"
+        }
+    ]
+}

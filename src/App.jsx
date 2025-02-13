@@ -10,6 +10,10 @@ import NotFound from "./components/pages/NotFound/NotFound";
 import Login from "./components/pages/auth/Login";
 import Signup from "./components/pages/auth/Signup";
 import Profile from "./components/pages/auth/Profile";
+import OrderOnline from "./components/pages/onlineOrder/OrderOnline";
+import Checkout from "./components/pages/onlineOrder/Checkout";
+import { CartProvider } from "./components/pages/onlineOrder/CartContext";
+import OrderConfirmation from "./components/pages/onlineOrder/OrderConfirmation";
 const App = () => {
   const [user, setUser] = useState(null);
 
@@ -28,6 +32,7 @@ const App = () => {
   }, []);
 
   return (
+    <CartProvider>
     <>
       <Layout>
         <Routes>
@@ -38,6 +43,9 @@ const App = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/reservations" element={<Reservations />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/orderOnline" element={<OrderOnline />} />
+          <Route path="/orderConfirmation" element={<OrderConfirmation />} />
           <Route
             path="/confirmedReservation"
             element={<ConfirmedReservation />}
@@ -46,6 +54,7 @@ const App = () => {
         </Routes>
       </Layout>
     </>
+    </CartProvider>
   );
 };
 export default App;

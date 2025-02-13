@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/pages/onlineOrder/confirmation.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1739408313335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739409656983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .confirmation-container {\r\n     display: flex;\r\n     flex-direction: column;\r\n     align-items: center;\r\n-    justify-content: center;\r\n+    justify-content: start;\r\n     min-height: 100vh;\r\n     text-align: center;\r\n     padding: 20px;\r\n     background-color: #f8f9fa;\r\n"
+                },
+                {
+                    "date": 1739409668563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n .confirmation-container {\r\n     display: flex;\r\n     flex-direction: column;\r\n     align-items: center;\r\n-    justify-content: start;\r\n+    justify-content: flex-start;\r\n     min-height: 100vh;\r\n     text-align: center;\r\n     padding: 20px;\r\n     background-color: #f8f9fa;\r\n"
+                },
+                {
+                    "date": 1739410015480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,82 +1,48 @@\n .confirmation-container {\r\n-    display: flex;\r\n-    flex-direction: column;\r\n-    align-items: center;\r\n-    justify-content: flex-start;\r\n-    min-height: 100vh;\r\n+    max-width: 400px;\r\n+    margin: auto;\r\n+    padding: 20px;\r\n     text-align: center;\r\n-    padding: 20px;\r\n-    background-color: #f8f9fa;\r\n-  }\r\n-  \r\n-  .confirmation-card {\r\n     background: #fff;\r\n-    padding: 30px;\r\n     border-radius: 10px;\r\n-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\r\n-    max-width: 400px;\r\n-    width: 100%;\r\n+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);\r\n   }\r\n   \r\n-  .confirmation-card h2 {\r\n-    color: #2c3e50;\r\n-    font-size: 24px;\r\n-    margin-bottom: 10px;\r\n+  h2 {\r\n+    color: #ff7f50;\r\n   }\r\n   \r\n-  .confirmation-card p {\r\n-    font-size: 16px;\r\n-    color: #555;\r\n-    margin-bottom: 15px;\r\n+  .order-items {\r\n+    text-align: left;\r\n+    margin-top: 20px;\r\n   }\r\n   \r\n-  .order-details {\r\n-    text-align: left;\r\n-    width: 100%;\r\n-    margin-top: 15px;\r\n+  .order-item {\r\n+    display: flex;\r\n+    justify-content: space-between;\r\n     padding: 10px;\r\n+    background: #f8f8f8;\r\n+    margin-bottom: 8px;\r\n     border-radius: 5px;\r\n-    background: #ecf0f1;\r\n   }\r\n   \r\n-  .order-details p {\r\n-    margin: 5px 0;\r\n+  h3 {\r\n+    color: #333;\r\n+    margin-top: 20px;\r\n   }\r\n   \r\n-  .home-btn {\r\n-    margin-top: 20px;\r\n-    padding: 10px 20px;\r\n+  .back-btn {\r\n+    padding: 10px 15px;\r\n     background: #ff7f50;\r\n-    color: #fff;\r\n-    font-size: 16px;\r\n+    color: white;\r\n     border: none;\r\n+    cursor: pointer;\r\n     border-radius: 5px;\r\n-    cursor: pointer;\r\n-    transition: background 0.3s;\r\n+    width: 100%;\r\n+    margin-top: 15px;\r\n   }\r\n   \r\n-  .home-btn:hover {\r\n+  .back-btn:hover {\r\n     background: #e67348;\r\n   }\r\n-  \r\n-  /* Responsive */\r\n-  @media (max-width: 480px) {\r\n-    .confirmation-card {\r\n-      max-width: 90%;\r\n-      padding: 20px;\r\n-    }\r\n-  \r\n-    .confirmation-card h2 {\r\n-      font-size: 20px;\r\n-    }\r\n-  \r\n-    .confirmation-card p {\r\n-      font-size: 14px;\r\n-    }\r\n-  \r\n-    .home-btn {\r\n-      font-size: 14px;\r\n-      padding: 8px 16px;\r\n-    }\r\n-  }\r\n   \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1739408313335,
+            "name": "Commit-0",
+            "content": ".confirmation-container {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    min-height: 100vh;\r\n    text-align: center;\r\n    padding: 20px;\r\n    background-color: #f8f9fa;\r\n  }\r\n  \r\n  .confirmation-card {\r\n    background: #fff;\r\n    padding: 30px;\r\n    border-radius: 10px;\r\n    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\r\n    max-width: 400px;\r\n    width: 100%;\r\n  }\r\n  \r\n  .confirmation-card h2 {\r\n    color: #2c3e50;\r\n    font-size: 24px;\r\n    margin-bottom: 10px;\r\n  }\r\n  \r\n  .confirmation-card p {\r\n    font-size: 16px;\r\n    color: #555;\r\n    margin-bottom: 15px;\r\n  }\r\n  \r\n  .order-details {\r\n    text-align: left;\r\n    width: 100%;\r\n    margin-top: 15px;\r\n    padding: 10px;\r\n    border-radius: 5px;\r\n    background: #ecf0f1;\r\n  }\r\n  \r\n  .order-details p {\r\n    margin: 5px 0;\r\n  }\r\n  \r\n  .home-btn {\r\n    margin-top: 20px;\r\n    padding: 10px 20px;\r\n    background: #ff7f50;\r\n    color: #fff;\r\n    font-size: 16px;\r\n    border: none;\r\n    border-radius: 5px;\r\n    cursor: pointer;\r\n    transition: background 0.3s;\r\n  }\r\n  \r\n  .home-btn:hover {\r\n    background: #e67348;\r\n  }\r\n  \r\n  /* Responsive */\r\n  @media (max-width: 480px) {\r\n    .confirmation-card {\r\n      max-width: 90%;\r\n      padding: 20px;\r\n    }\r\n  \r\n    .confirmation-card h2 {\r\n      font-size: 20px;\r\n    }\r\n  \r\n    .confirmation-card p {\r\n      font-size: 14px;\r\n    }\r\n  \r\n    .home-btn {\r\n      font-size: 14px;\r\n      padding: 8px 16px;\r\n    }\r\n  }\r\n  "
+        }
+    ]
+}

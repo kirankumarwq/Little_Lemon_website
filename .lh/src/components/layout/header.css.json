@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 76,
+            "activePatchIndex": 77,
             "patches": [
                 {
                     "date": 1738918815975,
@@ -312,6 +312,10 @@
                 {
                     "date": 1739208435761,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,7 +168,7 @@\n @media (max-width: 768px) {\n   .header {\n     position:static; /* or static */\n     margin-bottom: 0;   /* Remove any extra margin at the bottom */\n-    padding-bottom: 100px; /* Reduce bottom padding if necessary */\n+    padding-bottom: 5px; /* Reduce bottom padding if necessary */\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739401423356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -127,8 +127,31 @@\n   height: 40px;\n   border-radius: 50%;\n }\n \n+.cart-container {\n+  position: relative;\n+  display: flex;\n+  align-items: center;\n+}\n+\n+.cart-badge {\n+  position: absolute;\n+  top: -5px;\n+  right: -10px;\n+  background: red;\n+  color: white;\n+  font-size: 12px;\n+  width: 18px;\n+  height: 18px;\n+  display: flex;\n+  align-items: center;\n+  justify-content: center;\n+  border-radius: 50%;\n+  font-weight: bold;\n+}\n+\n+\n /* Prevent Mobile Profile Pic from Overlapping */\n @media (max-width: 768px) {\n   .login-btn span {\n     padding: 5px;\n"
                 }
             ],
             "date": 1738918815975,

@@ -2,8 +2,11 @@ import { HashLink } from "react-router-hash-link";
 import logoImage from "./assets/logo.png";
 import "./header.css";
 import { Link } from "react-router-dom";
+import { useCart } from "../../components/pages/onlineOrder/CartContext"; // ✅ Import CartContext
 
 const Header = ({ navLinks, mobileNavLink }) => {
+  const { cartItems } = useCart(); // ✅ Get cart data
+  const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   return (
     <header className="header">
       <nav className="container grid nav-bar">
@@ -22,7 +25,11 @@ const Header = ({ navLinks, mobileNavLink }) => {
         <ul className="nav-bar-links">
           {navLinks.map((navLink, index) => (
             <li key={index} className="hover-underline-animation">
-              {navLink.icon ? (
+              {navLink.path === "/order-online" ? (
+                <Link to={navLink.path}>
+                  Order Online {totalItems > 0 && <span className="cart-badge">({totalItems})</span>}
+                </Link>
+              ) : navLink.icon ? (
                 <Link to={navLink.path}>
                   <img src={navLink.icon} alt="Profile" className="profile-pic" />
                 </Link>
