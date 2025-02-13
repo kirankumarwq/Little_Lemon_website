@@ -1,47 +1,171 @@
-/* Profile Page Container */
+/* Profile Container */
 .profile-container {
-    max-width: 400px;
-    margin: auto;
-    padding: 2rem;
-    text-align: center;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px; /* Increased width */
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f4ce14;
+}
+
+/* Profile Tabs */
+.profile-tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 12px;
+  margin-bottom: 30px;
+}
+
+.profile-tabs button {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 14px;
+  font-size: 17px;
+  cursor: pointer;
+  color: #495e57;
+  transition: color 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.profile-tabs button.active {
+  color: #f4ce14;
+  font-weight: bold;
+  border-bottom: 3px solid #f4ce14;
+}
+
+/* Profile Sections */
+.profile-section {
+  display: none;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+.profile-section.active {
+  display: block;
+}
+
+/* Edit Profile Form */
+.profile-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two-column layout */
+  gap: 10px; /* More spacing */
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Full-Width Fields */
+.full-width {
+  grid-column: span 2; /* Makes the input take full width */
+}
+
+/* Form Labels */
+.profile-form label {
+  font-size: 15px;
+  font-weight: bold;
+  color: #495e57;
+}
+
+/* Form Inputs */
+.profile-form input,
+.profile-form select {
+  width: 100%;
+  padding: 14px;
+  font-size: 17px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  transition: border 0.3s ease-in-out;
+}
+
+/* Focus Effects */
+.profile-form input:focus,
+.profile-form select:focus {
+  border: 1px solid #f4ce14;
+  outline: none;
+}
+
+/* Buttons */
+.edit-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 16px;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+  grid-column: span 2; /* Full width */
+  margin-top: 10px;
+}
+
+.edit-btn:hover {
+  background: #388e3c;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: #d9534f;
+  color: white;
+  border: none;
+  padding: 16px;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+  margin-top: 30px;
+}
+
+.logout-btn:hover {
+  background: #c9302c;
+}
+
+/* Responsive Layout (For Small Screens) */
+@media (max-width: 768px) {
+  .profile-container {
+    width: 90%;
+    padding: 20px;
   }
-  
-  /* Profile Header */
-  .profile-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+
+  .profile-tabs button {
+    font-size: 15px;
+    padding: 12px;
   }
-  
-  /* Profile Picture (Same as Navbar) */
+
   .profile-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #f4ce14;
+    width: 110px;
+    height: 110px;
   }
-  
-  /* Profile Sections */
-  .profile-section {
-    margin-top: 20px;
-    text-align: left;
+
+  .profile-form {
+    display: flex;
+    flex-direction: column; /* Change to single column */
+    gap: 15px;
   }
-  
-  /* Logout Button */
-  .logout-btn {
-    background: #f4ce14;
-    color: #495e57;
-    border: none;
-    padding: 10px;
-    margin-top: 20px;
-    cursor: pointer;
-    width: 100%;
-    font-size: 1rem;
-    border-radius: 5px;
+
+  .edit-btn {
+    font-size: 16px;
+    padding: 14px;
   }
-  
+}
