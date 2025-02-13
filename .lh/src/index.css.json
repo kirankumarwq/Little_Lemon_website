@@ -1,0 +1,86 @@
+{
+    "sourceFile": "src/index.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1739205755710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739205766647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   z-index: 999;\n }\n \n main {\n-  padding-top: 5rem;\n+  padding-top: 7rem;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n \n a {\n"
+                },
+                {
+                    "date": 1739205808338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   z-index: 999;\n }\n \n main {\n-  padding-top: 7rem;\n+  padding-top: 6rem;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n \n a {\n"
+                },
+                {
+                    "date": 1739205815936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   z-index: 999;\n }\n \n main {\n-  padding-top: 6rem;\n+  padding-top: 5rem;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n \n a {\n"
+                },
+                {
+                    "date": 1739205825898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   z-index: 999;\n }\n \n main {\n-  padding-top: 5rem;\n+  padding-top: 3rem;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n \n a {\n"
+                },
+                {
+                    "date": 1739205861698,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   z-index: 999;\n }\n \n main {\n-  padding-top: 3rem;\n+  padding-top:auto;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n \n a {\n"
+                },
+                {
+                    "date": 1739205917258,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   z-index: 999;\n }\n \n main {\n-  padding-top:auto;\n+  padding: top 30vh;;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n \n a {\n"
+                },
+                {
+                    "date": 1739205927148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   z-index: 999;\n }\n \n main {\n-  padding: top 30vh;;\n+  padding: top 30px;;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n \n a {\n"
+                },
+                {
+                    "date": 1739205940265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   z-index: 999;\n }\n \n main {\n-  padding: top 30px;;\n+  padding: top 3rem;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n \n a {\n"
+                },
+                {
+                    "date": 1739205946111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   z-index: 999;\n }\n \n main {\n-  padding: top 3rem;\n+  padding: top 10rem;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n \n a {\n"
+                },
+                {
+                    "date": 1739205962248,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   z-index: 999;\n }\n \n main {\n-  padding: top 10rem;\n+  padding-top: 3rem;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n \n a {\n"
+                },
+                {
+                    "date": 1739205974216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   z-index: 999;\n }\n \n main {\n-  padding-top: 3rem;\n+  padding-top: 4rem;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n \n a {\n"
+                },
+                {
+                    "date": 1739206111932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,156 @@\n+*,\n+*:after,\n+*:before {\n+  margin: 0;\n+  padding: 0;\n+  border: 0;\n+  outline: 0;\n+  box-sizing: border-box;\n+  -webkit-box-sizing: border-box;\n+  -moz-box-sizing: border-box;\n+}\n+\n+html {\n+  scroll-behavior:smooth;\n+}\n+\n+body {\n+  font-family: Karla, sans-serif;\n+  font-size: 1rem;\n+  line-height: 1.5;\n+  color: #495e57;\n+}\n+\n+header {\n+  position: fixed;\n+  top: 0;\n+  left: 0;\n+  width: 100%;\n+  height:fit-content;\n+  background-color: #ffffff;\n+  z-index: 999;\n+}\n+\n+main {\n+  padding-top: 4rem;\n+  min-height: calc(100vh - 6.25rem - 18rem);\n+}\n+@media (max-width: 768px) {\n+  .main{\n+    padding: 2rem;\n+    \n+  }\n+}\n+\n+a {\n+  text-decoration: none;\n+  color: #495e57;\n+}\n+\n+h1,\n+h2 {\n+  line-height: 1;\n+  font-family: \"Markazi Text\";\n+  font-weight: normal;\n+}\n+\n+h1 {\n+  font-size: 3.5rem;\n+}\n+\n+h2 {\n+  font-size: 2.5rem;\n+}\n+\n+label {\n+  width: fit-content;\n+  cursor: pointer;\n+}\n+\n+input,\n+select {\n+  width: 100%;\n+  height: 2.5rem;\n+  padding: 0 0.5rem;\n+  outline: none;\n+  border: 1px solid #e0e0e0;\n+  border-radius: 0.375rem;\n+  background: #ffffff;\n+  color: #495e57;\n+  cursor: pointer;\n+}\n+\n+select {\n+  -webkit-appearance: none;\n+  appearance: none;\n+}\n+\n+input:focus,\n+select:focus {\n+  border: 1px solid #495e57;\n+}\n+\n+label {\n+  font-weight: bold;\n+}\n+\n+button {\n+  border: none;\n+  cursor: pointer;\n+}\n+\n+img {\n+  max-width: 100%;\n+}\n+\n+.container {\n+  max-width: 61.75rem;\n+  width: 90%;\n+  margin: 0 auto;\n+}\n+\n+.grid {\n+  display: grid;\n+}\n+\n+.button-primary {\n+  padding: 0.5rem 1rem;\n+  border-radius: 2rem;\n+  background-color: #f4ce14;\n+  color: #495e57;\n+  font-weight: bold;\n+  border: 2px solid #f4ce14;\n+}\n+\n+.button-primary:hover,\n+.button-primary:focus {\n+  background-color: #495e57;\n+  border-color: #495e57;\n+  color: #ffffff;\n+}\n+/* Center the confirmation message */\n+.confirmed-reservation {\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  justify-content: flex-start;\n+  height: 100vh; /* Make it take the full height of the screen */\n+  text-align: center;\n+  gap: 1rem; /* Adds spacing between elements */\n+  padding-top: 30vh; /* Moves the content down (Adjust as needed) */\n+}\n+\n+.confirmed-reservation svg {\n+  color: #4CAF50; /* Green check icon */\n+}\n+\n+.confirmed-reservation h2 {\n+  font-size: 1.8rem;\n+  color: #333;\n+}\n+\n+.confirmed-reservation p {\n+  font-size: 1.2rem;\n+  color: #666;\n+  max-width: 500px; /* Restrict width for better readability */\n+}\n"
+                },
+                {
+                    "date": 1739206124918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,17 +31,11 @@\n   z-index: 999;\n }\n \n main {\n-  padding-top: 4rem;\n+  padding-top: rem;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n-@media (max-width: 768px) {\n-  .main{\n-    padding: 2rem;\n-    \n-  }\n-}\n \n a {\n   text-decoration: none;\n   color: #495e57;\n@@ -153,154 +147,4 @@\n   font-size: 1.2rem;\n   color: #666;\n   max-width: 500px; /* Restrict width for better readability */\n }\n-*,\n-*:after,\n-*:before {\n-  margin: 0;\n-  padding: 0;\n-  border: 0;\n-  outline: 0;\n-  box-sizing: border-box;\n-  -webkit-box-sizing: border-box;\n-  -moz-box-sizing: border-box;\n-}\n-\n-html {\n-  scroll-behavior:smooth;\n-}\n-\n-body {\n-  font-family: Karla, sans-serif;\n-  font-size: 1rem;\n-  line-height: 1.5;\n-  color: #495e57;\n-}\n-\n-header {\n-  position: fixed;\n-  top: 0;\n-  left: 0;\n-  width: 100%;\n-  height:fit-content;\n-  background-color: #ffffff;\n-  z-index: 999;\n-}\n-\n-main {\n-  padding-top: 4rem;\n-  min-height: calc(100vh - 6.25rem - 18rem);\n-}\n-\n-a {\n-  text-decoration: none;\n-  color: #495e57;\n-}\n-\n-h1,\n-h2 {\n-  line-height: 1;\n-  font-family: \"Markazi Text\";\n-  font-weight: normal;\n-}\n-\n-h1 {\n-  font-size: 3.5rem;\n-}\n-\n-h2 {\n-  font-size: 2.5rem;\n-}\n-\n-label {\n-  width: fit-content;\n-  cursor: pointer;\n-}\n-\n-input,\n-select {\n-  width: 100%;\n-  height: 2.5rem;\n-  padding: 0 0.5rem;\n-  outline: none;\n-  border: 1px solid #e0e0e0;\n-  border-radius: 0.375rem;\n-  background: #ffffff;\n-  color: #495e57;\n-  cursor: pointer;\n-}\n-\n-select {\n-  -webkit-appearance: none;\n-  appearance: none;\n-}\n-\n-input:focus,\n-select:focus {\n-  border: 1px solid #495e57;\n-}\n-\n-label {\n-  font-weight: bold;\n-}\n-\n-button {\n-  border: none;\n-  cursor: pointer;\n-}\n-\n-img {\n-  max-width: 100%;\n-}\n-\n-.container {\n-  max-width: 61.75rem;\n-  width: 90%;\n-  margin: 0 auto;\n-}\n-\n-.grid {\n-  display: grid;\n-}\n-\n-.button-primary {\n-  padding: 0.5rem 1rem;\n-  border-radius: 2rem;\n-  background-color: #f4ce14;\n-  color: #495e57;\n-  font-weight: bold;\n-  border: 2px solid #f4ce14;\n-}\n-\n-.button-primary:hover,\n-.button-primary:focus {\n-  background-color: #495e57;\n-  border-color: #495e57;\n-  color: #ffffff;\n-}\n-/* Center the confirmation message */\n-.confirmed-reservation {\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  justify-content: flex-start;\n-  height: 100vh; /* Make it take the full height of the screen */\n-  text-align: center;\n-  gap: 1rem; /* Adds spacing between elements */\n-  padding-top: 30vh; /* Moves the content down (Adjust as needed) */\n-}\n-\n-.confirmed-reservation svg {\n-  color: #4CAF50; /* Green check icon */\n-}\n-\n-.confirmed-reservation h2 {\n-  font-size: 1.8rem;\n-  color: #333;\n-}\n-\n-.confirmed-reservation p {\n-  font-size: 1.2rem;\n-  color: #666;\n-  max-width: 500px; /* Restrict width for better readability */\n-}\n"
+                },
+                {
+                    "date": 1739206135346,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   z-index: 999;\n }\n \n main {\n-  padding-top: rem;\n+  padding-top: 4rem;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n \n a {\n"
+                },
+                {
+                    "date": 1739206143938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   z-index: 999;\n }\n \n main {\n-  padding-top: 4rem;\n+  padding-top: 5rem;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n \n a {\n"
+                },
+                {
+                    "date": 1739206151786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   z-index: 999;\n }\n \n main {\n-  padding-top: 5rem;\n+  padding-top: 6rem;\n   min-height: calc(100vh - 6.25rem - 18rem);\n }\n \n a {\n"
+                },
+                {
+                    "date": 1739208597241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -147,4 +147,10 @@\n   font-size: 1.2rem;\n   color: #666;\n   max-width: 500px; /* Restrict width for better readability */\n }\n+@media (max-width: 768px) {\n+main#home {\n+  margin-top: 0;        /* Remove top margin */\n+  padding-top: 10px;    /* Minimal top padding if needed */\n+}\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1739205755710,
+            "name": "Commit-0",
+            "content": "*,\n*:after,\n*:before {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  outline: 0;\n  box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n}\n\nhtml {\n  scroll-behavior:smooth;\n}\n\nbody {\n  font-family: Karla, sans-serif;\n  font-size: 1rem;\n  line-height: 1.5;\n  color: #495e57;\n}\n\nheader {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height:fit-content;\n  background-color: #ffffff;\n  z-index: 999;\n}\n\nmain {\n  padding-top: 5rem;\n  min-height: calc(100vh - 6.25rem - 18rem);\n}\n\na {\n  text-decoration: none;\n  color: #495e57;\n}\n\nh1,\nh2 {\n  line-height: 1;\n  font-family: \"Markazi Text\";\n  font-weight: normal;\n}\n\nh1 {\n  font-size: 3.5rem;\n}\n\nh2 {\n  font-size: 2.5rem;\n}\n\nlabel {\n  width: fit-content;\n  cursor: pointer;\n}\n\ninput,\nselect {\n  width: 100%;\n  height: 2.5rem;\n  padding: 0 0.5rem;\n  outline: none;\n  border: 1px solid #e0e0e0;\n  border-radius: 0.375rem;\n  background: #ffffff;\n  color: #495e57;\n  cursor: pointer;\n}\n\nselect {\n  -webkit-appearance: none;\n  appearance: none;\n}\n\ninput:focus,\nselect:focus {\n  border: 1px solid #495e57;\n}\n\nlabel {\n  font-weight: bold;\n}\n\nbutton {\n  border: none;\n  cursor: pointer;\n}\n\nimg {\n  max-width: 100%;\n}\n\n.container {\n  max-width: 61.75rem;\n  width: 90%;\n  margin: 0 auto;\n}\n\n.grid {\n  display: grid;\n}\n\n.button-primary {\n  padding: 0.5rem 1rem;\n  border-radius: 2rem;\n  background-color: #f4ce14;\n  color: #495e57;\n  font-weight: bold;\n  border: 2px solid #f4ce14;\n}\n\n.button-primary:hover,\n.button-primary:focus {\n  background-color: #495e57;\n  border-color: #495e57;\n  color: #ffffff;\n}\n/* Center the confirmation message */\n.confirmed-reservation {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: flex-start;\n  height: 100vh; /* Make it take the full height of the screen */\n  text-align: center;\n  gap: 1rem; /* Adds spacing between elements */\n  padding-top: 30vh; /* Moves the content down (Adjust as needed) */\n}\n\n.confirmed-reservation svg {\n  color: #4CAF50; /* Green check icon */\n}\n\n.confirmed-reservation h2 {\n  font-size: 1.8rem;\n  color: #333;\n}\n\n.confirmed-reservation p {\n  font-size: 1.2rem;\n  color: #666;\n  max-width: 500px; /* Restrict width for better readability */\n}\n"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/components/pages/auth/Signup.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1739105055456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739105794018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React, { useState } from \"react\";\r\n import { Link } from \"react-router-dom\";\r\n-import { auth } from \"../../firebaseConfig\";\r\n+import { auth } from \"../../../firebaseConfig\";\r\n import { createUserWithEmailAndPassword } from \"firebase/auth\";\r\n import \"./auth.css\";\r\n \r\n const Signup = () => {\r\n"
+                },
+                {
+                    "date": 1739108650273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n import React, { useState } from \"react\";\r\n+import { supabase } from \"../../supabaseConfig\";\r\n import { Link } from \"react-router-dom\";\r\n-import { auth } from \"../../../firebaseConfig\";\r\n-import { createUserWithEmailAndPassword } from \"firebase/auth\";\r\n import \"./auth.css\";\r\n \r\n const Signup = () => {\r\n   const [name, setName] = useState(\"\");\r\n@@ -11,24 +10,25 @@\n   const [message, setMessage] = useState(\"\");\r\n \r\n   const handleSignup = async (e) => {\r\n     e.preventDefault();\r\n-    try {\r\n-      await createUserWithEmailAndPassword(auth, email, password);\r\n-      setMessage(\"Account created successfully!\");\r\n-    } catch (error) {\r\n-      setMessage(error.message);\r\n-    }\r\n+    const { error } = await supabase.auth.signUp({\r\n+      email,\r\n+      password,\r\n+      options: { data: { full_name: name } },\r\n+    });\r\n+    if (error) setMessage(error.message);\r\n+    else setMessage(\"Account created! Check your email.\");\r\n   };\r\n \r\n   return (\r\n     <div className=\"auth-container\">\r\n       <h2>Create an Account</h2>\r\n       {message && <p className=\"message\">{message}</p>}\r\n       <form onSubmit={handleSignup}>\r\n-        <input type=\"text\" placeholder=\"Full Name\" value={name} onChange={(e) => setName(e.target.value)} required />\r\n-        <input type=\"email\" placeholder=\"Email\" value={email} onChange={(e) => setEmail(e.target.value)} required />\r\n-        <input type=\"password\" placeholder=\"Password\" value={password} onChange={(e) => setPassword(e.target.value)} required />\r\n+        <input type=\"text\" placeholder=\"Full Name\" onChange={(e) => setName(e.target.value)} required />\r\n+        <input type=\"email\" placeholder=\"Email\" onChange={(e) => setEmail(e.target.value)} required />\r\n+        <input type=\"password\" placeholder=\"Password\" onChange={(e) => setPassword(e.target.value)} required />\r\n         <button type=\"submit\">Sign Up</button>\r\n       </form>\r\n       <p>Already have an account? <Link to=\"/login\">Login</Link></p>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1739108841903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React, { useState } from \"react\";\r\n-import { supabase } from \"../../supabaseConfig\";\r\n+import { supabase } from \"../../../supabaseConfig\";\r\n import { Link } from \"react-router-dom\";\r\n import \"./auth.css\";\r\n \r\n const Signup = () => {\r\n"
+                },
+                {
+                    "date": 1739111389055,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n       password,\r\n       options: { data: { full_name: name } },\r\n     });\r\n     if (error) setMessage(error.message);\r\n-    else setMessage(\"Account created! Check your email.\");\r\n+    else setMessage(\"A confirmation email has been sent. Please verify your email before logging in..\");\r\n   };\r\n \r\n   return (\r\n     <div className=\"auth-container\">\r\n"
+                },
+                {
+                    "date": 1739111660270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,13 +22,14 @@\n \r\n   return (\r\n     <div className=\"auth-container\">\r\n       <h2>Create an Account</h2>\r\n-      {message && <p className=\"message\">{message}</p>}\r\n+      \r\n       <form onSubmit={handleSignup}>\r\n         <input type=\"text\" placeholder=\"Full Name\" onChange={(e) => setName(e.target.value)} required />\r\n         <input type=\"email\" placeholder=\"Email\" onChange={(e) => setEmail(e.target.value)} required />\r\n         <input type=\"password\" placeholder=\"Password\" onChange={(e) => setPassword(e.target.value)} required />\r\n+        {message && <p className=\"message\">{message}</p>}\r\n         <button type=\"submit\">Sign Up</button>\r\n       </form>\r\n       <p>Already have an account? <Link to=\"/login\">Login</Link></p>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1739112302813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n       password,\r\n       options: { data: { full_name: name } },\r\n     });\r\n     if (error) setMessage(error.message);\r\n-    else setMessage(\"A confirmation email has been sent. Please verify your email before logging in..\");\r\n+    else setMessage(\"Account created sucessfully! redirecting...\");\r\n   };\r\n \r\n   return (\r\n     <div className=\"auth-container\">\r\n"
+                },
+                {
+                    "date": 1739112547768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,19 +7,24 @@\n   const [name, setName] = useState(\"\");\r\n   const [email, setEmail] = useState(\"\");\r\n   const [password, setPassword] = useState(\"\");\r\n   const [message, setMessage] = useState(\"\");\r\n+  const navigate = useNavigate(); //  Use navigate for redirection\r\n \r\n   const handleSignup = async (e) => {\r\n     e.preventDefault();\r\n     const { error } = await supabase.auth.signUp({\r\n       email,\r\n       password,\r\n       options: { data: { full_name: name } },\r\n     });\r\n-    if (error) setMessage(error.message);\r\n-    else setMessage(\"Account created sucessfully! redirecting...\");\r\n-  };\r\n+    if (error) {\r\n+        setMessage(error.message);\r\n+      } else {\r\n+        setMessage(\"Account created successfully! Redirecting to login...\");\r\n+        setTimeout(() => navigate(\"/login\"), 3000); // ✅ Redirect after 3 seconds\r\n+      }\r\n+    };\r\n \r\n   return (\r\n     <div className=\"auth-container\">\r\n       <h2>Create an Account</h2>\r\n"
+                },
+                {
+                    "date": 1739112578418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import React, { useState } from \"react\";\r\n import { supabase } from \"../../../supabaseConfig\";\r\n-import { Link } from \"react-router-dom\";\r\n+import { Link, useNavigate } from \"react-router-dom\";\r\n import \"./auth.css\";\r\n \r\n const Signup = () => {\r\n   const [name, setName] = useState(\"\");\r\n"
+                },
+                {
+                    "date": 1739125133476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         <input type=\"text\" placeholder=\"Full Name\" onChange={(e) => setName(e.target.value)} required />\r\n         <input type=\"email\" placeholder=\"Email\" onChange={(e) => setEmail(e.target.value)} required />\r\n         <input type=\"password\" placeholder=\"Password\" onChange={(e) => setPassword(e.target.value)} required />\r\n         {message && <p className=\"message\">{message}</p>}\r\n-        <button type=\"submit\">Sign Up</button>\r\n+        <button type=\"submit\" className=\"signup-button\">Sign Up</button>\r\n       </form>\r\n       <p>Already have an account? <Link to=\"/login\">Login</Link></p>\r\n     </div>\r\n   );\r\n"
+                },
+                {
+                    "date": 1739125239284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n   return (\r\n     <div className=\"auth-container\">\r\n       <h2>Create an Account</h2>\r\n       \r\n-      <form onSubmit={handleSignup}>\r\n+      <form onSubmit={handleSignup} className=\"signup-form\">\r\n         <input type=\"text\" placeholder=\"Full Name\" onChange={(e) => setName(e.target.value)} required />\r\n         <input type=\"email\" placeholder=\"Email\" onChange={(e) => setEmail(e.target.value)} required />\r\n         <input type=\"password\" placeholder=\"Password\" onChange={(e) => setPassword(e.target.value)} required />\r\n         {message && <p className=\"message\">{message}</p>}\r\n"
+                }
+            ],
+            "date": 1739105055456,
+            "name": "Commit-0",
+            "content": "import React, { useState } from \"react\";\r\nimport { Link } from \"react-router-dom\";\r\nimport { auth } from \"../../firebaseConfig\";\r\nimport { createUserWithEmailAndPassword } from \"firebase/auth\";\r\nimport \"./auth.css\";\r\n\r\nconst Signup = () => {\r\n  const [name, setName] = useState(\"\");\r\n  const [email, setEmail] = useState(\"\");\r\n  const [password, setPassword] = useState(\"\");\r\n  const [message, setMessage] = useState(\"\");\r\n\r\n  const handleSignup = async (e) => {\r\n    e.preventDefault();\r\n    try {\r\n      await createUserWithEmailAndPassword(auth, email, password);\r\n      setMessage(\"Account created successfully!\");\r\n    } catch (error) {\r\n      setMessage(error.message);\r\n    }\r\n  };\r\n\r\n  return (\r\n    <div className=\"auth-container\">\r\n      <h2>Create an Account</h2>\r\n      {message && <p className=\"message\">{message}</p>}\r\n      <form onSubmit={handleSignup}>\r\n        <input type=\"text\" placeholder=\"Full Name\" value={name} onChange={(e) => setName(e.target.value)} required />\r\n        <input type=\"email\" placeholder=\"Email\" value={email} onChange={(e) => setEmail(e.target.value)} required />\r\n        <input type=\"password\" placeholder=\"Password\" value={password} onChange={(e) => setPassword(e.target.value)} required />\r\n        <button type=\"submit\">Sign Up</button>\r\n      </form>\r\n      <p>Already have an account? <Link to=\"/login\">Login</Link></p>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Signup;\r\n"
+        }
+    ]
+}

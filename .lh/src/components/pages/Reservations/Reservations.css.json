@@ -1,0 +1,78 @@
+{
+    "sourceFile": "src/components/pages/Reservations/Reservations.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1738922307179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1738922425268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -112,8 +112,9 @@\n   color: white;\n }\n \n \n+\n /* Ensure other form elements fit */\n .reservations form > * {\n   flex-shrink: 0; /* Prevent elements from shrinking */\n }\n"
+                },
+                {
+                    "date": 1738922516828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -86,9 +86,9 @@\n }\n /* Dine In Selection Buttons */\n .dine-in-options {\n   display: flex;\n-  gap: 15px;\n+  gap: 7px;\n   justify-content: center;\n   margin-top: 10px;\n }\n \n"
+                },
+                {
+                    "date": 1738922528137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n   font-size: 1rem;\n   background-color: #f4ce14;\n   color: black;\n   border: none;\n-  border-radius: 5px;\n+  border-radius: 10px;\n   cursor: pointer;\n   transition: 0.3s ease-in-out;\n }\n \n"
+                },
+                {
+                    "date": 1738922542867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,9 +87,9 @@\n /* Dine In Selection Buttons */\n .dine-in-options {\n   display: flex;\n   gap: 7px;\n-  justify-content: center;\n+  justify-content: left;\n   margin-top: 10px;\n }\n \n .dine-in-btn {\n"
+                },
+                {
+                    "date": 1738922573828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,9 +92,9 @@\n   margin-top: 10px;\n }\n \n .dine-in-btn {\n-  padding: 12px 20px;\n+  padding: 10px 15px;\n   font-size: 1rem;\n   background-color: #f4ce14;\n   color: black;\n   border: none;\n"
+                },
+                {
+                    "date": 1738922611839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   margin-top: 10px;\n }\n \n .time-slots button {\n-  padding: 10px;\n+  padding: 10px 15px;\n   font-size: 1rem;\n   background-color: #f4ce14;\n   color: black;\n   border: none;\n"
+                },
+                {
+                    "date": 1738922637103,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n   border-radius: 15px;\n   cursor: pointer;\n   transition: 0.3s;\n   height: 50px;\n-  text-align: center;\n+  text-align: left;\n }\n \n .time-slots button:hover {\n   background-color: #ffcc00;\n"
+                },
+                {
+                    "date": 1738922645724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n   border: none;\n   border-radius: 15px;\n   cursor: pointer;\n   transition: 0.3s;\n-  height: 50px;\n+  height: 10px;\n   text-align: left;\n }\n \n .time-slots button:hover {\n"
+                },
+                {
+                    "date": 1738922655440,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n   border: none;\n   border-radius: 15px;\n   cursor: pointer;\n   transition: 0.3s;\n-  height: 10px;\n+  height: 20px;\n   text-align: left;\n }\n \n .time-slots button:hover {\n"
+                },
+                {
+                    "date": 1738922666748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n   border: none;\n   border-radius: 15px;\n   cursor: pointer;\n   transition: 0.3s;\n-  height: 20px;\n+  height: 30px;\n   text-align: left;\n }\n \n .time-slots button:hover {\n"
+                },
+                {
+                    "date": 1738922676392,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n   font-size: 1rem;\n   background-color: #f4ce14;\n   color: black;\n   border: none;\n-  border-radius: 15px;\n+  border-radius: 10px;\n   cursor: pointer;\n   transition: 0.3s;\n   height: 30px;\n   text-align: left;\n"
+                },
+                {
+                    "date": 1738922686160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n }\n \n .time-slots button {\n   padding: 10px 15px;\n-  font-size: 1rem;\n+  font-size: 0.9rem;\n   background-color: #f4ce14;\n   color: black;\n   border: none;\n   border-radius: 10px;\n"
+                },
+                {
+                    "date": 1738922748605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,17 +33,15 @@\n }\n \n .time-slots button {\n   padding: 10px 15px;\n-  font-size: 0.9rem;\n+  font-size: 1rem;\n   background-color: #f4ce14;\n   color: black;\n   border: none;\n   border-radius: 10px;\n   cursor: pointer;\n-  transition: 0.3s;\n-  height: 30px;\n-  text-align: left;\n+  transition: 0.3s ease-in-out;\n }\n \n .time-slots button:hover {\n   background-color: #ffcc00;\n"
+                },
+                {
+                    "date": 1738922760084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n }\n \n .time-slots button {\n   padding: 10px 15px;\n-  font-size: 1rem;\n+  font-size: 0.9rem;\n   background-color: #f4ce14;\n   color: black;\n   border: none;\n   border-radius: 10px;\n"
+                },
+                {
+                    "date": 1739375480040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n /* Time Slot Container */\n .time-slots {\n   display: grid;\n   grid-template-columns: repeat(4, 1fr); /* 4 slots in a row for PC */\n-  gap: 5px;\n+  gap: 2px;\n   margin-top: 10px;\n }\n \n .time-slots button {\n"
+                }
+            ],
+            "date": 1738922307179,
+            "name": "Commit-0",
+            "content": "/* Centering the Form */\n.reservations {\n  min-height: calc(100vh - 6.25rem - 18rem);\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  \n  padding: 20px;\n  box-sizing: border-box;\n  padding-top: 50px; /* Moves the content down (Adjust as needed) */\n}\n\n/* Form Styling */\n.reservations form {\n  width: 90%;\n  max-width: 400px; /* Limits form width */\n  display: flex;\n  flex-direction: column; /* Keeps fields one below another */\n  gap: 1rem;\n  background: #fff;\n  padding: 20px;\n  border-radius: 8px;\n  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);\n  overflow: hidden;\n}\n\n/* Time Slot Container */\n.time-slots {\n  display: grid;\n  grid-template-columns: repeat(4, 1fr); /* 4 slots in a row for PC */\n  gap: 5px;\n  margin-top: 10px;\n}\n\n.time-slots button {\n  padding: 10px;\n  font-size: 1rem;\n  background-color: #f4ce14;\n  color: black;\n  border: none;\n  border-radius: 15px;\n  cursor: pointer;\n  transition: 0.3s;\n  height: 50px;\n  text-align: center;\n}\n\n.time-slots button:hover {\n  background-color: #ffcc00;\n}\n\n.time-slots button.selected {\n  background-color: #4CAF50;\n  color: white;\n}\n\n/* Greyed-out button for unavailable time slots */\n.time-slots button.unavailable {\n  background-color: #d3d3d3;\n  cursor: not-allowed;\n  color: #a9a9a9;\n}\n\n/* Show More Button */\n.show-more-btn {\n  margin-top: 10px;\n  font-size: 1rem;\n  color: #4CAF50;\n  background: none;\n  border: none;\n  cursor: pointer;\n  text-decoration: underline;\n  display: block;\n  text-align: center;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.show-more-btn:hover {\n  color: #388e3c;\n}\n\n.show-more-btn::after {\n  content: \" ▼\"; /* Downfacing arrow */\n  font-size: 1rem;\n}\n/* Dine In Selection Buttons */\n.dine-in-options {\n  display: flex;\n  gap: 15px;\n  justify-content: center;\n  margin-top: 10px;\n}\n\n.dine-in-btn {\n  padding: 12px 20px;\n  font-size: 1rem;\n  background-color: #f4ce14;\n  color: black;\n  border: none;\n  border-radius: 5px;\n  cursor: pointer;\n  transition: 0.3s ease-in-out;\n}\n\n.dine-in-btn:hover {\n  background-color: #ffcc00;\n}\n\n.dine-in-btn.selected {\n  background-color: #4CAF50;\n  color: white;\n}\n\n\n/* Ensure other form elements fit */\n.reservations form > * {\n  flex-shrink: 0; /* Prevent elements from shrinking */\n}\n\n/* Mobile Adjustments */\n@media (max-width: 491px) {\n  .reservations {\n    padding: 10px;\n  }\n\n  .reservations form {\n    width: 100%;\n  }\n\n  .time-slots {\n    grid-template-columns: repeat(3, 1fr); /* 3 slots per row on mobile */\n  }\n\n  .show-more-btn {\n    margin-top: 20px;\n  }\n}\n"
+        }
+    ]
+}

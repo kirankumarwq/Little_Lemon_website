@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/pages/data/menuItems",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1739394607201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1739394607201,
+            "name": "Commit-0",
+            "content": "// src/data/menuItems.js\r\nconst menuItems = [\r\n  {\r\n    id: 1,\r\n    name: \"Greek Salad\",\r\n    description: \"Fresh salad with cucumbers, tomatoes, olives, and feta cheese.\",\r\n    price: 9.99,\r\n    image: \"/images/greek-salad.jpg\", // Ensure these images are in your public folder or imported correctly\r\n  },\r\n  {\r\n    id: 2,\r\n    name: \"Bruschetta\",\r\n    description: \"Grilled bread garlic, tomatoes, olive oil, and basil.\",\r\n    price: 6.99,\r\n    image: \"/images/bruschetta.jpg\",\r\n  },\r\n  {\r\n    id: 3,\r\n    name: \"Lemon Dessert\",\r\n    description: \"A delightful lemon dessert with a creamy finish.\",\r\n    price: 4.99,\r\n    image: \"/images/lemon-dessert.jpg\",\r\n  },\r\n  // Add more items as needed\r\n];\r\n\r\nexport default menuItems;\r\n"
+        }
+    ]
+}

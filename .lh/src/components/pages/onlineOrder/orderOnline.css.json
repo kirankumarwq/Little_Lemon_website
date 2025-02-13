@@ -1,0 +1,294 @@
+{
+    "sourceFile": "src/components/pages/onlineOrder/orderOnline.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 69,
+            "patches": [
+                {
+                    "date": 1739394655566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739399622118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,124 +1,85 @@\n-/* Container styling */\r\n+/* 📌 Order Online Container */\r\n .order-container {\r\n-    max-width: 1200px;\r\n-    margin: 2rem auto;\r\n-    padding: 0 1rem;\r\n+    padding: 20px;\r\n+    max-width: 800px;\r\n+    margin: auto;\r\n   }\r\n   \r\n-  /* Page Title */\r\n-  .page-title {\r\n-    text-align: center;\r\n-    font-size: 2rem;\r\n-    color: #495e57;\r\n-    margin-bottom: 1.5rem;\r\n+  /* 📌 Category Title */\r\n+  .menu-category h3 {\r\n+    margin-top: 20px;\r\n+    color: #333;\r\n   }\r\n   \r\n-  /* Grid Layout for Menu Items */\r\n-  .menu-grid {\r\n-    display: grid;\r\n-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\r\n-    gap: 1.5rem;\r\n+  /* 📌 Menu Item */\r\n+  .menu-item {\r\n+    background: #f9f9f9;\r\n+    padding: 15px;\r\n+    margin-bottom: 10px;\r\n+    border-radius: 8px;\r\n+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);\r\n   }\r\n   \r\n-  /* Card Styling */\r\n-  .menu-card {\r\n-    background: #fff;\r\n-    border: 1px solid #e0e0e0;\r\n-    border-radius: 12px;\r\n-    overflow: hidden;\r\n-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);\r\n+  /* 📌 Quantity Controls */\r\n+  .quantity-controls {\r\n     display: flex;\r\n-    flex-direction: column;\r\n-    transition: transform 0.3s ease;\r\n+    align-items: center;\r\n+    gap: 10px;\r\n   }\r\n   \r\n-  .menu-card:hover {\r\n-    transform: translateY(-5px);\r\n+  .quantity-controls button {\r\n+    background: #ff6600;\r\n+    border: none;\r\n+    padding: 5px 10px;\r\n+    color: white;\r\n+    font-size: 16px;\r\n+    cursor: pointer;\r\n+    border-radius: 5px;\r\n   }\r\n   \r\n-  /* Image Styling */\r\n-  .menu-image {\r\n-    width: 100%;\r\n-    height: 150px;\r\n-    object-fit: cover;\r\n+  .quantity-controls button:hover {\r\n+    background: #cc5200;\r\n   }\r\n   \r\n-  /* Card Details */\r\n-  .menu-details {\r\n-    padding: 1rem;\r\n-    flex-grow: 1;\r\n-    display: flex;\r\n-    flex-direction: column;\r\n-    justify-content: space-between;\r\n-  }\r\n-  \r\n-  .menu-name {\r\n-    font-size: 1.25rem;\r\n-    margin: 0.5rem 0;\r\n-    color: #333;\r\n-  }\r\n-  \r\n-  .menu-desc {\r\n-    font-size: 0.9rem;\r\n-    color: #777;\r\n-    flex-grow: 1;\r\n-  }\r\n-  \r\n-  .menu-footer {\r\n-    display: flex;\r\n-    justify-content: space-between;\r\n-    align-items: center;\r\n-    margin-top: 1rem;\r\n-  }\r\n-  \r\n-  .menu-price {\r\n-    font-size: 1.1rem;\r\n-    font-weight: bold;\r\n-    color: #495e57;\r\n-  }\r\n-  \r\n-  /* Add to Cart Button */\r\n+  /* 📌 Add to Cart Button */\r\n   .add-btn {\r\n-    background: #f4ce14;\r\n+    background: #008000;\r\n+    color: white;\r\n     border: none;\r\n-    padding: 8px 12px;\r\n-    border-radius: 4px;\r\n+    padding: 10px 15px;\r\n     cursor: pointer;\r\n-    font-size: 0.9rem;\r\n-    font-weight: bold;\r\n-    transition: background 0.3s ease;\r\n+    border-radius: 5px;\r\n+    font-size: 14px;\r\n   }\r\n   \r\n   .add-btn:hover {\r\n-    background: #ffcc00;\r\n+    background: #006400;\r\n   }\r\n   \r\n-  /* Cart Summary Section */\r\n+  /* 📌 Sticky Cart Summary */\r\n   .cart-summary {\r\n-    margin-top: 2rem;\r\n-    padding: 1rem;\r\n-    border-top: 1px solid #e0e0e0;\r\n+    position: fixed;\r\n+    bottom: 0;\r\n+    left: 0;\r\n+    width: 100%;\r\n+    background: black;\r\n+    color: white;\r\n     text-align: center;\r\n+    padding: 15px;\r\n+    font-size: 18px;\r\n   }\r\n   \r\n-  .cart-summary h2 {\r\n-    margin-bottom: 0.5rem;\r\n-    color: #495e57;\r\n-  }\r\n-  \r\n   .checkout-btn {\r\n-    display: inline-block;\r\n-    margin-top: 1rem;\r\n-    background: #f4ce14;\r\n+    background: #ffcc00;\r\n     color: black;\r\n-    text-decoration: none;\r\n     padding: 10px 20px;\r\n-    border-radius: 4px;\r\n-    font-weight: bold;\r\n-    transition: background 0.3s ease;\r\n+    border: none;\r\n+    cursor: pointer;\r\n+    font-size: 16px;\r\n+    margin-top: 5px;\r\n   }\r\n   \r\n   .checkout-btn:hover {\r\n-    background: #ffcc00;\r\n+    background: #e6b800;\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739399666157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,9 +42,9 @@\n   }\r\n   \r\n   /* 📌 Add to Cart Button */\r\n   .add-btn {\r\n-    background: #008000;\r\n+    background: #dadd07;\r\n     color: white;\r\n     border: none;\r\n     padding: 10px 15px;\r\n     cursor: pointer;\r\n"
+                },
+                {
+                    "date": 1739399714381,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n   \r\n   /* 📌 Add to Cart Button */\r\n   .add-btn {\r\n     background: #dadd07;\r\n-    color: white;\r\n+    color: #333;\r\n     border: none;\r\n     padding: 10px 15px;\r\n     cursor: pointer;\r\n     border-radius: 5px;\r\n"
+                },
+                {
+                    "date": 1739399761211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n     color: #333;\r\n     border: none;\r\n     padding: 10px 15px;\r\n     cursor: pointer;\r\n-    border-radius: 5px;\r\n+    border-radius: 15px;\r\n     font-size: 14px;\r\n   }\r\n   \r\n   .add-btn:hover {\r\n"
+                },
+                {
+                    "date": 1739399787326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,9 +52,10 @@\n     font-size: 14px;\r\n   }\r\n   \r\n   .add-btn:hover {\r\n-    background: #006400;\r\n+    background: #04440e\r\n+    ;\r\n   }\r\n   \r\n   /* 📌 Sticky Cart Summary */\r\n   .cart-summary {\r\n"
+                },
+                {
+                    "date": 1739399882712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -52,10 +52,11 @@\n     font-size: 14px;\r\n   }\r\n   \r\n   .add-btn:hover {\r\n-    background: #04440e\r\n-    ;\r\n+  background-color: #495e57;\r\n+    color: white;\r\n+    border: #dadd07;\r\n   }\r\n   \r\n   /* 📌 Sticky Cart Summary */\r\n   .cart-summary {\r\n"
+                },
+                {
+                    "date": 1739399902437,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n   \r\n   .add-btn:hover {\r\n   background-color: #495e57;\r\n     color: white;\r\n-    border: #dadd07;\r\n+    border: 1px solid #dadd07;\r\n   }\r\n   \r\n   /* 📌 Sticky Cart Summary */\r\n   .cart-summary {\r\n"
+                },
+                {
+                    "date": 1739399965190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,14 +49,15 @@\n     padding: 10px 15px;\r\n     cursor: pointer;\r\n     border-radius: 15px;\r\n     font-size: 14px;\r\n+    margin-top: 2rem;\r\n   }\r\n   \r\n   .add-btn:hover {\r\n   background-color: #495e57;\r\n     color: white;\r\n-    border: 1px solid #dadd07;\r\n+    border:  #dadd07;\r\n   }\r\n   \r\n   /* 📌 Sticky Cart Summary */\r\n   .cart-summary {\r\n"
+                },
+                {
+                    "date": 1739399999180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     border-radius: 5px;\r\n   }\r\n   \r\n   .quantity-controls button:hover {\r\n-    background: #cc5200;\r\n+    background: #dadd07\r\n   }\r\n   \r\n   /* 📌 Add to Cart Button */\r\n   .add-btn {\r\n"
+                },
+                {
+                    "date": 1739400020825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     gap: 10px;\r\n   }\r\n   \r\n   .quantity-controls button {\r\n-    background: #ff6600;\r\n+    background: #dadd07;\r\n     border: none;\r\n     padding: 5px 10px;\r\n     color: white;\r\n     font-size: 16px;\r\n"
+                },
+                {
+                    "date": 1739400056767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -73,9 +73,9 @@\n   }\r\n   \r\n   .checkout-btn {\r\n     background: #ffcc00;\r\n-    color: black;\r\n+    color: rgb(207, 189, 189);\r\n     padding: 10px 20px;\r\n     border: none;\r\n     cursor: pointer;\r\n     font-size: 16px;\r\n"
+                },
+                {
+                    "date": 1739400061903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     gap: 10px;\r\n   }\r\n   \r\n   .quantity-controls button {\r\n-    background: #dadd07;\r\n+    background: #ff6600;\r\n     border: none;\r\n     padding: 5px 10px;\r\n     color: white;\r\n     font-size: 16px;\r\n@@ -73,9 +73,9 @@\n   }\r\n   \r\n   .checkout-btn {\r\n     background: #ffcc00;\r\n-    color: rgb(207, 189, 189);\r\n+    color: black;\r\n     padding: 10px 20px;\r\n     border: none;\r\n     cursor: pointer;\r\n     font-size: 16px;\r\n"
+                },
+                {
+                    "date": 1739400091789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n     position: fixed;\r\n     bottom: 0;\r\n     left: 0;\r\n     width: 100%;\r\n-    background: black;\r\n+    background: rgb(191, 223, 9);\r\n     color: white;\r\n     text-align: center;\r\n     padding: 15px;\r\n     font-size: 18px;\r\n"
+                },
+                {
+                    "date": 1739400102074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -64,9 +64,9 @@\n     position: fixed;\r\n     bottom: 0;\r\n     left: 0;\r\n     width: 100%;\r\n-    background: rgb(191, 223, 9);\r\n+    background: black;\r\n     color: white;\r\n     text-align: center;\r\n     padding: 15px;\r\n     font-size: 18px;\r\n"
+                },
+                {
+                    "date": 1739400131753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -82,7 +82,7 @@\n     margin-top: 5px;\r\n   }\r\n   \r\n   .checkout-btn:hover {\r\n-    background: #e6b800;\r\n+    background: #495e57;\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739400145246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,6 +83,7 @@\n   }\r\n   \r\n   .checkout-btn:hover {\r\n     background: #495e57;\r\n+    color: white;\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739400224770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,10 +51,10 @@\n     border-radius: 15px;\r\n     font-size: 14px;\r\n     margin-top: 2rem;\r\n   }\r\n-  \r\n-  .add-btn:hover {\r\n+  .add-btn .button-primary:hover,\r\n+  add-btn .button-primary:focus {\r\n   background-color: #495e57;\r\n     color: white;\r\n     border:  #dadd07;\r\n   }\r\n"
+                },
+                {
+                    "date": 1739400231640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,8 @@\n   }\r\n   .add-btn .button-primary:hover,\r\n   add-btn .button-primary:focus {\r\n   background-color: #495e57;\r\n-    color: white;\r\n     border:  #dadd07;\r\n   }\r\n   \r\n   /* 📌 Sticky Cart Summary */\r\n"
+                },
+                {
+                    "date": 1739400268862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     gap: 10px;\r\n   }\r\n   \r\n   .quantity-controls button {\r\n-    background: #ff6600;\r\n+    background: #dadd07;\r\n     border: none;\r\n     padding: 5px 10px;\r\n     color: white;\r\n     font-size: 16px;\r\n@@ -51,11 +51,12 @@\n     border-radius: 15px;\r\n     font-size: 14px;\r\n     margin-top: 2rem;\r\n   }\r\n-  .add-btn .button-primary:hover,\r\n-  add-btn .button-primary:focus {\r\n+  \r\n+  .add-btn:hover {\r\n   background-color: #495e57;\r\n+    color: white;\r\n     border:  #dadd07;\r\n   }\r\n   \r\n   /* 📌 Sticky Cart Summary */\r\n@@ -82,7 +83,6 @@\n   }\r\n   \r\n   .checkout-btn:hover {\r\n     background: #495e57;\r\n-    color: white;\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739400347689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n   .quantity-controls button {\r\n     background: #dadd07;\r\n     border: none;\r\n     padding: 5px 10px;\r\n-    color: white;\r\n+    color: rgb(8, 8, 8);\r\n     font-size: 16px;\r\n     cursor: pointer;\r\n     border-radius: 5px;\r\n   }\r\n"
+                },
+                {
+                    "date": 1739400363057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     background: #dadd07;\r\n     border: none;\r\n     padding: 5px 10px;\r\n     color: rgb(8, 8, 8);\r\n-    font-size: 16px;\r\n+    font-size: 30px;\r\n     cursor: pointer;\r\n     border-radius: 5px;\r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1739400379851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     background: #dadd07;\r\n     border: none;\r\n     padding: 5px 10px;\r\n     color: rgb(8, 8, 8);\r\n-    font-size: 30px;\r\n+    font-size: 20px;\r\n     cursor: pointer;\r\n     border-radius: 5px;\r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1739404377951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,88 +1,115 @@\n-/* 📌 Order Online Container */\r\n+/* Order Online Page Styling */\r\n .order-container {\r\n     padding: 20px;\r\n     max-width: 800px;\r\n     margin: auto;\r\n   }\r\n   \r\n-  /* 📌 Category Title */\r\n-  .menu-category h3 {\r\n-    margin-top: 20px;\r\n-    color: #333;\r\n+  .menu-category {\r\n+    margin-bottom: 30px;\r\n   }\r\n   \r\n-  /* 📌 Menu Item */\r\n   .menu-item {\r\n-    background: #f9f9f9;\r\n+    display: flex;\r\n+    justify-content: space-between;\r\n+    align-items: center;\r\n+    background: #fff;\r\n     padding: 15px;\r\n-    margin-bottom: 10px;\r\n-    border-radius: 8px;\r\n-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);\r\n+    margin: 10px 0;\r\n+    border-radius: 10px;\r\n+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);\r\n   }\r\n   \r\n-  /* 📌 Quantity Controls */\r\n+  .menu-item h4 {\r\n+    font-size: 1.2rem;\r\n+    color: #333;\r\n+    margin-bottom: 5px;\r\n+  }\r\n+  \r\n+  .menu-item p {\r\n+    color: #666;\r\n+    font-size: 0.9rem;\r\n+  }\r\n+  \r\n+  .add-btn {\r\n+    background: #ff4500;\r\n+    color: white;\r\n+    border: none;\r\n+    padding: 10px 15px;\r\n+    cursor: pointer;\r\n+    border-radius: 5px;\r\n+    transition: 0.3s;\r\n+  }\r\n+  \r\n+  .add-btn:hover {\r\n+    background: #e63e00;\r\n+  }\r\n+  \r\n+  /* Quantity Controls */\r\n   .quantity-controls {\r\n     display: flex;\r\n     align-items: center;\r\n     gap: 10px;\r\n   }\r\n   \r\n   .quantity-controls button {\r\n-    background: #dadd07;\r\n+    background: #ff4500;\r\n+    color: white;\r\n     border: none;\r\n     padding: 5px 10px;\r\n-    color: rgb(8, 8, 8);\r\n-    font-size: 20px;\r\n     cursor: pointer;\r\n     border-radius: 5px;\r\n+    font-size: 1rem;\r\n   }\r\n   \r\n-  .quantity-controls button:hover {\r\n-    background: #dadd07\r\n-  }\r\n-  \r\n-  /* 📌 Add to Cart Button */\r\n-  .add-btn {\r\n-    background: #dadd07;\r\n+  .quantity-controls span {\r\n+    font-size: 1rem;\r\n+    font-weight: bold;\r\n     color: #333;\r\n-    border: none;\r\n-    padding: 10px 15px;\r\n-    cursor: pointer;\r\n-    border-radius: 15px;\r\n-    font-size: 14px;\r\n-    margin-top: 2rem;\r\n   }\r\n   \r\n-  .add-btn:hover {\r\n-  background-color: #495e57;\r\n-    color: white;\r\n-    border:  #dadd07;\r\n-  }\r\n-  \r\n-  /* 📌 Sticky Cart Summary */\r\n+  /* Cart Summary */\r\n   .cart-summary {\r\n     position: fixed;\r\n     bottom: 0;\r\n     left: 0;\r\n-    width: 100%;\r\n-    background: black;\r\n-    color: white;\r\n-    text-align: center;\r\n+    right: 0;\r\n+    background: white;\r\n     padding: 15px;\r\n-    font-size: 18px;\r\n+    display: flex;\r\n+    justify-content: space-between;\r\n+    align-items: center;\r\n+    box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.1);\r\n   }\r\n   \r\n   .checkout-btn {\r\n-    background: #ffcc00;\r\n-    color: black;\r\n+    background: #ff4500;\r\n+    color: white;\r\n+    border: none;\r\n     padding: 10px 20px;\r\n-    border: none;\r\n     cursor: pointer;\r\n-    font-size: 16px;\r\n-    margin-top: 5px;\r\n+    border-radius: 5px;\r\n+    font-size: 1rem;\r\n   }\r\n   \r\n   .checkout-btn:hover {\r\n-    background: #495e57;\r\n+    background: #e63e00;\r\n   }\r\n+  \r\n+  /* Responsive */\r\n+  @media (max-width: 600px) {\r\n+    .menu-item {\r\n+      flex-direction: column;\r\n+      text-align: center;\r\n+    }\r\n+  \r\n+    .quantity-controls {\r\n+      margin-top: 10px;\r\n+    }\r\n+  \r\n+    .cart-summary {\r\n+      flex-direction: column;\r\n+      text-align: center;\r\n+    }\r\n+  }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739404425846,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     font-size: 0.9rem;\r\n   }\r\n   \r\n   .add-btn {\r\n-    background: #ff4500;\r\n+    background: #f4ce14;\r\n     color: white;\r\n     border: none;\r\n     padding: 10px 15px;\r\n     cursor: pointer;\r\n"
+                },
+                {
+                    "date": 1739404503115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   }\r\n   \r\n   .add-btn {\r\n     background: #f4ce14;\r\n-    color: white;\r\n+    color: #666;\r\n     border: none;\r\n     padding: 10px 15px;\r\n     cursor: pointer;\r\n     border-radius: 5px;\r\n"
+                },
+                {
+                    "date": 1739404529560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n     transition: 0.3s;\r\n   }\r\n   \r\n   .add-btn:hover {\r\n-    background: #e63e00;\r\n+    background: #495e57;\r\n   }\r\n   \r\n   /* Quantity Controls */\r\n   .quantity-controls {\r\n"
+                },
+                {
+                    "date": 1739404547565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,8 +42,9 @@\n   }\r\n   \r\n   .add-btn:hover {\r\n     background: #495e57;\r\n+    color: white;\r\n   }\r\n   \r\n   /* Quantity Controls */\r\n   .quantity-controls {\r\n"
+                },
+                {
+                    "date": 1739404563518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n     color: #666;\r\n     border: none;\r\n     padding: 10px 15px;\r\n     cursor: pointer;\r\n-    border-radius: 5px;\r\n+    border-radius: 515px;\r\n     transition: 0.3s;\r\n   }\r\n   \r\n   .add-btn:hover {\r\n"
+                },
+                {
+                    "date": 1739404581518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n     gap: 10px;\r\n   }\r\n   \r\n   .quantity-controls button {\r\n-    background: #ff4500;\r\n+    background: #f4ce14;\r\n     color: white;\r\n     border: none;\r\n     padding: 5px 10px;\r\n     cursor: pointer;\r\n"
+                },
+                {
+                    "date": 1739404591092,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,9 +54,9 @@\n   }\r\n   \r\n   .quantity-controls button {\r\n     background: #f4ce14;\r\n-    color: white;\r\n+    color: black;\r\n     border: none;\r\n     padding: 5px 10px;\r\n     cursor: pointer;\r\n     border-radius: 5px;\r\n"
+                },
+                {
+                    "date": 1739404728327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -95,9 +95,32 @@\n   \r\n   .checkout-btn:hover {\r\n     background: #e63e00;\r\n   }\r\n+  /* Filters Section */\r\n+.filters {\r\n+    display: flex;\r\n+    justify-content: space-between;\r\n+    margin-bottom: 20px;\r\n+  }\r\n   \r\n+  .filters select {\r\n+    padding: 10px;\r\n+    border: 1px solid #ccc;\r\n+    border-radius: 5px;\r\n+    font-size: 1rem;\r\n+    cursor: pointer;\r\n+  }\r\n+  \r\n+  /* Responsive Filters */\r\n+  @media (max-width: 600px) {\r\n+    .filters {\r\n+      flex-direction: column;\r\n+      gap: 10px;\r\n+    }\r\n+  }\r\n+  \r\n+  \r\n   /* Responsive */\r\n   @media (max-width: 600px) {\r\n     .menu-item {\r\n       flex-direction: column;\r\n"
+                },
+                {
+                    "date": 1739404792515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n     color: #666;\r\n     border: none;\r\n     padding: 10px 15px;\r\n     cursor: pointer;\r\n-    border-radius: 515px;\r\n+    border-radius: 15px;\r\n     transition: 0.3s;\r\n   }\r\n   \r\n   .add-btn:hover {\r\n"
+                },
+                {
+                    "date": 1739405749093,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   .menu-item {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n-    background: #fff;\r\n+    background: #8f1010;\r\n     padding: 15px;\r\n     margin: 10px 0;\r\n     border-radius: 10px;\r\n     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);\r\n"
+                },
+                {
+                    "date": 1739405755326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n   .menu-item {\r\n     display: flex;\r\n     justify-content: space-between;\r\n     align-items: center;\r\n-    background: #8f1010;\r\n+    background: #fff;\r\n     padding: 15px;\r\n     margin: 10px 0;\r\n     border-radius: 10px;\r\n     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);\r\n@@ -36,9 +36,9 @@\n     color: #666;\r\n     border: none;\r\n     padding: 10px 15px;\r\n     cursor: pointer;\r\n-    border-radius: 15px;\r\n+    border-radius: 515px;\r\n     transition: 0.3s;\r\n   }\r\n   \r\n   .add-btn:hover {\r\n"
+                },
+                {
+                    "date": 1739405772966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);\r\n   }\r\n   \r\n   .menu-item h4 {\r\n-    font-size: 1.2rem;\r\n+    font-size: 1rem;\r\n     color: #333;\r\n     margin-bottom: 5px;\r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1739405787510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);\r\n   }\r\n   \r\n   .menu-item h4 {\r\n-    font-size: 1rem;\r\n+    font-size: 1.2rem;\r\n     color: #333;\r\n     margin-bottom: 5px;\r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1739405799320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   }\r\n   \r\n   .menu-item p {\r\n     color: #666;\r\n-    font-size: 0.9rem;\r\n+    font-size: 0.5rem;\r\n   }\r\n   \r\n   .add-btn {\r\n     background: #f4ce14;\r\n"
+                },
+                {
+                    "date": 1739405809641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   }\r\n   \r\n   .menu-item p {\r\n     color: #666;\r\n-    font-size: 0.5rem;\r\n+    font-size: 0.8rem;\r\n   }\r\n   \r\n   .add-btn {\r\n     background: #f4ce14;\r\n"
+                },
+                {
+                    "date": 1739405852357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,9 +97,9 @@\n     background: #e63e00;\r\n   }\r\n   /* Filters Section */\r\n .filters {\r\n-    display: flex;\r\n+    display: inline;\r\n     justify-content: space-between;\r\n     margin-bottom: 20px;\r\n   }\r\n   \r\n"
+                },
+                {
+                    "date": 1739405865717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,8 @@\n   }\r\n   /* Filters Section */\r\n .filters {\r\n     display: inline;\r\n-    justify-content: space-between;\r\n     margin-bottom: 20px;\r\n   }\r\n   \r\n   .filters select {\r\n"
+                },
+                {
+                    "date": 1739405877786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   }\r\n   \r\n   .menu-item p {\r\n     color: #666;\r\n-    font-size: 0.8rem;\r\n+    font-size: 0.5rem;\r\n   }\r\n   \r\n   .add-btn {\r\n     background: #f4ce14;\r\n@@ -97,9 +97,10 @@\n     background: #e63e00;\r\n   }\r\n   /* Filters Section */\r\n .filters {\r\n-    display: inline;\r\n+    display: flex;\r\n+    justify-content: space-between;\r\n     margin-bottom: 20px;\r\n   }\r\n   \r\n   .filters select {\r\n"
+                },
+                {
+                    "date": 1739405910001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   }\r\n   \r\n   .menu-item p {\r\n     color: #666;\r\n-    font-size: 0.5rem;\r\n+    font-size: 0.8rem;\r\n   }\r\n   \r\n   .add-btn {\r\n     background: #f4ce14;\r\n"
+                },
+                {
+                    "date": 1739405950490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,9 @@\n     font-size: 0.8rem;\r\n   }\r\n   \r\n   .add-btn {\r\n+    align-items: end;\r\n     background: #f4ce14;\r\n     color: #666;\r\n     border: none;\r\n     padding: 10px 15px;\r\n"
+                },
+                {
+                    "date": 1739406136321,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     font-size: 0.8rem;\r\n   }\r\n   \r\n   .add-btn {\r\n-    align-items: end;\r\n+    align-self: flex-end;\r\n     background: #f4ce14;\r\n     color: #666;\r\n     border: none;\r\n     padding: 10px 15px;\r\n"
+                },
+                {
+                    "date": 1739406159056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n   \r\n   .menu-item {\r\n     display: flex;\r\n     justify-content: space-between;\r\n-    align-items: center;\r\n+    align-items: flex-start;\r\n     background: #fff;\r\n     padding: 15px;\r\n     margin: 10px 0;\r\n     border-radius: 10px;\r\n"
+                },
+                {
+                    "date": 1739406259320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -121,14 +121,31 @@\n   }\r\n   \r\n   \r\n   /* Responsive */\r\n-  @media (max-width: 600px) {\r\n+  @media (max-width: 768px) {\r\n     .menu-item {\r\n-      flex-direction: column;\r\n-      text-align: center;\r\n+      flex-direction: row;\r\n+      justify-content: space-between; /* Ensures price stays in line */\r\n+      align-items: center;\r\n+      width: 100%;\r\n     }\r\n-  \r\n+    .menu-item h4 {\r\n+        flex: 1; /* Allow the title to take space */\r\n+        white-space: nowrap; /* Prevent wrapping */\r\n+        overflow: hidden;\r\n+        text-overflow: ellipsis; /* Show \"...\" if text is too long */\r\n+      }\r\n+    \r\n+      .menu-item p {\r\n+        margin-left: 10px;\r\n+        flex-shrink: 0; /* Prevent price from shrinking */\r\n+      }\r\n+    \r\n+      .menu-item .add-btn {\r\n+        margin-left: auto; /* Push button to the right */\r\n+      }\r\n+      \r\n     .quantity-controls {\r\n       margin-top: 10px;\r\n     }\r\n   \r\n"
+                },
+                {
+                    "date": 1739406334808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     color: #666;\r\n     border: none;\r\n     padding: 10px 15px;\r\n     cursor: pointer;\r\n-    border-radius: 515px;\r\n+    border-radius: 15px;\r\n     transition: 0.3s;\r\n   }\r\n   \r\n   .add-btn:hover {\r\n@@ -143,9 +143,9 @@\n     \r\n       .menu-item .add-btn {\r\n         margin-left: auto; /* Push button to the right */\r\n       }\r\n-      \r\n+\r\n     .quantity-controls {\r\n       margin-top: 10px;\r\n     }\r\n   \r\n"
+                },
+                {
+                    "date": 1739406450592,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -123,33 +123,35 @@\n   \r\n   /* Responsive */\r\n   @media (max-width: 768px) {\r\n     .menu-item {\r\n+      display: flex;\r\n       flex-direction: row;\r\n-      justify-content: space-between; /* Ensures price stays in line */\r\n+      justify-content: space-between; /* Keeps content in one line */\r\n       align-items: center;\r\n       width: 100%;\r\n+      gap: 10px; /* Adds spacing between elements */\r\n     }\r\n+  \r\n     .menu-item h4 {\r\n-        flex: 1; /* Allow the title to take space */\r\n-        white-space: nowrap; /* Prevent wrapping */\r\n-        overflow: hidden;\r\n-        text-overflow: ellipsis; /* Show \"...\" if text is too long */\r\n-      }\r\n-    \r\n-      .menu-item p {\r\n-        margin-left: 10px;\r\n-        flex-shrink: 0; /* Prevent price from shrinking */\r\n-      }\r\n-    \r\n-      .menu-item .add-btn {\r\n-        margin-left: auto; /* Push button to the right */\r\n-      }\r\n-\r\n-    .quantity-controls {\r\n-      margin-top: 10px;\r\n+      flex: 1; /* Allows text to take available space */\r\n+      white-space: nowrap; /* Prevents title from breaking */\r\n+      overflow: hidden;\r\n+      text-overflow: ellipsis; /* Show \"...\" if the text is too long */\r\n     }\r\n   \r\n+    .menu-item p {\r\n+      margin-left: 10px;\r\n+      flex-shrink: 0; /* Prevents price from shrinking */\r\n+      white-space: nowrap; /* Keeps price in one line */\r\n+    }\r\n+  \r\n+    .menu-item .add-btn {\r\n+      margin-left: auto; /* Push button to the right */\r\n+      white-space: nowrap; /* Prevents wrapping */\r\n+      padding: 6px 12px; /* Adjust button padding for a better fit */\r\n+      font-size: 14px; /* Reduce font size slightly for mobile */\r\n+    }\r\n     .cart-summary {\r\n       flex-direction: column;\r\n       text-align: center;\r\n     }\r\n"
+                },
+                {
+                    "date": 1739406502026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n   @media (max-width: 768px) {\r\n     .menu-item {\r\n       display: flex;\r\n       flex-direction: row;\r\n-      justify-content: space-between; /* Keeps content in one line */\r\n+      justify-content: space-evenly; /* Keeps content in one line */\r\n       align-items: center;\r\n       width: 100%;\r\n       gap: 10px; /* Adds spacing between elements */\r\n     }\r\n"
+                },
+                {
+                    "date": 1739406587991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -121,37 +121,32 @@\n   }\r\n   \r\n   \r\n   /* Responsive */\r\n-  @media (max-width: 768px) {\r\n-    .menu-item {\r\n-      display: flex;\r\n-      flex-direction: row;\r\n-      justify-content: space-evenly; /* Keeps content in one line */\r\n-      align-items: center;\r\n-      width: 100%;\r\n-      gap: 10px; /* Adds spacing between elements */\r\n-    }\r\n-  \r\n-    .menu-item h4 {\r\n-      flex: 1; /* Allows text to take available space */\r\n-      white-space: nowrap; /* Prevents title from breaking */\r\n-      overflow: hidden;\r\n-      text-overflow: ellipsis; /* Show \"...\" if the text is too long */\r\n-    }\r\n-  \r\n-    .menu-item p {\r\n-      margin-left: 10px;\r\n-      flex-shrink: 0; /* Prevents price from shrinking */\r\n-      white-space: nowrap; /* Keeps price in one line */\r\n-    }\r\n-  \r\n-    .menu-item .add-btn {\r\n-      margin-left: auto; /* Push button to the right */\r\n-      white-space: nowrap; /* Prevents wrapping */\r\n-      padding: 6px 12px; /* Adjust button padding for a better fit */\r\n-      font-size: 14px; /* Reduce font size slightly for mobile */\r\n-    }\r\n+ @media (max-width: 768px) {\r\n+  .menu-item {\r\n+    display: flex;\r\n+    flex-direction: row;\r\n+    justify-content: space-between; /* Keeps content in one line */\r\n+    align-items: center;\r\n+    width: 100%;\r\n+    gap: 10px; /* Adds spacing between elements */\r\n+  }\r\n+\r\n+  .menu-item h4 {\r\n+    flex: 1; /* Allows text to take available space */\r\n+    white-space: nowrap; /* Prevents title from breaking */\r\n+    overflow: hidden;\r\n+    text-overflow: ellipsis; /* Show \"...\" if the text is too long */\r\n+  }\r\n+\r\n+  .menu-item p {\r\n+    margin-left: 10px;\r\n+    flex-shrink: 0; /* Prevents price from shrinking */\r\n+    white-space: nowrap; /* Keeps price in one line */\r\n+  }\r\n+\r\n+  }\r\n     .cart-summary {\r\n       flex-direction: column;\r\n       text-align: center;\r\n     }\r\n"
+                },
+                {
+                    "date": 1739406597485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -149,6 +149,5 @@\n     .cart-summary {\r\n       flex-direction: column;\r\n       text-align: center;\r\n     }\r\n-  }\r\n-  \n\\ No newline at end of file\n+  \r\n"
+                },
+                {
+                    "date": 1739406894394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -121,33 +121,68 @@\n   }\r\n   \r\n   \r\n   /* Responsive */\r\n- @media (max-width: 768px) {\r\n-  .menu-item {\r\n-    display: flex;\r\n-    flex-direction: row;\r\n-    justify-content: space-between; /* Keeps content in one line */\r\n-    align-items: center;\r\n-    width: 100%;\r\n-    gap: 10px; /* Adds spacing between elements */\r\n+  @media (max-width: 768px) {\r\n+    .menu-item {\r\n+      display: flex;\r\n+      justify-content: space-between;\r\n+      align-items: center;\r\n+      width: 100%;\r\n+      gap: 10px;\r\n+      padding: 10px;\r\n+    }\r\n+  \r\n+    /* Left side: Name, description, and price */\r\n+    .menu-item .item-info {\r\n+      flex: 1; /* Takes remaining space */\r\n+      display: flex;\r\n+      flex-direction: column;\r\n+      justify-content: center;\r\n+    }\r\n+  \r\n+    .menu-item h4 {\r\n+      margin: 0;\r\n+      font-size: 16px;\r\n+    }\r\n+  \r\n+    .menu-item p {\r\n+      margin: 4px 0;\r\n+      font-size: 14px;\r\n+      color: #666;\r\n+    }\r\n+  \r\n+    /* Right side: Add to Cart button */\r\n+    .menu-item .cart-controls {\r\n+      flex-shrink: 0; /* Prevents it from shrinking */\r\n+      display: flex;\r\n+      align-items: center;\r\n+    }\r\n+  \r\n+    .menu-item .add-btn {\r\n+      white-space: nowrap;\r\n+      padding: 6px 12px;\r\n+      font-size: 14px;\r\n+    }\r\n+  \r\n+    .quantity-controls {\r\n+      display: flex;\r\n+      align-items: center;\r\n+      gap: 8px;\r\n+    }\r\n+  \r\n+    .quantity-controls button {\r\n+      padding: 4px 8px;\r\n+      font-size: 14px;\r\n+    }\r\n+  \r\n+    .quantity-controls span {\r\n+      font-size: 14px;\r\n+    }\r\n   }\r\n-\r\n-  .menu-item h4 {\r\n-    flex: 1; /* Allows text to take available space */\r\n-    white-space: nowrap; /* Prevents title from breaking */\r\n-    overflow: hidden;\r\n-    text-overflow: ellipsis; /* Show \"...\" if the text is too long */\r\n-  }\r\n-\r\n-  .menu-item p {\r\n-    margin-left: 10px;\r\n-    flex-shrink: 0; /* Prevents price from shrinking */\r\n-    white-space: nowrap; /* Keeps price in one line */\r\n-  }\r\n-\r\n-  }\r\n+  \r\n     .cart-summary {\r\n       flex-direction: column;\r\n       text-align: center;\r\n     }\r\n-  \r\n+  }\r\n+  \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739406907926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -177,10 +177,8 @@\n   \r\n     .quantity-controls span {\r\n       font-size: 14px;\r\n     }\r\n-  }\r\n-  \r\n     .cart-summary {\r\n       flex-direction: column;\r\n       text-align: center;\r\n     }\r\n"
+                },
+                {
+                    "date": 1739406978411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -99,9 +99,8 @@\n   }\r\n   /* Filters Section */\r\n .filters {\r\n     display: flex;\r\n-    justify-content: space-between;\r\n     margin-bottom: 20px;\r\n   }\r\n   \r\n   .filters select {\r\n"
+                },
+                {
+                    "date": 1739407031158,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -99,8 +99,9 @@\n   }\r\n   /* Filters Section */\r\n .filters {\r\n     display: flex;\r\n+    justify-content: space-between;\r\n     margin-bottom: 20px;\r\n   }\r\n   \r\n   .filters select {\r\n@@ -176,8 +177,12 @@\n   \r\n     .quantity-controls span {\r\n       font-size: 14px;\r\n     }\r\n+\r\n+    .filters{\r\n+      flex-direction: row\r\n+    }\r\n     .cart-summary {\r\n       flex-direction: column;\r\n       text-align: center;\r\n     }\r\n"
+                },
+                {
+                    "date": 1739407127601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -182,9 +182,9 @@\n     .filters{\r\n       flex-direction: row\r\n     }\r\n     .cart-summary {\r\n-      flex-direction: column;\r\n+      flex-direction: row\r\n       text-align: center;\r\n     }\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739407143359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -183,8 +183,7 @@\n       flex-direction: row\r\n     }\r\n     .cart-summary {\r\n       flex-direction: row\r\n-      text-align: center;\r\n     }\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739407161719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -182,8 +182,9 @@\n     .filters{\r\n       flex-direction: row\r\n     }\r\n     .cart-summary {\r\n-      flex-direction: row\r\n+      flex-direction: column;\r\n+      text-align: center;\r\n     }\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739407178697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -184,7 +184,8 @@\n     }\r\n     .cart-summary {\r\n       flex-direction: column;\r\n       text-align: center;\r\n+      bottom: auto;\r\n     }\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739407198550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -184,8 +184,8 @@\n     }\r\n     .cart-summary {\r\n       flex-direction: column;\r\n       text-align: center;\r\n-      bottom: auto;\r\n+      bottom: 10px;\r\n     }\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739407207847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -184,8 +184,8 @@\n     }\r\n     .cart-summary {\r\n       flex-direction: column;\r\n       text-align: center;\r\n-      bottom: 10px;\r\n+      bottom: 20px;\r\n     }\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739407216306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -184,8 +184,8 @@\n     }\r\n     .cart-summary {\r\n       flex-direction: column;\r\n       text-align: center;\r\n-      bottom: 20px;\r\n+      bottom: 50px;\r\n     }\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739407231564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -183,9 +183,8 @@\n       flex-direction: row\r\n     }\r\n     .cart-summary {\r\n       flex-direction: column;\r\n-      text-align: center;\r\n       bottom: 50px;\r\n     }\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739407250533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -184,7 +184,8 @@\n     }\r\n     .cart-summary {\r\n       flex-direction: column;\r\n       bottom: 50px;\r\n+      justify-content: space-between;\r\n     }\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739407256803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -185,7 +185,8 @@\n     .cart-summary {\r\n       flex-direction: column;\r\n       bottom: 50px;\r\n       justify-content: space-between;\r\n+      align-items: center;\r\n     }\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739407289401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -184,8 +184,9 @@\n     }\r\n     .cart-summary {\r\n       flex-direction: column;\r\n       bottom: 50px;\r\n+      display: flex;\r\n       justify-content: space-between;\r\n       align-items: center;\r\n     }\r\n   }\r\n"
+                },
+                {
+                    "date": 1739407483098,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -184,10 +184,9 @@\n     }\r\n     .cart-summary {\r\n       flex-direction: column;\r\n       bottom: 50px;\r\n-      display: flex;\r\n       justify-content: space-between;\r\n-      align-items: center;\r\n+      align-items: left;\r\n     }\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739407491679,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -184,9 +184,8 @@\n     }\r\n     .cart-summary {\r\n       flex-direction: column;\r\n       bottom: 50px;\r\n-      justify-content: space-between;\r\n       align-items: left;\r\n     }\r\n   }\r\n   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739407522992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -184,8 +184,7 @@\n     }\r\n     .cart-summary {\r\n       flex-direction: column;\r\n       bottom: 50px;\r\n-      align-items: left;\r\n     }\r\n   }\r\n   \n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1739394655566,
+            "name": "Commit-0",
+            "content": "/* Container styling */\r\n.order-container {\r\n    max-width: 1200px;\r\n    margin: 2rem auto;\r\n    padding: 0 1rem;\r\n  }\r\n  \r\n  /* Page Title */\r\n  .page-title {\r\n    text-align: center;\r\n    font-size: 2rem;\r\n    color: #495e57;\r\n    margin-bottom: 1.5rem;\r\n  }\r\n  \r\n  /* Grid Layout for Menu Items */\r\n  .menu-grid {\r\n    display: grid;\r\n    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\r\n    gap: 1.5rem;\r\n  }\r\n  \r\n  /* Card Styling */\r\n  .menu-card {\r\n    background: #fff;\r\n    border: 1px solid #e0e0e0;\r\n    border-radius: 12px;\r\n    overflow: hidden;\r\n    box-shadow: 0 4px 8px rgba(0,0,0,0.05);\r\n    display: flex;\r\n    flex-direction: column;\r\n    transition: transform 0.3s ease;\r\n  }\r\n  \r\n  .menu-card:hover {\r\n    transform: translateY(-5px);\r\n  }\r\n  \r\n  /* Image Styling */\r\n  .menu-image {\r\n    width: 100%;\r\n    height: 150px;\r\n    object-fit: cover;\r\n  }\r\n  \r\n  /* Card Details */\r\n  .menu-details {\r\n    padding: 1rem;\r\n    flex-grow: 1;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n  }\r\n  \r\n  .menu-name {\r\n    font-size: 1.25rem;\r\n    margin: 0.5rem 0;\r\n    color: #333;\r\n  }\r\n  \r\n  .menu-desc {\r\n    font-size: 0.9rem;\r\n    color: #777;\r\n    flex-grow: 1;\r\n  }\r\n  \r\n  .menu-footer {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    margin-top: 1rem;\r\n  }\r\n  \r\n  .menu-price {\r\n    font-size: 1.1rem;\r\n    font-weight: bold;\r\n    color: #495e57;\r\n  }\r\n  \r\n  /* Add to Cart Button */\r\n  .add-btn {\r\n    background: #f4ce14;\r\n    border: none;\r\n    padding: 8px 12px;\r\n    border-radius: 4px;\r\n    cursor: pointer;\r\n    font-size: 0.9rem;\r\n    font-weight: bold;\r\n    transition: background 0.3s ease;\r\n  }\r\n  \r\n  .add-btn:hover {\r\n    background: #ffcc00;\r\n  }\r\n  \r\n  /* Cart Summary Section */\r\n  .cart-summary {\r\n    margin-top: 2rem;\r\n    padding: 1rem;\r\n    border-top: 1px solid #e0e0e0;\r\n    text-align: center;\r\n  }\r\n  \r\n  .cart-summary h2 {\r\n    margin-bottom: 0.5rem;\r\n    color: #495e57;\r\n  }\r\n  \r\n  .checkout-btn {\r\n    display: inline-block;\r\n    margin-top: 1rem;\r\n    background: #f4ce14;\r\n    color: black;\r\n    text-decoration: none;\r\n    padding: 10px 20px;\r\n    border-radius: 4px;\r\n    font-weight: bold;\r\n    transition: background 0.3s ease;\r\n  }\r\n  \r\n  .checkout-btn:hover {\r\n    background: #ffcc00;\r\n  }\r\n  "
+        }
+    ]
+}

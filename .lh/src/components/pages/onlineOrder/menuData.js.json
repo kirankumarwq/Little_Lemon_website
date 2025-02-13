@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/pages/onlineOrder/menuData.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1739398979181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1739398979181,
+            "name": "Commit-0",
+            "content": "export const menuData = [\r\n    {\r\n      category: \"APPETIZERS\",\r\n      items: [\r\n        { title: \"ROMAINE SALAD\", price: 9.99, desc: \"Romaine, scallions, dill, red-wine vinaigrette\" },\r\n        { title: \"BEET SALAD\", price: 10.99, desc: \"Beets, arugula, walnuts, manouri, red-wine-vinaigrette\" },\r\n        { title: \"VILLAGE SALAD\", price: 12.99, desc: \"Tomato, red onion, green pepper, cucumber, kalamata olives, feta, olive oil\" },\r\n        { title: \"OCTOPUS\", price: 18.99, desc: \"Octopus, red wine, onions, bell peppers, capers, fava puree\" },\r\n        { title: \"CALAMARI\", price: 16.99, desc: \"Calamari, arugula, lemon, olive oil\" },\r\n        { title: \"SALMON TARTARE\", price: 19.99, desc: \"Salmon, shredded phyllo, horseradish, lemon, shallots, chives, yogurt, dill\" },\r\n      ],\r\n    },\r\n    {\r\n      category: \"KEBABS\",\r\n      items: [\r\n        { title: \"GRILLED SWORDFISH\", price: 24.99, desc: \"Grilled swordfish, pita, mixed lettuce, parsley, spiced yogurt, sumac, onions, zhoug\" },\r\n        { title: \"GRILLED SHRIMP\", price: 20.99, desc: \"Grilled shrimp, garlic, pita, parsley, spiced yogurt, sumac, onions\" },\r\n        { title: \"NIMAN RANCH SIRLOIN STEAK\", price: 27.99, desc: \"Sirloin steak, jalapeno, pita, red peppers, spiced yogurt, sumac, onions\" },\r\n        { title: \"GRILLED LAMB\", price: 22.99, desc: \"Grilled lamb, garlic, jalapeno, pita, parsley, spiced yogurt, sumac, onions\" },\r\n      ],\r\n    },\r\n    {\r\n      category: \"VEGETARIAN TAPAS\",\r\n      items: [\r\n        { title: \"SAUTEED HALLOUMI CHEESE\", price: 14.99, desc: \"Chilis, tomato, coriander, over white polenta\" },\r\n        { title: \"ROASTED CAULIFLOWER\", price: 12.99, desc: \"Maghreb spices, lemon tahini\" },\r\n        { title: \"FRIED ARTICHOKE\", price: 15.99, desc: \"Shaved manchego, herb mayo, marinara sauce\" },\r\n        { title: \"RICOTTA GNOCCHI\", price: 16.99, desc: \"Truffle cream sauce\" },\r\n      ],\r\n    },\r\n    {\r\n      category: \"ENTREES\",\r\n      items: [\r\n        { title: \"SEAFOOD GRILL\", price: 32.99, desc: \"Salmon kebab, sea scallops, mini spicy tuna burger, shrimp, hummus, basmati rice, green charmoula\" },\r\n        { title: \"MEME COUSCOUS\", price: 29.99, desc: \"Lamb, merguez, chicken, vegetables, chickpeas, cooked in bouillon over couscous with harissa\" },\r\n        { title: \"MUSHROOM RAVIOLI\", price: 22.99, desc: \"Portobello mushroom, walnuts, parmesan, truffle oil\" },\r\n        { title: \"SEAFOOD LINGUINE\", price: 24.99, desc: \"Scallops, shrimp, mussels, fresh tomato, garlic, basil, jalapeno\" },\r\n        { title: \"FISH EN PAPILLOTE\", price: 36.99, desc: \"Chef’s fish selection, seasonal vegetables, garlic-potato dip, lemon, olive oil\" },\r\n      ],\r\n    },\r\n  ];"
+        }
+    ]
+}

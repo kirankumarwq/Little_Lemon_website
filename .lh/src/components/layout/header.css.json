@@ -1,0 +1,326 @@
+{
+    "sourceFile": "src/components/layout/header.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 77,
+            "patches": [
+                {
+                    "date": 1738918815975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1739191310764,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -89,8 +89,42 @@\n .hover-underline-animation:hover:after {\n   transform: scaleX(1);\n   transform-origin: bottom left;\n }\n+\n+/* Profile Picture Styling */\n+.profile-pic {\n+  width: 45px;  /* Adjust size as needed */\n+  height: 45px;\n+  border-radius: 50%; /* Makes it circular */\n+  object-fit: cover; /* Ensures image fills the circle */\n+  border: 2px solid #f4ce14; /* Optional: Adds a border */\n+}\n+\n+/* Ensure alignment */\n+.login-btn {\n+  display: flex;\n+  align-items: center;\n+  gap: 8px;\n+}\n+\n+.login-icon {\n+  font-size: 1.5rem;\n+  color: #495e57;\n+}\n+\n+/* Mobile Only Styling */\n+.mobile-only {\n+  display: none;\n+}\n+\n+@media (max-width: 768px) {\n+  .mobile-only {\n+    display: flex;\n+    align-items: center;\n+  }\n+}\n+\n @media only screen and (max-width: 992px) {\n   .hover-underline-animation:after {\n     bottom: -1px;\n   }\n"
+                },
+                {
+                    "date": 1739191667434,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -123,8 +123,9 @@\n     align-items: center;\n   }\n }\n \n+\n @media only screen and (max-width: 992px) {\n   .hover-underline-animation:after {\n     bottom: -1px;\n   }\n"
+                },
+                {
+                    "date": 1739191917309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n   transform: scaleX(1);\n   transform-origin: bottom left;\n }\n \n-/* Profile Picture Styling */\n+//* Profile Picture Styling */\n .profile-pic {\n   width: 45px;  /* Adjust size as needed */\n   height: 45px;\n   border-radius: 50%; /* Makes it circular */\n@@ -124,8 +124,9 @@\n   }\n }\n \n \n+\n @media only screen and (max-width: 992px) {\n   .hover-underline-animation:after {\n     bottom: -1px;\n   }\n"
+                },
+                {
+                    "date": 1739191939366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,9 +90,9 @@\n   transform: scaleX(1);\n   transform-origin: bottom left;\n }\n \n-//* Profile Picture Styling */\n+/* Profile Picture Styling */\n .profile-pic {\n   width: 45px;  /* Adjust size as needed */\n   height: 45px;\n   border-radius: 50%; /* Makes it circular */\n"
+                },
+                {
+                    "date": 1739192540061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,25 +92,26 @@\n }\n \n /* Profile Picture Styling */\n .profile-pic {\n-  width: 45px;  /* Adjust size as needed */\n+  width: 45px;  \n   height: 45px;\n-  border-radius: 50%; /* Makes it circular */\n-  object-fit: cover; /* Ensures image fills the circle */\n-  border: 2px solid #f4ce14; /* Optional: Adds a border */\n+  border-radius: 50%;\n+  object-fit: cover;\n+  border: 2px solid #f4ce14;\n }\n \n /* Ensure alignment */\n-.login-btn {\n+.nav-bar-links li {\n   display: flex;\n   align-items: center;\n-  gap: 8px;\n+  justify-content: center;\n }\n \n-.login-icon {\n-  font-size: 1.5rem;\n-  color: #495e57;\n+.nav-bar-links li img {\n+  width: 40px; /* Adjust size */\n+  height: 40px;\n+  border-radius: 50%;\n }\n \n /* Mobile Only Styling */\n .mobile-only {\n"
+                },
+                {
+                    "date": 1739193233217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -121,8 +121,13 @@\n @media (max-width: 768px) {\n   .mobile-only {\n     display: flex;\n     align-items: center;\n+    width: 45px;  \n+  height: 45px;\n+  border-radius: 50%;\n+  object-fit: cover;\n+  border: 2px solid #f4ce14;\n   }\n }\n \n \n"
+                },
+                {
+                    "date": 1739193268885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -119,9 +119,8 @@\n }\n \n @media (max-width: 768px) {\n   .mobile-only {\n-    display: flex;\n     align-items: center;\n     width: 45px;  \n   height: 45px;\n   border-radius: 50%;\n"
+                },
+                {
+                    "date": 1739193275299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -119,8 +119,9 @@\n }\n \n @media (max-width: 768px) {\n   .mobile-only {\n+    display: flex;\n     align-items: center;\n     width: 45px;  \n   height: 45px;\n   border-radius: 50%;\n"
+                },
+                {
+                    "date": 1739193321109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -115,19 +115,21 @@\n \n /* Mobile Only Styling */\n .mobile-only {\n   display: none;\n+  .profile-pic {\n+    width: 45px;  \n+    height: 45px;\n+    border-radius: 50%;\n+    object-fit: cover;\n+    border: 2px solid #f4ce14;\n+  }\n }\n \n @media (max-width: 768px) {\n   .mobile-only {\n     display: flex;\n     align-items: center;\n-    width: 45px;  \n-  height: 45px;\n-  border-radius: 50%;\n-  object-fit: cover;\n-  border: 2px solid #f4ce14;\n   }\n }\n \n \n"
+                },
+                {
+                    "date": 1739193346415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,11 +125,11 @@\n   }\n }\n \n @media (max-width: 768px) {\n-  .mobile-only {\n-    display: flex;\n-    align-items: center;\n+  .profile-pic {\n+    width: 40px;\n+    height: 40px;\n   }\n }\n \n \n"
+                },
+                {
+                    "date": 1739193370264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -113,10 +113,8 @@\n   border-radius: 50%;\n }\n \n /* Mobile Only Styling */\n-.mobile-only {\n-  display: none;\n   .profile-pic {\n     width: 45px;  \n     height: 45px;\n     border-radius: 50%;\n"
+                },
+                {
+                    "date": 1739193377892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -120,9 +120,8 @@\n     border-radius: 50%;\n     object-fit: cover;\n     border: 2px solid #f4ce14;\n   }\n-}\n \n @media (max-width: 768px) {\n   .profile-pic {\n     width: 40px;\n"
+                },
+                {
+                    "date": 1739193458669,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -113,15 +113,11 @@\n   border-radius: 50%;\n }\n \n /* Mobile Only Styling */\n-  .profile-pic {\n-    width: 45px;  \n-    height: 45px;\n-    border-radius: 50%;\n-    object-fit: cover;\n-    border: 2px solid #f4ce14;\n-  }\n+.mobile-only {\n+  display: none;\n+}\n \n @media (max-width: 768px) {\n   .profile-pic {\n     width: 40px;\n"
+                },
+                {
+                    "date": 1739193491090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,11 +118,13 @@\n   display: none;\n }\n \n @media (max-width: 768px) {\n-  .profile-pic {\n-    width: 40px;\n-    height: 40px;\n+  .mobile-only{\n+    .profile-pic {\n+      width: 40px;\n+      height: 40px;\n+    }\n   }\n }\n \n \n"
+                },
+                {
+                    "date": 1739193505963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,13 +118,11 @@\n   display: none;\n }\n \n @media (max-width: 768px) {\n-  .mobile-only{\n-    .profile-pic {\n-      width: 40px;\n-      height: 40px;\n-    }\n+  .profile-pic {\n+    width: 40px;\n+    height: 40px;\n   }\n }\n \n \n"
+                },
+                {
+                    "date": 1739193576260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,11 +118,12 @@\n   display: none;\n }\n \n @media (max-width: 768px) {\n-  .profile-pic {\n+  .mobile-only.profile-pic {\n     width: 40px;\n     height: 40px;\n+    display: block;\n   }\n }\n \n \n"
+                },
+                {
+                    "date": 1739193608270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,9 +118,9 @@\n   display: none;\n }\n \n @media (max-width: 768px) {\n-  .mobile-only.profile-pic {\n+  .mobile-only .profile-pic {\n     width: 40px;\n     height: 40px;\n     display: block;\n   }\n"
+                },
+                {
+                    "date": 1739193819970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -97,8 +97,9 @@\n   height: 45px;\n   border-radius: 50%;\n   object-fit: cover;\n   border: 2px solid #f4ce14;\n+  display: block;\n }\n \n /* Ensure alignment */\n .nav-bar-links li {\n@@ -113,17 +114,13 @@\n   border-radius: 50%;\n }\n \n /* Mobile Only Styling */\n-.mobile-only {\n-  display: none;\n-}\n-\n @media (max-width: 768px) {\n-  .mobile-only .profile-pic {\n-    width: 40px;\n-    height: 40px;\n-    display: block;\n+  .mobile-only {\n+    display: flex;\n+    align-items: center;\n+    justify-content: center;\n   }\n }\n \n \n"
+                },
+                {
+                    "date": 1739193944499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -120,8 +120,20 @@\n     display: flex;\n     align-items: center;\n     justify-content: center;\n   }\n+\n+  .mobile-only.profile-pic{\n+    width: 40px;\n+    height: 40px;\n+    display: block;\n+  }\n+  .login-btn{\n+    display: flex;\n+    align-items: center;\n+    justify-content: center;\n+    padding: 5PX\n+  };\n }\n \n \n \n"
+                },
+                {
+                    "date": 1739193973235,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,9 +96,9 @@\n   width: 45px;  \n   height: 45px;\n   border-radius: 50%;\n   object-fit: cover;\n-  border: 2px solid #f4ce14;\n+  border: 1px solid #f4ce14;\n   display: block;\n }\n \n /* Ensure alignment */\n"
+                },
+                {
+                    "date": 1739194780013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -122,10 +122,10 @@\n     justify-content: center;\n   }\n \n   .mobile-only.profile-pic{\n-    width: 40px;\n-    height: 40px;\n+    width: 35px;\n+    height: 35px;\n     display: block;\n   }\n   .login-btn{\n     display: flex;\n"
+                },
+                {
+                    "date": 1739194870044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -115,14 +115,8 @@\n }\n \n /* Mobile Only Styling */\n @media (max-width: 768px) {\n-  .mobile-only {\n-    display: flex;\n-    align-items: center;\n-    justify-content: center;\n-  }\n-\n   .mobile-only.profile-pic{\n     width: 35px;\n     height: 35px;\n     display: block;\n"
+                },
+                {
+                    "date": 1739194959526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /* Header Container */\n .header {\n-  display: inline-flex;\n-  justify-content: space-between; /* Ensures Logo and Login stay in one line */\n+  display: flex;\n+  justify-content: space-between;\n   align-items: center;\n   padding: 15px 20px;\n   background: #fff;\n   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n@@ -11,151 +11,87 @@\n /* Logo */\n .nav-bar {\n   border-bottom: 2px solid #495e57;\n   width: 100%;\n-  max-width:100%;\n+  max-width: 100%;\n   padding: 0 6%;\n   align-items: center;\n+  display: grid;\n   grid-template-columns: auto auto auto;\n   height: 6.25rem;\n }\n \n-.nav-bar-logo {\n-  grid-column: 1;\n-  justify-self: start;\n-  align-self: center;\n-  line-height: 0;\n-}\n-\n .nav-bar-logo img {\n   width: 10rem;\n-  height: auto\n-}\n-.login-img {\n-  width: 10rem; /* Adjust size */\n   height: auto;\n }\n \n-/* Login Button */\n-.login-btn {\n-  justify-self: flex-end;\n-  width: max-content;\n-  background: #f4ce14;\n-  padding: 8px 15px;\n-  font-size: 1rem;\n-  font-weight: bold;\n-  text-align: center;\n-  border: none;\n-  cursor: pointer;\n-  border-radius: 25px;\n-  text-decoration: none;\n-}\n-\n-/* Full Navigation Menu (Desktop) */\n-.nav-bar-links {\n-  grid-column: 3;\n-  display: flex;\n-  justify-content: flex-end;\n-  align-items: center;\n-  column-gap: 1.5rem;\n-  transition: left 300ms linear;\n-}\n-\n-.nav-bar-links li {\n-  list-style-type: none;\n-  font-weight: 600;\n-}\n-\n-.nav-bar-links a {\n-  height: max-content;\n-  text-transform: uppercase;\n-}\n-.hover-underline-animation {\n-  display: inline-block;\n-  position: relative;\n-}\n-.hover-underline-animation:after {\n-  content: \"\";\n-  position: absolute;\n-  width: 100%;\n-  transform: scaleX(0);\n-  height: 2px;\n-  bottom: 0;\n-  left: 0;\n-  background-color: #495e57;\n-  transform-origin: bottom right;\n-  transition: transform 0.25s ease-out;\n-}\n-\n-.hover-underline-animation:hover:after {\n-  transform: scaleX(1);\n-  transform-origin: bottom left;\n-}\n-\n-/* Profile Picture Styling */\n+/* Profile Picture Styling (PC & Mobile) */\n .profile-pic {\n-  width: 45px;  \n+  width: 45px;\n   height: 45px;\n   border-radius: 50%;\n   object-fit: cover;\n-  border: 1px solid #f4ce14;\n+  border: 2px solid #f4ce14;\n   display: block;\n }\n \n+/* Profile Picture (Mobile) */\n+@media (max-width: 768px) {\n+  .mobile-only .profile-pic {\n+    width: 40px;\n+    height: 40px;\n+    display: block;\n+  }\n+}\n+\n /* Ensure alignment */\n .nav-bar-links li {\n   display: flex;\n   align-items: center;\n   justify-content: center;\n }\n \n .nav-bar-links li img {\n-  width: 40px; /* Adjust size */\n+  width: 40px;\n   height: 40px;\n   border-radius: 50%;\n }\n \n-/* Mobile Only Styling */\n-@media (max-width: 768px) {\n-  .mobile-only.profile-pic{\n-    width: 35px;\n-    height: 35px;\n-    display: block;\n-  }\n-  .login-btn{\n-    display: flex;\n-    align-items: center;\n-    justify-content: center;\n-    padding: 5PX\n-  };\n+/* Login Button (Mobile Only) */\n+.login-btn {\n+  display: flex;\n+  align-items: center;\n+  justify-content: center;\n+  background: #f4ce14;\n+  padding: 8px 15px;\n+  font-size: 1rem;\n+  font-weight: bold;\n+  text-align: center;\n+  border: none;\n+  cursor: pointer;\n+  border-radius: 25px;\n+  text-decoration: none;\n }\n \n-\n\\ No newline at end of file\n-\n-@media only screen and (max-width: 992px) {\n-  .hover-underline-animation:after {\n-    bottom: -1px;\n-  }\n-}\n-  .nav-bar {\n-    grid-template-columns: auto auto;\n-  }\n /* Hide Full Navigation on Mobile */\n @media (max-width: 768px) {\n   .nav-bar-links {\n     display: none;\n   }\n \n   .header {\n-    padding: 15px 10px; /* Adjust padding for smaller screens */\n+    padding: 15px 10px;\n   }\n \n   .login-btn {\n     font-size: 0.9rem;\n     padding: 6px 12px;\n   }\n }\n+\n+/* Hide \"Login\" Button on Desktop (Only Show Profile Pic) */\n @media (min-width: 768px) {\n   .login-btn {\n     display: none;\n   }\n-}\n+}\n"
+                },
+                {
+                    "date": 1739195073788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n /* Header Container */\n .header {\n-  display: flex;\n-  justify-content: space-between;\n+  display: inline-flex;\n+  justify-content: space-between; /* Ensures Logo and Login stay in one line */\n   align-items: center;\n   padding: 15px 20px;\n   background: #fff;\n   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n@@ -11,22 +11,88 @@\n /* Logo */\n .nav-bar {\n   border-bottom: 2px solid #495e57;\n   width: 100%;\n-  max-width: 100%;\n+  max-width:100%;\n   padding: 0 6%;\n   align-items: center;\n-  display: grid;\n   grid-template-columns: auto auto auto;\n   height: 6.25rem;\n }\n \n+.nav-bar-logo {\n+  grid-column: 1;\n+  justify-self: start;\n+  align-self: center;\n+  line-height: 0;\n+}\n+\n .nav-bar-logo img {\n   width: 10rem;\n+  height: auto\n+}\n+.login-img {\n+  width: 10rem; /* Adjust size */\n   height: auto;\n }\n \n-/* Profile Picture Styling (PC & Mobile) */\n+/* Login Button */\n+.login-btn {\n+  justify-self: flex-end;\n+  width: max-content;\n+  background: #f4ce14;\n+  padding: 8px 15px;\n+  font-size: 1rem;\n+  font-weight: bold;\n+  text-align: center;\n+  border: none;\n+  cursor: pointer;\n+  border-radius: 25px;\n+  text-decoration: none;\n+}\n+\n+/* Full Navigation Menu (Desktop) */\n+.nav-bar-links {\n+  grid-column: 3;\n+  display: flex;\n+  justify-content: flex-end;\n+  align-items: center;\n+  column-gap: 1.5rem;\n+  transition: left 300ms linear;\n+}\n+\n+.nav-bar-links li {\n+  list-style-type: none;\n+  font-weight: 600;\n+}\n+\n+.nav-bar-links a {\n+  height: max-content;\n+  text-transform: uppercase;\n+}\n+.hover-underline-animation {\n+  display: inline-block;\n+  position: relative;\n+}\n+.hover-underline-animation:after {\n+  content: \"\";\n+  position: absolute;\n+  width: 100%;\n+  transform: scaleX(0);\n+  height: 2px;\n+  bottom: 0;\n+  left: 0;\n+  background-color: #495e57;\n+  transform-origin: bottom right;\n+  transition: transform 0.25s ease-out;\n+}\n+\n+.hover-underline-animation:hover:after {\n+  transform: scaleX(1);\n+  transform-origin: bottom left;\n+}\n+\n+/* Profile Picture Styling */\n .profile-pic {\n   width: 45px;\n   height: 45px;\n   border-radius: 50%;\n@@ -34,64 +100,63 @@\n   border: 2px solid #f4ce14;\n   display: block;\n }\n \n-/* Profile Picture (Mobile) */\n+/* Profile Picture for Mobile */\n @media (max-width: 768px) {\n   .mobile-only .profile-pic {\n     width: 40px;\n     height: 40px;\n+    border-radius: 50%;\n     display: block;\n   }\n-}\n \n-/* Ensure alignment */\n-.nav-bar-links li {\n-  display: flex;\n-  align-items: center;\n-  justify-content: center;\n+  .login-btn {\n+    display: flex;\n+    align-items: center;\n+    justify-content: center;\n+  }\n }\n \n+/* Ensure Desktop Profile Picture is Properly Styled */\n .nav-bar-links li img {\n   width: 40px;\n   height: 40px;\n   border-radius: 50%;\n }\n \n-/* Login Button (Mobile Only) */\n-.login-btn {\n-  display: flex;\n-  align-items: center;\n-  justify-content: center;\n-  background: #f4ce14;\n-  padding: 8px 15px;\n-  font-size: 1rem;\n-  font-weight: bold;\n-  text-align: center;\n-  border: none;\n-  cursor: pointer;\n-  border-radius: 25px;\n-  text-decoration: none;\n+/* Prevent Mobile Profile Pic from Overlapping */\n+@media (max-width: 768px) {\n+  .login-btn {\n+    padding: 5px;\n+  }\n }\n \n+\n+@media only screen and (max-width: 992px) {\n+  .hover-underline-animation:after {\n+    bottom: -1px;\n+  }\n+}\n+  .nav-bar {\n+    grid-template-columns: auto auto;\n+  }\n /* Hide Full Navigation on Mobile */\n @media (max-width: 768px) {\n   .nav-bar-links {\n     display: none;\n   }\n \n   .header {\n-    padding: 15px 10px;\n+    padding: 15px 10px; /* Adjust padding for smaller screens */\n   }\n \n   .login-btn {\n     font-size: 0.9rem;\n     padding: 6px 12px;\n   }\n }\n-\n-/* Hide \"Login\" Button on Desktop (Only Show Profile Pic) */\n @media (min-width: 768px) {\n   .login-btn {\n     display: none;\n   }\n-}\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739195131432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,9 +118,9 @@\n }\n \n /* Ensure Desktop Profile Picture is Properly Styled */\n .nav-bar-links li img {\n-  width: 40px;\n+  width: 35px;\n   height: 40px;\n   border-radius: 50%;\n }\n \n"
+                },
+                {
+                    "date": 1739195140109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -119,9 +119,9 @@\n \n /* Ensure Desktop Profile Picture is Properly Styled */\n .nav-bar-links li img {\n   width: 35px;\n-  height: 40px;\n+  height: 35px;\n   border-radius: 50%;\n }\n \n /* Prevent Mobile Profile Pic from Overlapping */\n"
+                },
+                {
+                    "date": 1739195155551,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,10 +103,10 @@\n \n /* Profile Picture for Mobile */\n @media (max-width: 768px) {\n   .mobile-only .profile-pic {\n-    width: 40px;\n-    height: 40px;\n+    width: 20px;\n+    height: 20px;\n     border-radius: 50%;\n     display: block;\n   }\n \n@@ -118,10 +118,10 @@\n }\n \n /* Ensure Desktop Profile Picture is Properly Styled */\n .nav-bar-links li img {\n-  width: 35px;\n-  height: 35px;\n+  width: 40px;\n+  height: 40px;\n   border-radius: 50%;\n }\n \n /* Prevent Mobile Profile Pic from Overlapping */\n"
+                },
+                {
+                    "date": 1739195161034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -103,10 +103,10 @@\n \n /* Profile Picture for Mobile */\n @media (max-width: 768px) {\n   .mobile-only .profile-pic {\n-    width: 20px;\n-    height: 20px;\n+    width: 40px;\n+    height: 40px;\n     border-radius: 50%;\n     display: block;\n   }\n \n"
+                },
+                {
+                    "date": 1739195171404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,9 +96,8 @@\n   width: 45px;\n   height: 45px;\n   border-radius: 50%;\n   object-fit: cover;\n-  border: 2px solid #f4ce14;\n   display: block;\n }\n \n /* Profile Picture for Mobile */\n"
+                },
+                {
+                    "date": 1739195187477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n @media (max-width: 768px) {\n   .mobile-only .profile-pic {\n     width: 40px;\n     height: 40px;\n-    border-radius: 50%;\n+    border-radius: 100%;\n     display: block;\n   }\n \n   .login-btn {\n"
+                },
+                {
+                    "date": 1739195199794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,17 +96,18 @@\n   width: 45px;\n   height: 45px;\n   border-radius: 50%;\n   object-fit: cover;\n+  border: 2px solid #f4ce14;\n   display: block;\n }\n \n /* Profile Picture for Mobile */\n @media (max-width: 768px) {\n   .mobile-only .profile-pic {\n     width: 40px;\n     height: 40px;\n-    border-radius: 100%;\n+    border-radius: 50%;\n     display: block;\n   }\n \n   .login-btn {\n"
+                },
+                {
+                    "date": 1739195216417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,9 +96,9 @@\n   width: 45px;\n   height: 45px;\n   border-radius: 50%;\n   object-fit: cover;\n-  border: 2px solid #f4ce14;\n+  border: 2px #f4ce14;\n   display: block;\n }\n \n /* Profile Picture for Mobile */\n"
+                },
+                {
+                    "date": 1739195231491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,9 +96,9 @@\n   width: 45px;\n   height: 45px;\n   border-radius: 50%;\n   object-fit: cover;\n-  border: 2px #f4ce14;\n+  border: 2px solid #f4ce14;\n   display: block;\n }\n \n /* Profile Picture for Mobile */\n"
+                },
+                {
+                    "date": 1739195241274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -118,9 +118,9 @@\n }\n \n /* Ensure Desktop Profile Picture is Properly Styled */\n .nav-bar-links li img {\n-  width: 40px;\n+  width: 50px;\n   height: 40px;\n   border-radius: 50%;\n }\n \n"
+                },
+                {
+                    "date": 1739195281189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,9 +96,9 @@\n   width: 45px;\n   height: 45px;\n   border-radius: 50%;\n   object-fit: cover;\n-  border: 2px solid #f4ce14;\n+  border: 2px solid;\n   display: block;\n }\n \n /* Profile Picture for Mobile */\n@@ -119,9 +119,9 @@\n \n /* Ensure Desktop Profile Picture is Properly Styled */\n .nav-bar-links li img {\n   width: 50px;\n-  height: 40px;\n+  height: 50px;\n   border-radius: 50%;\n }\n \n /* Prevent Mobile Profile Pic from Overlapping */\n"
+                },
+                {
+                    "date": 1739195309466,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -96,9 +96,9 @@\n   width: 45px;\n   height: 45px;\n   border-radius: 50%;\n   object-fit: cover;\n-  border: 2px solid;\n+  border: 2px solid #f4ce14;\n   display: block;\n }\n \n /* Profile Picture for Mobile */\n@@ -119,9 +119,9 @@\n \n /* Ensure Desktop Profile Picture is Properly Styled */\n .nav-bar-links li img {\n   width: 50px;\n-  height: 50px;\n+  height: 40px;\n   border-radius: 50%;\n }\n \n /* Prevent Mobile Profile Pic from Overlapping */\n"
+                },
+                {
+                    "date": 1739195327397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n   font-weight: bold;\n   text-align: center;\n   border: none;\n   cursor: pointer;\n-  border-radius: 25px;\n+  border-radius: 50px;\n   text-decoration: none;\n }\n \n /* Full Navigation Menu (Desktop) */\n"
+                },
+                {
+                    "date": 1739195353819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n   line-height: 0;\n }\n \n .nav-bar-logo img {\n-  width: 10rem;\n+  width: 20rem;\n   height: auto\n }\n .login-img {\n   width: 10rem; /* Adjust size */\n"
+                },
+                {
+                    "date": 1739195362495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,13 +26,13 @@\n   line-height: 0;\n }\n \n .nav-bar-logo img {\n-  width: 20rem;\n+  width: 10rem;\n   height: auto\n }\n .login-img {\n-  width: 10rem; /* Adjust size */\n+  width: 20rem; /* Adjust size */\n   height: auto;\n }\n \n /* Login Button */\n"
+                },
+                {
+                    "date": 1739195393555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,10 @@\n \n /* Login Button */\n .login-btn {\n   justify-self: flex-end;\n-  width: max-content;\n+  width: 40px;\n+  height: 40px;\n   background: #f4ce14;\n   padding: 8px 15px;\n   font-size: 1rem;\n   font-weight: bold;\n"
+                },
+                {
+                    "date": 1739195445070,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,9 @@\n   background: #f4ce14;\n   padding: 8px 15px;\n   font-size: 1rem;\n   font-weight: bold;\n-  text-align: center;\n+  text-align:justify;\n   border: none;\n   cursor: pointer;\n   border-radius: 50px;\n   text-decoration: none;\n"
+                },
+                {
+                    "date": 1739195475469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n .login-btn {\n   justify-self: flex-end;\n   width: 40px;\n   height: 40px;\n-  background: #f4ce14;\n+  \n   padding: 8px 15px;\n   font-size: 1rem;\n   font-weight: bold;\n   text-align:justify;\n"
+                },
+                {
+                    "date": 1739195480543,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,8 @@\n .login-btn {\n   justify-self: flex-end;\n   width: 40px;\n   height: 40px;\n-  \n   padding: 8px 15px;\n   font-size: 1rem;\n   font-weight: bold;\n   text-align:justify;\n"
+                },
+                {
+                    "date": 1739195507663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n /* Login Button */\n .login-btn {\n   justify-self: flex-end;\n   width: 40px;\n-  height: 40px;\n+  height:max-content;\n   padding: 8px 15px;\n   font-size: 1rem;\n   font-weight: bold;\n   text-align:justify;\n"
+                },
+                {
+                    "date": 1739195517659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n \n /* Login Button */\n .login-btn {\n   justify-self: flex-end;\n-  width: 40px;\n+  width: max-content;\n   height:max-content;\n   padding: 8px 15px;\n   font-size: 1rem;\n   font-weight: bold;\n"
+                },
+                {
+                    "date": 1739195568230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n .header {\n   display: inline-flex;\n   justify-content: space-between; /* Ensures Logo and Login stay in one line */\n   align-items: center;\n-  padding: 15px 20px;\n+  padding: 10px 20px;\n   background: #fff;\n   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n }\n \n"
+                },
+                {
+                    "date": 1739195576324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n .header {\n   display: inline-flex;\n   justify-content: space-between; /* Ensures Logo and Login stay in one line */\n   align-items: center;\n-  padding: 10px 20px;\n+  padding: 10px 10px;\n   background: #fff;\n   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n }\n \n"
+                },
+                {
+                    "date": 1739195598739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n .header {\n   display: inline-flex;\n   justify-content: space-between; /* Ensures Logo and Login stay in one line */\n   align-items: center;\n-  padding: 10px 10px;\n+  padding: 15px 20px;\n   background: #fff;\n   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n }\n \n@@ -15,9 +15,9 @@\n   max-width:100%;\n   padding: 0 6%;\n   align-items: center;\n   grid-template-columns: auto auto auto;\n-  height: 6.25rem;\n+  height: 5.5rem;\n }\n \n .nav-bar-logo {\n   grid-column: 1;\n"
+                },
+                {
+                    "date": 1739195737634,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,12 @@\n .header {\n   display: inline-flex;\n   justify-content: space-between; /* Ensures Logo and Login stay in one line */\n   align-items: center;\n-  padding: 15px 20px;\n+  padding: 10px 15px;\n   background: #fff;\n   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n+  height: 5.5rem;\n }\n \n /* Logo */\n .nav-bar {\n"
+                },
+                {
+                    "date": 1739195747907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n   line-height: 0;\n }\n \n .nav-bar-logo img {\n-  width: 10rem;\n+  width: 8rem;\n   height: auto\n }\n .login-img {\n   width: 20rem; /* Adjust size */\n"
+                },
+                {
+                    "date": 1739195831406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n }\n \n /* Login Button */\n .login-btn {\n-  justify-self: flex-end;\n+  justify-self: end;\n   width: max-content;\n   height:max-content;\n   padding: 8px 15px;\n   font-size: 1rem;\n"
+                },
+                {
+                    "date": 1739195870337,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n .login-btn {\n   justify-self: end;\n   width: max-content;\n   height:max-content;\n-  padding: 8px 15px;\n+  padding: 8px 10px;\n   font-size: 1rem;\n   font-weight: bold;\n   text-align:justify;\n   border: none;\n"
+                },
+                {
+                    "date": 1739195891069,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n .login-btn {\n   justify-self: end;\n   width: max-content;\n   height:max-content;\n-  padding: 8px 10px;\n+  padding: 5px 10px;\n   font-size: 1rem;\n   font-weight: bold;\n   text-align:justify;\n   border: none;\n"
+                },
+                {
+                    "date": 1739195902468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n .login-btn {\n   justify-self: end;\n   width: max-content;\n   height:max-content;\n-  padding: 5px 10px;\n+  padding: 0px 10px;\n   font-size: 1rem;\n   font-weight: bold;\n   text-align:justify;\n   border: none;\n"
+                },
+                {
+                    "date": 1739195969454,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,12 +37,13 @@\n }\n \n /* Login Button */\n .login-btn {\n+  grid-column: 3;\n   justify-self: end;\n   width: max-content;\n   height:max-content;\n-  padding: 0px 10px;\n+  padding: 8px 15px;\n   font-size: 1rem;\n   font-weight: bold;\n   text-align:justify;\n   border: none;\n"
+                },
+                {
+                    "date": 1739196049692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,8 +39,10 @@\n /* Login Button */\n .login-btn {\n   grid-column: 3;\n   justify-self: end;\n+  position: absolute;\n+  right: 1.5rem;\n   width: max-content;\n   height:max-content;\n   padding: 8px 15px;\n   font-size: 1rem;\n"
+                },
+                {
+                    "date": 1739196072306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n .login-btn {\n   grid-column: 3;\n   justify-self: end;\n   position: absolute;\n-  right: 1.5rem;\n+  right: 2rem;\n   width: max-content;\n   height:max-content;\n   padding: 8px 15px;\n   font-size: 1rem;\n"
+                },
+                {
+                    "date": 1739196097134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \n /* Login Button */\n .login-btn {\n   grid-column: 3;\n-  justify-self: end;\n+  justify-self:flex-end;\n   position: absolute;\n   right: 2rem;\n   width: max-content;\n   height:max-content;\n"
+                },
+                {
+                    "date": 1739198829916,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n   width: 8rem;\n   height: auto\n }\n .login-img {\n-  width: 20rem; /* Adjust size */\n+  width: 10rem; /* Adjust size */\n   height: auto;\n }\n \n /* Login Button */\n"
+                },
+                {
+                    "date": 1739199491379,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -162,5 +162,10 @@\n @media (min-width: 768px) {\n   .login-btn {\n     display: none;\n   }\n+}\n+@media (max-width: 768px) {\n+  .header {\n+    position: relative; /* or static */\n+  }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739199530707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -165,7 +165,7 @@\n   }\n }\n @media (max-width: 768px) {\n   .header {\n-    position: relative; /* or static */\n+    position:static; /* or static */\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739207162037,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   height: auto\n }\n .login-img {\n   width: 10rem; /* Adjust size */\n-  height: auto;\n+  height: 10rem;\n }\n \n /* Login Button */\n .login-btn {\n"
+                },
+                {
+                    "date": 1739207178657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n }\n \n .nav-bar-logo img {\n   width: 8rem;\n-  height: auto\n+  height: 8rem;\n }\n .login-img {\n   width: 10rem; /* Adjust size */\n   height: 10rem;\n"
+                },
+                {
+                    "date": 1739207189218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,13 +28,13 @@\n }\n \n .nav-bar-logo img {\n   width: 8rem;\n-  height: 8rem;\n+  height: auto\n }\n .login-img {\n   width: 10rem; /* Adjust size */\n-  height: 10rem;\n+  height: auto;\n }\n \n /* Login Button */\n .login-btn {\n"
+                },
+                {
+                    "date": 1739207212746,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n   height: auto\n }\n .login-img {\n   width: 10rem; /* Adjust size */\n-  height: auto;\n+  height: 10 rem;\n }\n \n /* Login Button */\n .login-btn {\n"
+                },
+                {
+                    "date": 1739207232208,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,9 +46,9 @@\n   height:max-content;\n   padding: 8px 15px;\n   font-size: 1rem;\n   font-weight: bold;\n-  text-align:justify;\n+  text-align:center;\n   border: none;\n   cursor: pointer;\n   border-radius: 50px;\n   text-decoration: none;\n"
+                },
+                {
+                    "date": 1739207246289,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,9 +41,9 @@\n   grid-column: 3;\n   justify-self:flex-end;\n   position: absolute;\n   right: 2rem;\n-  width: max-content;\n+  width: 40px\n   height:max-content;\n   padding: 8px 15px;\n   font-size: 1rem;\n   font-weight: bold;\n"
+                },
+                {
+                    "date": 1739207261201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,10 +41,10 @@\n   grid-column: 3;\n   justify-self:flex-end;\n   position: absolute;\n   right: 2rem;\n-  width: 40px\n-  height:max-content;\n+  width: 40px;\n+  height:40px;\n   padding: 8px 15px;\n   font-size: 1rem;\n   font-weight: bold;\n   text-align:center;\n"
+                },
+                {
+                    "date": 1739207344282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,10 +41,10 @@\n   grid-column: 3;\n   justify-self:flex-end;\n   position: absolute;\n   right: 2rem;\n-  width: 40px;\n-  height:40px;\n+  width: max-content;\n+  height:max-content;\n   padding: 8px 15px;\n   font-size: 1rem;\n   font-weight: bold;\n   text-align:center;\n"
+                },
+                {
+                    "date": 1739207699053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,171 @@\n+/* Header Container */\n+.header {\n+  display: inline-flex;\n+  justify-content: space-between; /* Ensures Logo and Login stay in one line */\n+  align-items: center;\n+  padding: 10px 15px;\n+  background: #fff;\n+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n+  height: 5.5rem;\n+}\n+\n+/* Logo */\n+.nav-bar {\n+  border-bottom: 2px solid #495e57;\n+  width: 100%;\n+  max-width:100%;\n+  padding: 0 6%;\n+  align-items: center;\n+  grid-template-columns: auto auto auto;\n+  height: 5.5rem;\n+}\n+\n+.nav-bar-logo {\n+  grid-column: 1;\n+  justify-self: start;\n+  align-self: center;\n+  line-height: 0;\n+}\n+\n+.nav-bar-logo img {\n+  width: 8rem;\n+  height: auto\n+}\n+.login-img {\n+  width: 10rem; /* Adjust size */\n+  height: 10 rem;\n+}\n+\n+/* Login Button */\n+.login-btn {\n+  grid-column: 3;\n+  justify-self:flex-end;\n+  position: absolute;\n+  right: 2rem;\n+  width: max-content;\n+  height:max-content;\n+  padding: 8px 15px;\n+  font-size: 1rem;\n+  font-weight: bold;\n+  text-align:center;\n+  border: none;\n+  cursor: pointer;\n+  border-radius: 50px;\n+  text-decoration: none;\n+}\n+\n+/* Full Navigation Menu (Desktop) */\n+.nav-bar-links {\n+  grid-column: 3;\n+  display: flex;\n+  justify-content: flex-end;\n+  align-items: center;\n+  column-gap: 3rem;\n+  transition: left 300ms linear;\n+}\n+\n+.nav-bar-links li {\n+  list-style-type: none;\n+  font-weight: 600;\n+}\n+\n+.nav-bar-links a {\n+  height: max-content;\n+  text-transform: uppercase;\n+}\n+.hover-underline-animation {\n+  display: inline-block;\n+  position: relative;\n+}\n+.hover-underline-animation:after {\n+  content: \"\";\n+  position: absolute;\n+  width: 100%;\n+  transform: scaleX(0);\n+  height: 2px;\n+  bottom: 0;\n+  left: 0;\n+  background-color: #495e57;\n+  transform-origin: bottom right;\n+  transition: transform 0.25s ease-out;\n+}\n+\n+.hover-underline-animation:hover:after {\n+  transform: scaleX(1);\n+  transform-origin: bottom left;\n+}\n+\n+/* Profile Picture Styling */\n+.profile-pic {\n+  width: 45px;\n+  height: 45px;\n+  border-radius: 50%;\n+  object-fit: cover;\n+  border: 2px solid #f4ce14;\n+  display: block;\n+}\n+\n+/* Profile Picture for Mobile */\n+@media (max-width: 768px) {\n+  .mobile-only .profile-pic {\n+    width: 40px;\n+    height: 40px;\n+    border-radius: 50%;\n+    display: block;\n+  }\n+\n+  .login-btn {\n+    display: flex;\n+    align-items: center;\n+    justify-content: center;\n+  }\n+}\n+\n+/* Ensure Desktop Profile Picture is Properly Styled */\n+.nav-bar-links li img {\n+  width: 50px;\n+  height: 40px;\n+  border-radius: 50%;\n+}\n+\n+/* Prevent Mobile Profile Pic from Overlapping */\n+@media (max-width: 768px) {\n+  .login-btn {\n+    padding: 5px;\n+  }\n+}\n+\n+\n+@media only screen and (max-width: 992px) {\n+  .hover-underline-animation:after {\n+    bottom: -1px;\n+  }\n+}\n+  .nav-bar {\n+    grid-template-columns: auto auto;\n+  }\n+/* Hide Full Navigation on Mobile */\n+@media (max-width: 768px) {\n+  .nav-bar-links {\n+    display: none;\n+  }\n+\n+  .header {\n+    padding: 15px 10px; /* Adjust padding for smaller screens */\n+  }\n+\n+  .login-btn {\n+    font-size: 0.9rem;\n+    padding: 6px 12px;\n+  }\n+}\n+@media (min-width: 768px) {\n+  .login-btn {\n+    display: none;\n+  }\n+}\n+@media (max-width: 768px) {\n+  .header {\n+    position:static; /* or static */\n+  }\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739207708202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,179 +59,8 @@\n   grid-column: 3;\n   display: flex;\n   justify-content: flex-end;\n   align-items: center;\n-  column-gap: 3rem;\n-  transition: left 300ms linear;\n-}\n-\n-.nav-bar-links li {\n-  list-style-type: none;\n-  font-weight: 600;\n-}\n-\n-.nav-bar-links a {\n-  height: max-content;\n-  text-transform: uppercase;\n-}\n-.hover-underline-animation {\n-  display: inline-block;\n-  position: relative;\n-}\n-.hover-underline-animation:after {\n-  content: \"\";\n-  position: absolute;\n-  width: 100%;\n-  transform: scaleX(0);\n-  height: 2px;\n-  bottom: 0;\n-  left: 0;\n-  background-color: #495e57;\n-  transform-origin: bottom right;\n-  transition: transform 0.25s ease-out;\n-}\n-\n-.hover-underline-animation:hover:after {\n-  transform: scaleX(1);\n-  transform-origin: bottom left;\n-}\n-\n-/* Profile Picture Styling */\n-.profile-pic {\n-  width: 45px;\n-  height: 45px;\n-  border-radius: 50%;\n-  object-fit: cover;\n-  border: 2px solid #f4ce14;\n-  display: block;\n-}\n-\n-/* Profile Picture for Mobile */\n-@media (max-width: 768px) {\n-  .mobile-only .profile-pic {\n-    width: 40px;\n-    height: 40px;\n-    border-radius: 50%;\n-    display: block;\n-  }\n-\n-  .login-btn {\n-    display: flex;\n-    align-items: center;\n-    justify-content: center;\n-  }\n-}\n-\n-/* Ensure Desktop Profile Picture is Properly Styled */\n-.nav-bar-links li img {\n-  width: 50px;\n-  height: 40px;\n-  border-radius: 50%;\n-}\n-\n-/* Prevent Mobile Profile Pic from Overlapping */\n-@media (max-width: 768px) {\n-  .login-btn {\n-    padding: 5px;\n-  }\n-}\n-\n-\n-@media only screen and (max-width: 992px) {\n-  .hover-underline-animation:after {\n-    bottom: -1px;\n-  }\n-}\n-  .nav-bar {\n-    grid-template-columns: auto auto;\n-  }\n-/* Hide Full Navigation on Mobile */\n-@media (max-width: 768px) {\n-  .nav-bar-links {\n-    display: none;\n-  }\n-\n-  .header {\n-    padding: 15px 10px; /* Adjust padding for smaller screens */\n-  }\n-\n-  .login-btn {\n-    font-size: 0.9rem;\n-    padding: 6px 12px;\n-  }\n-}\n-@media (min-width: 768px) {\n-  .login-btn {\n-    display: none;\n-  }\n-}\n-@media (max-width: 768px) {\n-  .header {\n-    position:static; /* or static */\n-  }\n-}\n-/* Header Container */\n-.header {\n-  display: inline-flex;\n-  justify-content: space-between; /* Ensures Logo and Login stay in one line */\n-  align-items: center;\n-  padding: 10px 15px;\n-  background: #fff;\n-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n-  height: 5.5rem;\n-}\n-\n-/* Logo */\n-.nav-bar {\n-  border-bottom: 2px solid #495e57;\n-  width: 100%;\n-  max-width:100%;\n-  padding: 0 6%;\n-  align-items: center;\n-  grid-template-columns: auto auto auto;\n-  height: 5.5rem;\n-}\n-\n-.nav-bar-logo {\n-  grid-column: 1;\n-  justify-self: start;\n-  align-self: center;\n-  line-height: 0;\n-}\n-\n-.nav-bar-logo img {\n-  width: 8rem;\n-  height: auto\n-}\n-.login-img {\n-  width: 10rem; /* Adjust size */\n-  height: 10 rem;\n-}\n-\n-/* Login Button */\n-.login-btn {\n-  grid-column: 3;\n-  justify-self:flex-end;\n-  position: absolute;\n-  right: 2rem;\n-  width: max-content;\n-  height:max-content;\n-  padding: 8px 15px;\n-  font-size: 1rem;\n-  font-weight: bold;\n-  text-align:center;\n-  border: none;\n-  cursor: pointer;\n-  border-radius: 50px;\n-  text-decoration: none;\n-}\n-\n-/* Full Navigation Menu (Desktop) */\n-.nav-bar-links {\n-  grid-column: 3;\n-  display: flex;\n-  justify-content: flex-end;\n-  align-items: center;\n   column-gap: 1.5rem;\n   transition: left 300ms linear;\n }\n \n"
+                },
+                {
+                    "date": 1739207861604,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -129,10 +129,11 @@\n }\n \n /* Prevent Mobile Profile Pic from Overlapping */\n @media (max-width: 768px) {\n-  .login-btn {\n+  .login-btn span {\n     padding: 5px;\n+    margin-left: 8px;\n   }\n }\n \n \n"
+                },
+                {
+                    "date": 1739208201631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -167,6 +167,8 @@\n }\n @media (max-width: 768px) {\n   .header {\n     position:static; /* or static */\n+    margin-bottom: 0;   /* Remove any extra margin at the bottom */\n+    padding-bottom: 5px; /* Reduce bottom padding if necessary */\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739208417844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,7 +168,7 @@\n @media (max-width: 768px) {\n   .header {\n     position:static; /* or static */\n     margin-bottom: 0;   /* Remove any extra margin at the bottom */\n-    padding-bottom: 5px; /* Reduce bottom padding if necessary */\n+    padding-bottom: 10px; /* Reduce bottom padding if necessary */\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739208425756,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,7 +168,7 @@\n @media (max-width: 768px) {\n   .header {\n     position:static; /* or static */\n     margin-bottom: 0;   /* Remove any extra margin at the bottom */\n-    padding-bottom: 10px; /* Reduce bottom padding if necessary */\n+    padding-bottom: 100px; /* Reduce bottom padding if necessary */\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739208435761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -168,7 +168,7 @@\n @media (max-width: 768px) {\n   .header {\n     position:static; /* or static */\n     margin-bottom: 0;   /* Remove any extra margin at the bottom */\n-    padding-bottom: 100px; /* Reduce bottom padding if necessary */\n+    padding-bottom: 5px; /* Reduce bottom padding if necessary */\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1739401423356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -127,8 +127,31 @@\n   height: 40px;\n   border-radius: 50%;\n }\n \n+.cart-container {\n+  position: relative;\n+  display: flex;\n+  align-items: center;\n+}\n+\n+.cart-badge {\n+  position: absolute;\n+  top: -5px;\n+  right: -10px;\n+  background: red;\n+  color: white;\n+  font-size: 12px;\n+  width: 18px;\n+  height: 18px;\n+  display: flex;\n+  align-items: center;\n+  justify-content: center;\n+  border-radius: 50%;\n+  font-weight: bold;\n+}\n+\n+\n /* Prevent Mobile Profile Pic from Overlapping */\n @media (max-width: 768px) {\n   .login-btn span {\n     padding: 5px;\n"
+                }
+            ],
+            "date": 1738918815975,
+            "name": "Commit-0",
+            "content": "/* Header Container */\n.header {\n  display: inline-flex;\n  justify-content: space-between; /* Ensures Logo and Login stay in one line */\n  align-items: center;\n  padding: 15px 20px;\n  background: #fff;\n  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);\n}\n\n/* Logo */\n.nav-bar {\n  border-bottom: 2px solid #495e57;\n  width: 100%;\n  max-width:100%;\n  padding: 0 6%;\n  align-items: center;\n  grid-template-columns: auto auto auto;\n  height: 6.25rem;\n}\n\n.nav-bar-logo {\n  grid-column: 1;\n  justify-self: start;\n  align-self: center;\n  line-height: 0;\n}\n\n.nav-bar-logo img {\n  width: 10rem;\n  height: auto\n}\n.login-img {\n  width: 10rem; /* Adjust size */\n  height: auto;\n}\n\n/* Login Button */\n.login-btn {\n  justify-self: flex-end;\n  width: max-content;\n  background: #f4ce14;\n  padding: 8px 15px;\n  font-size: 1rem;\n  font-weight: bold;\n  text-align: center;\n  border: none;\n  cursor: pointer;\n  border-radius: 25px;\n  text-decoration: none;\n}\n\n/* Full Navigation Menu (Desktop) */\n.nav-bar-links {\n  grid-column: 3;\n  display: flex;\n  justify-content: flex-end;\n  align-items: center;\n  column-gap: 1.5rem;\n  transition: left 300ms linear;\n}\n\n.nav-bar-links li {\n  list-style-type: none;\n  font-weight: 600;\n}\n\n.nav-bar-links a {\n  height: max-content;\n  text-transform: uppercase;\n}\n.hover-underline-animation {\n  display: inline-block;\n  position: relative;\n}\n.hover-underline-animation:after {\n  content: \"\";\n  position: absolute;\n  width: 100%;\n  transform: scaleX(0);\n  height: 2px;\n  bottom: 0;\n  left: 0;\n  background-color: #495e57;\n  transform-origin: bottom right;\n  transition: transform 0.25s ease-out;\n}\n\n.hover-underline-animation:hover:after {\n  transform: scaleX(1);\n  transform-origin: bottom left;\n}\n@media only screen and (max-width: 992px) {\n  .hover-underline-animation:after {\n    bottom: -1px;\n  }\n}\n  .nav-bar {\n    grid-template-columns: auto auto;\n  }\n/* Hide Full Navigation on Mobile */\n@media (max-width: 768px) {\n  .nav-bar-links {\n    display: none;\n  }\n\n  .header {\n    padding: 15px 10px; /* Adjust padding for smaller screens */\n  }\n\n  .login-btn {\n    font-size: 0.9rem;\n    padding: 6px 12px;\n  }\n}\n@media (min-width: 768px) {\n  .login-btn {\n    display: none;\n  }\n}"
+        }
+    ]
+}

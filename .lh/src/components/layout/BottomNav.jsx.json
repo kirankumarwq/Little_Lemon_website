@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/layout/BottomNav.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1739199242168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1739199242168,
+            "name": "Commit-0",
+            "content": "import React from \"react\";\r\nimport { Link } from \"react-router-dom\";\r\nimport { FaHome, FaUtensils, FaConciergeBell, FaShoppingCart } from \"react-icons/fa\";\r\nimport \"./bottomNav.css\";\r\n\r\nconst BottomNav = () => {\r\n  return (\r\n    <nav className=\"bottom-nav\">\r\n      <Link to=\"/\" className=\"nav-item\">\r\n        <FaHome />\r\n        <span>Home</span>\r\n      </Link>\r\n      <Link to=\"/menu\" className=\"nav-item\">\r\n        <FaUtensils />\r\n        <span>Menu</span>\r\n      </Link>\r\n      <Link to=\"/reservations\" className=\"nav-item\">\r\n        <FaConciergeBell />\r\n        <span>Reservations</span>\r\n      </Link>\r\n      <Link to=\"/orderOnline\" className=\"nav-item\">\r\n        <FaShoppingCart />\r\n        <span>Order</span>\r\n      </Link>\r\n    </nav>\r\n  );\r\n};\r\n\r\nexport default BottomNav;\r\n"
+        }
+    ]
+}

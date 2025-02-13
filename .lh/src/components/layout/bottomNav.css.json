@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/layout/bottomNav.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1739199247672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1739199247672,
+            "name": "Commit-0",
+            "content": ".bottom-nav {\r\n    position: fixed;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    background-color: #fff;\r\n    display: flex;\r\n    justify-content: space-around;\r\n    align-items: center;\r\n    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);\r\n    padding: 0.5rem 0;\r\n    z-index: 1000;\r\n  }\r\n  \r\n  .nav-item {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    color: #495e57;\r\n    text-decoration: none;\r\n    font-size: 0.75rem;\r\n  }\r\n  \r\n  .nav-item span {\r\n    font-size: 0.7rem;\r\n    margin-top: 2px;\r\n  }\r\n  \r\n  .nav-item svg {\r\n    font-size: 1.5rem;\r\n  }\r\n  \r\n  /* Show bottom nav only on mobile and tablet */\r\n  @media (min-width: 769px) {\r\n    .bottom-nav {\r\n      display: none;\r\n    }\r\n  }\r\n  "
+        }
+    ]
+}

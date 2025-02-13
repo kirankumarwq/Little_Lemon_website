@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/pages/Home/MealCard.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1739436773110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1739436773110,
+            "name": "Commit-0",
+            "content": ".meal-card {\n  grid-column: auto;\n  grid-row: 2;\n  min-height: 31.25rem;\n  padding-bottom: 1.5rem;\n  display: flex;\n  flex-direction: column;\n  border-radius: 1rem;\n  overflow: hidden;\n  background-color: #edefee;\n  box-shadow: 0 0 15px #d9d9d9;\n}\n\n.meal-card-image {\n  position: relative;\n  height: 12.5rem;\n  overflow: hidden;\n}\n\n.meal-card:hover .meal-card-image img {\n  transform: scale(1.08);\n}\n\n.meal-card-image img {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 12.5rem;\n  object-fit: cover;\n  object-position: 50% 5%;\n  transition: all linear 300ms;\n}\n\n.meal-card-header,\n.meal-card-body-footer {\n  padding: 0 1rem;\n}\n\n.meal-card-header {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  padding: 1rem;\n}\n\n.meal-card-header h3 {\n  font-size: 1.125rem;\n}\n\n.meal-card-header span {\n  font-weight: 700;\n  color: #333;\n}\n\n.meal-card-body-footer {\n  display: flex;\n  flex-grow: 1;\n  flex-direction: column;\n  justify-content: space-between;\n}\n\n.meal-card-body-footer a {\n  font-weight: bold;\n}\n\n.meal-card-body-footer svg {\n  margin-left: 0.5rem;\n}\n\n@media (max-width: 960px) {\n  .meal-card {\n    grid-row: auto;\n  }\n}\n"
+        }
+    ]
+}

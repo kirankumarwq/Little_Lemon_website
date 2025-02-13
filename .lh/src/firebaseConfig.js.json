@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/firebaseConfig.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1739104975406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1739104975406,
+            "name": "Commit-0",
+            "content": "import { initializeApp } from \"firebase/app\";\r\nimport { getAuth, GoogleAuthProvider, FacebookAuthProvider } from \"firebase/auth\";\r\n\r\nconst firebaseConfig = {\r\n  apiKey: \"YOUR_FIREBASE_API_KEY\",\r\n  authDomain: \"YOUR_FIREBASE_AUTH_DOMAIN\",\r\n  projectId: \"YOUR_FIREBASE_PROJECT_ID\",\r\n  storageBucket: \"YOUR_FIREBASE_STORAGE_BUCKET\",\r\n  messagingSenderId: \"YOUR_FIREBASE_MESSAGING_SENDER_ID\",\r\n  appId: \"YOUR_FIREBASE_APP_ID\"\r\n};\r\n\r\nconst app = initializeApp(firebaseConfig);\r\nexport const auth = getAuth(app);\r\nexport const googleProvider = new GoogleAuthProvider();\r\nexport const facebookProvider = new FacebookAuthProvider();\r\n"
+        }
+    ]
+}
