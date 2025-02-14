@@ -6,7 +6,7 @@ Welcome to the **Little Lemon Restaurant** website! This project is a fully resp
 - **Homepage** with a hero section, featured dishes, and a promotional banner.
 - **Navigation Bar** with easy access to all sections.
 - **Table Reservation System** with real-time booking options.
-- **Online Ordering System** (Zomato-style UI) with a cart feature.
+- **Online Ordering System** with a cart feature.
 - **User Authentication** with Supabase (Google login, email/password signup, profile management).
 - **Profile Page** with upcoming reservations, past reservations, and recent orders.
 - **Fully Responsive Design** for PC, tablet, and mobile.
@@ -62,11 +62,7 @@ The website will run on `https://kirankumarwq.github.io/Little_Lemon_website/`.
 
 
 
-## 📜 License
-This project is licensed under the **MIT License**.
-
 ---
-✨ **Developed by [Your Name]** ✨
 
 
 ![preview](https://github.com/victorpreston/little-lemon-restaurant/assets/112781610/c89281ce-be90-4271-a15d-9f44f6153dee)
