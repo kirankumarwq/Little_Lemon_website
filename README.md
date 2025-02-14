@@ -58,7 +58,7 @@ REACT_APP_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```sh
 npm start
 ```
-The website will run on `[http://localhost:3000](https://kirankumarwq.github.io/Little_Lemon_website/)/`.
+The website will run on `https://kirankumarwq.github.io/Little_Lemon_website/`.
 
 
 
